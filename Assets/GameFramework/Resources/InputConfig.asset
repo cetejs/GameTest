@@ -1,0 +1,292 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a10e8b7d51a345e2837d62b2593859aa, type: 3}
+  m_Name: InputConfig
+  m_EditorClassIdentifier: 
+  inputMappings:
+  - buttonName: HorizontalNav
+    description: Navigation
+    keyboard: 602
+    xbox: 16
+    ps4: 15
+    mobile: HorizontalNav
+  - buttonName: VerticalNav
+    description: Navigation
+    keyboard: 603
+    xbox: 17
+    ps4: 20
+    mobile: VerticalNav
+  - buttonName: Submit
+    description: Submit
+    keyboard: 13
+    xbox: 1
+    ps4: 2
+    mobile: Submit
+  - buttonName: Cancel
+    description: Cancel
+    keyboard: 8
+    xbox: 2
+    ps4: 3
+    mobile: Cancel
+  - buttonName: Horizontal
+    description: Move
+    keyboard: 600
+    xbox: 11
+    ps4: 15
+    mobile: Horizontal
+  - buttonName: Vertical
+    description: Move
+    keyboard: 601
+    xbox: 12
+    ps4: 16
+    mobile: Vertical
+  - buttonName: Mouse X
+    description: RotateView
+    keyboard: 604
+    xbox: 14
+    ps4: 17
+    mobile: Mouse X
+  - buttonName: Mouse Y
+    description: RotateView
+    keyboard: 605
+    xbox: 15
+    ps4: 18
+    mobile: Mouse Y
+  - buttonName: HorizontalArrow
+    description: SelectItem
+    keyboard: 602
+    xbox: 16
+    ps4: 19
+    mobile: HorizontalArrow
+  - buttonName: VerticalArrow
+    description: SelectItem
+    keyboard: 603
+    xbox: 17
+    ps4: 20
+    mobile: VerticalArrow
+  - buttonName: Button0
+    description: 
+    keyboard: 32
+    xbox: 1
+    ps4: 2
+    mobile: Button0
+  - buttonName: Button1
+    description: 
+    keyboard: 304
+    xbox: 2
+    ps4: 3
+    mobile: Button1
+  - buttonName: Button2
+    description: 
+    keyboard: 50
+    xbox: 3
+    ps4: 1
+    mobile: Button2
+  - buttonName: Button3
+    description: 
+    keyboard: 51
+    xbox: 4
+    ps4: 4
+    mobile: Button3
+  - buttonName: Button4
+    description: 
+    keyboard: 52
+    xbox: 5
+    ps4: 5
+    mobile: Button4
+  - buttonName: Button5
+    description: 
+    keyboard: 53
+    xbox: 6
+    ps4: 6
+    mobile: Button5
+  - buttonName: Button6
+    description: 
+    keyboard: 54
+    xbox: 7
+    ps4: 9
+    mobile: Button6
+  - buttonName: Button7
+    description: 
+    keyboard: 55
+    xbox: 8
+    ps4: 10
+    mobile: Button7
+  - buttonName: Button8
+    description: 
+    keyboard: 56
+    xbox: 18
+    ps4: 7
+    mobile: Button8
+  - buttonName: Button9
+    description: 
+    keyboard: 57
+    xbox: 19
+    ps4: 8
+    mobile: Button9
+  - buttonName: Button10
+    description: 
+    keyboard: 13
+    xbox: 13
+    ps4: 14
+    mobile: Button10
+  - buttonName: LeftStickClick
+    description: 
+    keyboard: 101
+    xbox: 9
+    ps4: 11
+    mobile: LeftStickClick
+  - buttonName: RightStickClick
+    description: 
+    keyboard: 113
+    xbox: 10
+    ps4: 12
+    mobile: RightStickClick
+  - buttonName: Throwing
+    description: 
+    keyboard: 103
+    xbox: 3
+    ps4: 1
+    mobile: Throwing
+  - buttonName: StartThrowing
+    description: 
+    keyboard: 607
+    xbox: 6
+    ps4: 6
+    mobile: StartThrowing
+  - buttonName: CancelThrowing
+    description: 
+    keyboard: 608
+    xbox: 5
+    ps4: 5
+    mobile: CancelThrowing
+  joystickMappings:
+  - joystick: Joystick1Button0
+    xbox: 1
+    ps4: 1
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button1
+    xbox: 2
+    ps4: 2
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button2
+    xbox: 3
+    ps4: 3
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button3
+    xbox: 4
+    ps4: 4
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button4
+    xbox: 5
+    ps4: 5
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button5
+    xbox: 6
+    ps4: 6
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button6
+    xbox: 7
+    ps4: 7
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button7
+    xbox: 8
+    ps4: 8
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button8
+    xbox: 9
+    ps4: 9
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button9
+    xbox: 10
+    ps4: 10
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button10
+    xbox: 0
+    ps4: 11
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button11
+    xbox: 0
+    ps4: 12
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button12
+    xbox: 0
+    ps4: 13
+    isAxis: 0
+    isInvert: 0
+  - joystick: Joystick1Button13
+    xbox: 0
+    ps4: 14
+    isAxis: 0
+    isInvert: 0
+  - joystick: x axis
+    xbox: 11
+    ps4: 15
+    isAxis: 1
+    isInvert: 0
+  - joystick: y axis
+    xbox: 12
+    ps4: 16
+    isAxis: 1
+    isInvert: 0
+  - joystick: 3rd axis
+    xbox: 13
+    ps4: 17
+    isAxis: 1
+    isInvert: 0
+  - joystick: 4th axis
+    xbox: 14
+    ps4: 0
+    isAxis: 1
+    isInvert: 0
+  - joystick: 5th axis
+    xbox: 15
+    ps4: 0
+    isAxis: 1
+    isInvert: 0
+  - joystick: 6th axis
+    xbox: 16
+    ps4: 18
+    isAxis: 1
+    isInvert: 0
+  - joystick: 7th axis
+    xbox: 17
+    ps4: 19
+    isAxis: 1
+    isInvert: 0
+  - joystick: 8th axis
+    xbox: 0
+    ps4: 20
+    isAxis: 1
+    isInvert: 0
+  - joystick: 9th axis
+    xbox: 18
+    ps4: 0
+    isAxis: 1
+    isInvert: 0
+  - joystick: 10th axis
+    xbox: 19
+    ps4: 0
+    isAxis: 1
+    isInvert: 0
