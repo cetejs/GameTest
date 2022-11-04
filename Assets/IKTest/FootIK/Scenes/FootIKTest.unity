@@ -272,14 +272,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FootIKCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 3282712525343630338, guid: 35f22e0a173d97d4f8f9add4d316e2a7, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3282712525343630338, guid: 35f22e0a173d97d4f8f9add4d316e2a7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35f22e0a173d97d4f8f9add4d316e2a7, type: 3}
 --- !u!4 &285647030 stripped
@@ -617,60 +609,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8642225304373351647, guid: 50a0925b0c22af146a2d15615f815a1c, type: 3}
   m_PrefabInstance: {fileID: 638704699}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &880966887 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3282712525343630338, guid: 35f22e0a173d97d4f8f9add4d316e2a7, type: 3}
-  m_PrefabInstance: {fileID: 285647029}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &880966888 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8080994703452447938, guid: 35f22e0a173d97d4f8f9add4d316e2a7, type: 3}
-  m_PrefabInstance: {fileID: 285647029}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &880966889
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880966887}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.0001
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &880966890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880966887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5add13cbff90841a0b4a7091d41486, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 880966888}
-  environmentLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  leftFootIKCurve: LeftFootIK
-  rightFootIKCurve: RightFootIK
-  isUseIKRotate: 1
-  isMovePelvis: 1
-  pelvisMoveSpeed: 0.1
-  footIKPosSpeed: 0.5
-  raycastUpHeight: 0.5
-  raycastDownDistance: 0.5
-  leftFootAngleOffset: 0
-  rightFootAngleOffset: 0
 --- !u!1 &925781852
 GameObject:
   m_ObjectHideFlags: 0

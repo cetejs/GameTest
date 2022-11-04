@@ -908,10 +908,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2793737046263692984}
   - component: {fileID: 8080994703452447938}
-  - component: {fileID: 880966889}
-  - component: {fileID: 880966890}
+  - component: {fileID: 4973665215167915641}
+  - component: {fileID: 4973665215167915642}
   m_Layer: 6
-  m_Name: FootIKCharacter
+  m_Name: HeadTrackCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,7 +945,7 @@ Animator:
   m_GameObject: {fileID: 3282712525343630338}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 93fa880ed638cb043b0bf4bac7a36dff, type: 3}
-  m_Controller: {fileID: 9100000, guid: b60a76ce17bc9364786da2f54235b805, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0a65cd36c21e4be4bbab68c31300b076, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -955,7 +955,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &880966889
+--- !u!143 &4973665215167915641
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -973,7 +973,7 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &880966890
+--- !u!114 &4973665215167915642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -982,23 +982,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3282712525343630338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5add13cbff90841a0b4a7091d41486, type: 3}
+  m_Script: {fileID: 11500000, guid: a9aea21ed89a268418cd93f1b7119b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8080994703452447938}
-  environmentLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  leftFootIKCurve: LeftFootIK
-  rightFootIKCurve: RightFootIK
-  isUseIKRotate: 1
-  isMovePelvis: 1
-  pelvisMoveSpeed: 0.1
-  footIKPosSpeed: 0.5
-  raycastUpHeight: 0.5
-  raycastDownDistance: 0.5
-  leftFootAngleOffset: 0
-  rightFootAngleOffset: 0
+  trackTarget: {fileID: 0}
+  lookAtWight: 1
+  bodyWeight: 0.1
+  headWeight: 1
+  eyesWeight: 1
+  clampWeight: 0.5
+  maxDistance: 3
+  lookSpeed: 3
 --- !u!1 &3335725775699887961
 GameObject:
   m_ObjectHideFlags: 0
