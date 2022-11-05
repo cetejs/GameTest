@@ -69,7 +69,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: b9efd98973b74824d822b545a9d08995, type: 3}
+  m_Motion: {fileID: 1827226128182048838, guid: f6cc7fc956d9c934b850ac2914c5de44, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -81,7 +81,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AimIKCharacter
+  m_Name: AimIKLoopCharacter
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: ForwardSpeed

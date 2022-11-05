@@ -1,3 +1,4 @@
+using GameFramework.Generic;
 using GameFramework.Utils;
 using UnityEngine;
 
@@ -21,7 +22,10 @@ public class AimIK : MonoBehaviour
     private float maxDistance = 3.0f;
     [SerializeField]
     private float lookSpeed = 1.0f;
+    [SerializeField]
+    private string aimIKCurve = "AimIK";
 
+    private AnimatorParameter aimParameter;
     private Transform rawTarget;
     private Transform head;
     private float weight;
@@ -34,6 +38,7 @@ public class AimIK : MonoBehaviour
         }
 
         head = anim.GetBoneTransform(HumanBodyBones.Head);
+        aimParameter = new AnimatorParameter(anim, aimIKCurve);
     }
 
     private void Update()
@@ -50,6 +55,11 @@ public class AimIK : MonoBehaviour
 
         bool isOutRange = !trackTarget || VectorUtils.SqrDistance(head.position, trackTarget.position) > maxDistance * maxDistance;
         weight = Mathf.Lerp(weight, isOutRange ? 0.0f : lookAtWight, lookSpeed * Time.deltaTime);
+
+        if (aimParameter.isValid)
+        {
+            weight = Mathf.Clamp(weight, 0.0f, anim.GetFloat(aimParameter));
+        }
     }
 
     private void OnAnimatorIK(int layerIndex)
