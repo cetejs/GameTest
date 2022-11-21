@@ -12,8 +12,18 @@ public class FootIKSolver
     private Vector3 velocity;
     private float lastTime;
     private bool isGrounded;
-
     private RaycastHit hitInfo;
+
+    public FootIKSolver(FootIKInfo info, Transform transform)
+    {
+        this.info = info;
+        this.transform = transform;
+    }
+
+    public float IKOffset
+    {
+        get { return ikOffset; }
+    }
 
     public Vector3 IKPosition
     {
@@ -25,20 +35,9 @@ public class FootIKSolver
         get { return transform.rotation * rotationOffset; }
     }
 
-    public float IKOffset
-    {
-        get { return ikOffset; }
-    }
-
     public bool IsGrounded
     {
         get { return isGrounded; }
-    }
-
-    public FootIKSolver(FootIKInfo info, Transform transform)
-    {
-        this.info = info;
-        this.transform = transform;
     }
 
     public void Process()
