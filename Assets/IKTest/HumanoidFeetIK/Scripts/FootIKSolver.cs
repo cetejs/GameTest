@@ -57,20 +57,19 @@ public class FootIKSolver
         Vector3 prediction = position + velocity * info.prediction;
 
         hitInfo = Raycast(prediction);
-        isGrounded = hitInfo.collider;
         if (info.quality == FootIKInfo.Quality.Sample)
         {
             if (velocity.sqrMagnitude > 0.01f)
             {
                 RaycastHit footHit = Raycast(position);
-                if (!isGrounded || hitInfo.point.y < footHit.point.y)
+                if (footHit.collider && (!hitInfo.collider || hitInfo.point.y < footHit.point.y))
                 {
                     hitInfo = footHit;
-                    isGrounded = hitInfo.collider;
                 }
             }
         }
 
+        isGrounded = hitInfo.collider;
         SolveIKOffset(deltaTime);
         SolveRotationOffset(deltaTime);
     }

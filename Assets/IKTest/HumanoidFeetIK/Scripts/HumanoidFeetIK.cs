@@ -10,7 +10,6 @@ public class HumanoidFeetIK : MonoBehaviour
     private float footRotationWeight = 1;
     [SerializeField]
     private FootIKInfo footIKInfo;
-
     [SerializeField]
     private PelvisInfo pelvisInfo;
 
