@@ -55,31 +55,24 @@ public class FootIKSolver
         lastPosition = position;
 
         Vector3 prediction = position + velocity * info.prediction;
-        float rootYOffset = position.y - info.root.position.y + info.heightOffset;
+
         hitInfo = Raycast(prediction);
+        isGrounded = hitInfo.collider;
         if (info.quality == FootIKInfo.Quality.Sample)
         {
-            RaycastHit footHit = Raycast(position);
-            if (hitInfo.point.y < footHit.point.y)
+            if (velocity.sqrMagnitude > 0.01f)
             {
-                hitInfo = footHit;
+                RaycastHit footHit = Raycast(position);
+                if (!isGrounded || hitInfo.point.y < footHit.point.y)
+                {
+                    hitInfo = footHit;
+                    isGrounded = hitInfo.collider;
+                }
             }
         }
 
-        isGrounded = hitInfo.collider;
-        float heightFormGround = position.y - hitInfo.point.y - rootYOffset;
-        float offsetTarget = Mathf.Clamp(heightFormGround, -info.maxStep, info.maxStep);
-        if (!isGrounded)
-        {
-            offsetTarget = 0.0f;
-        }
-
-        ikOffset = Mathf.MoveTowards(ikOffset, offsetTarget, info.footSpeed * deltaTime);
-
-        Vector3 normal = Vector3.RotateTowards(Vector3.up, hitInfo.normal, info.maxFootRotationAngle * Mathf.Deg2Rad, deltaTime);
-        Quaternion hitRotation = Quaternion.FromToRotation(Vector3.up, normal);
-        Quaternion rotationOffsetTarget = Quaternion.RotateTowards(Quaternion.identity, hitRotation, info.maxFootRotationAngle);
-        rotationOffset = Quaternion.Slerp(rotationOffset, rotationOffsetTarget, info.footRotationSpeed * deltaTime);
+        SolveIKOffset(deltaTime);
+        SolveRotationOffset(deltaTime);
     }
 
     public void OnDrawGizmos()
@@ -88,7 +81,7 @@ public class FootIKSolver
         {
             return;
         }
-        
+
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(hitInfo.point, 0.05f);
     }
@@ -112,6 +105,28 @@ public class FootIKSolver
 #endif
         return hitInfo;
     }
+
+    private void SolveIKOffset(float deltaTime)
+    {
+        // float rootYOffset = position.y - info.root.position.y + info.heightOffset;
+        // float heightFormGround = position.y - hitInfo.point.y - rootYOffset;
+        float heightFormGround = info.root.position.y - hitInfo.point.y - info.heightOffset;
+        float offsetTarget = Mathf.Clamp(heightFormGround, -info.maxStep, info.maxStep);
+        if (!isGrounded)
+        {
+            offsetTarget = 0.0f;
+        }
+
+        ikOffset = Mathf.MoveTowards(ikOffset, offsetTarget, info.footSpeed * deltaTime);
+    }
+
+    private void SolveRotationOffset(float deltaTime)
+    {
+        Vector3 normal = Vector3.RotateTowards(Vector3.up, hitInfo.normal, info.maxFootRotationAngle * Mathf.Deg2Rad, deltaTime);
+        Quaternion hitRotation = Quaternion.FromToRotation(Vector3.up, normal);
+        Quaternion rotationOffsetTarget = Quaternion.RotateTowards(Quaternion.identity, hitRotation, info.maxFootRotationAngle);
+        rotationOffset = Quaternion.Slerp(rotationOffset, rotationOffsetTarget, info.footRotationSpeed * deltaTime);
+    }
 }
 
 [Serializable]
@@ -124,6 +139,7 @@ public class FootIKInfo
     public float footRotationSpeed = 7;
     public float prediction = 0.05f;
     public float maxStep = 0.5f;
+    [Range(0.0f, 90.0f)]
     public float maxFootRotationAngle = 45.0f;
     public Quality quality = Quality.Sample;
     public bool isDebugInfo;

@@ -23,6 +23,8 @@ using UnityEngine;
             }
 
             lastTime = Time.time;
+            lowestOffset *= info.lowerPelvisWeight;
+            highestOffset *= info.liftPelvisWeight;
             float offsetTarget = lowestOffset + highestOffset;
             if (!isGrounded)
             {
@@ -37,7 +39,9 @@ using UnityEngine;
     [Serializable]
     public class PelvisInfo
     {
+        [Range(0.0f, 1.0f)]
         public float lowerPelvisWeight = 1.0f;
+        [Range(0.0f, 1.0f)]
         public float liftPelvisWeight;
-        public float pelvisSpeed = 7.0f;
+        public float pelvisSpeed = 5.0f;
     }

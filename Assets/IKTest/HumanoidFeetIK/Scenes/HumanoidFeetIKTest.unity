@@ -224,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 880966889, guid: c063f8e9977766b4da20ee452e7a8afa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1858197889, guid: c063f8e9977766b4da20ee452e7a8afa, type: 3}
       propertyPath: maxStep
       value: 1
@@ -258,7 +262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1858197889, guid: c063f8e9977766b4da20ee452e7a8afa, type: 3}
       propertyPath: footIKInfo.maxStep
-      value: 1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1858197889, guid: c063f8e9977766b4da20ee452e7a8afa, type: 3}
       propertyPath: footIKInfo.quality
@@ -809,6 +813,14 @@ PrefabInstance:
     - target: {fileID: 7942582801189800346, guid: d826d8da459417541bacf5d9c23e0ef9, type: 3}
       propertyPath: m_Name
       value: Stairs_200x100x200_Prefab1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543366329974462172, guid: d826d8da459417541bacf5d9c23e0ef9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985210381569224479, guid: d826d8da459417541bacf5d9c23e0ef9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d826d8da459417541bacf5d9c23e0ef9, type: 3}

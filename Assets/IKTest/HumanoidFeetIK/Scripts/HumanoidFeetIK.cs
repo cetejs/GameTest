@@ -11,10 +11,6 @@ public class HumanoidFeetIK : MonoBehaviour
     [SerializeField]
     private FootIKInfo footIKInfo;
 
-    [SerializeField] [Range(0.0f, 1.0f)]
-    public float lowerPelvisWeight = 1.0f;
-    [SerializeField] [Range(0.0f, 1.0f)]
-    public float liftPelvisWeight;
     [SerializeField]
     private PelvisInfo pelvisInfo;
 
@@ -75,7 +71,7 @@ public class HumanoidFeetIK : MonoBehaviour
         float highestOffset = Mathf.Min(leftFootSolver.IKOffset, rightFootSolver.IKOffset);
         lowestOffset = Mathf.Max(lowestOffset, 0f);
         highestOffset = Mathf.Min(highestOffset, 0f);
-        pelvis.Process(lowestOffset * lowerPelvisWeight, highestOffset * liftPelvisWeight, isGrounded);
+        pelvis.Process(lowestOffset , highestOffset, isGrounded);
     }
 
     private void AppleFootIk(AvatarIKGoal foot, Vector3 footIKPos, Quaternion footIKRot)
