@@ -908,11 +908,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2793737046263692984}
   - component: {fileID: 8080994703452447938}
-  - component: {fileID: 880966889}
-  - component: {fileID: 880966890}
-  - component: {fileID: 1459195999049077231}
+  - component: {fileID: 4973665215167915641}
+  - component: {fileID: 7931709773750630498}
+  - component: {fileID: 7532423824644226707}
+  - component: {fileID: 7532423824644226708}
+  - component: {fileID: 7532423824644226709}
+  - component: {fileID: 7532423824644226710}
   m_Layer: 6
-  m_Name: FootIKCharacter
+  m_Name: CCDIKCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -946,17 +949,17 @@ Animator:
   m_GameObject: {fileID: 3282712525343630338}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 93fa880ed638cb043b0bf4bac7a36dff, type: 3}
-  m_Controller: {fileID: 9100000, guid: b60a76ce17bc9364786da2f54235b805, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0a65cd36c21e4be4bbab68c31300b076, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &880966889
+--- !u!143 &4973665215167915641
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -974,33 +977,7 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &880966890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282712525343630338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5add13cbff90841a0b4a7091d41486, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8080994703452447938}
-  environmentLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  leftFootIKCurve: LeftFootIK
-  rightFootIKCurve: RightFootIK
-  isUseIKRotate: 1
-  isMovePelvis: 1
-  pelvisMoveSpeed: 0.1
-  footIKPosSpeed: 0.5
-  raycastUpHeight: 0.5
-  raycastDownDistance: 0.5
-  leftFootAngleOffset: 0
-  rightFootAngleOffset: 0
---- !u!114 &1459195999049077231
+--- !u!114 &7931709773750630498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1086,6 +1063,86 @@ MonoBehaviour:
   - {fileID: 5955402175430353358}
   - {fileID: 4215887326206077001}
   - {fileID: 2454156773360892443}
+--- !u!114 &7532423824644226707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282712525343630338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a1adb6d7d4ef344ae4b66432f562b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  rotationWeight: 1
+  bones:
+    effector: {fileID: 8895599513410636944}
+    baseBone: {fileID: 8147654451029428843}
+  target: {fileID: 0}
+  sqrDistanceError: 0.000001
+  maxIterationCount: 10
+--- !u!114 &7532423824644226708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282712525343630338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a1adb6d7d4ef344ae4b66432f562b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  rotationWeight: 1
+  bones:
+    effector: {fileID: 4105678387512862363}
+    baseBone: {fileID: 8217480218335102550}
+  target: {fileID: 0}
+  sqrDistanceError: 0.000001
+  maxIterationCount: 10
+--- !u!114 &7532423824644226709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282712525343630338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a1adb6d7d4ef344ae4b66432f562b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  rotationWeight: 1
+  bones:
+    effector: {fileID: 132699829964261218}
+    baseBone: {fileID: 201404821635082064}
+  target: {fileID: 0}
+  sqrDistanceError: 0.000001
+  maxIterationCount: 10
+--- !u!114 &7532423824644226710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282712525343630338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a1adb6d7d4ef344ae4b66432f562b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  rotationWeight: 1
+  bones:
+    effector: {fileID: 2972042724804050735}
+    baseBone: {fileID: 5769280551635167507}
+  target: {fileID: 0}
+  sqrDistanceError: 0.000001
+  maxIterationCount: 10
 --- !u!1 &3335725775699887961
 GameObject:
   m_ObjectHideFlags: 0

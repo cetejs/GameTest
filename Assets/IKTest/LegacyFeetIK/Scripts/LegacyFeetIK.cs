@@ -1,7 +1,7 @@
 using GameFramework.Generic;
 using UnityEngine;
 
-public class FootIK : MonoBehaviour
+public class LegacyFeetIK : MonoBehaviour
 {
     [SerializeField]
     private Animator anim;

@@ -5,7 +5,7 @@ public class HumanoidFeetIK : MonoBehaviour
     [SerializeField]
     private Animator anim;
     [SerializeField] [Range(0.0f, 1.0f)]
-    private float widget = 1.0f;
+    private float weight = 1.0f;
     [SerializeField] [Range(0.0f, 1.0f)]
     private float footRotationWeight = 1;
     [SerializeField]
@@ -33,12 +33,15 @@ public class HumanoidFeetIK : MonoBehaviour
 
     private void OnValidate()
     {
-        footIKInfo.root = anim? anim.transform : null;
+        if (footIKInfo != null)
+        {
+            footIKInfo.root = anim ? anim.transform : null;
+        }
     }
 
     private void OnAnimatorIK(int layerIndex)
     {
-        if (!anim || widget <= 0)
+        if (!anim || weight <= 0)
         {
             return;
         }
@@ -70,13 +73,13 @@ public class HumanoidFeetIK : MonoBehaviour
         float highestOffset = Mathf.Min(leftFootSolver.IKOffset, rightFootSolver.IKOffset);
         lowestOffset = Mathf.Max(lowestOffset, 0f);
         highestOffset = Mathf.Min(highestOffset, 0f);
-        pelvis.Process(lowestOffset , highestOffset, isGrounded);
+        pelvis.Process(lowestOffset, highestOffset, isGrounded);
     }
 
     private void AppleFootIk(AvatarIKGoal foot, Vector3 footIKPos, Quaternion footIKRot)
     {
-        anim.SetIKPositionWeight(foot, widget);
-        anim.SetIKRotationWeight(foot, widget * footRotationWeight);
+        anim.SetIKPositionWeight(foot, weight);
+        anim.SetIKRotationWeight(foot, weight * footRotationWeight);
         anim.SetIKPosition(foot, footIKPos);
         anim.SetIKRotation(foot, footIKRot);
     }

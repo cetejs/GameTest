@@ -910,9 +910,9 @@ GameObject:
   - component: {fileID: 8080994703452447938}
   - component: {fileID: 880966889}
   - component: {fileID: 1459195999049077231}
-  - component: {fileID: 1858197889}
+  - component: {fileID: 4529654303906166205}
   m_Layer: 6
-  m_Name: HumanoidFeetIKCharacter
+  m_Name: FeetIKCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -946,7 +946,7 @@ Animator:
   m_GameObject: {fileID: 3282712525343630338}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 93fa880ed638cb043b0bf4bac7a36dff, type: 3}
-  m_Controller: {fileID: 9100000, guid: aa0a6a8e150791944949c450539ef664, type: 2}
+  m_Controller: {fileID: 9100000, guid: 90d8d8aa3dc65c04e861282ed40840b2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   - {fileID: 5955402175430353358}
   - {fileID: 4215887326206077001}
   - {fileID: 2454156773360892443}
---- !u!114 &1858197889
+--- !u!114 &4529654303906166205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1069,12 +1069,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3282712525343630338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4bb81d921e9629488aca6cfa8f74675, type: 3}
+  m_Script: {fileID: 11500000, guid: b118cd9aa2c272949b47c3fda4f66f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8080994703452447938}
   weight: 1
-  footRotationWeight: 0
+  footRotationWeight: 1
   footIKInfo:
     root: {fileID: 2793737046263692984}
     environmentLayer:
@@ -1087,11 +1087,17 @@ MonoBehaviour:
     maxStep: 0.5
     maxFootRotationAngle: 45
     quality: 1
-    isDebugInfo: 0
+    isDebugInfo: 1
   pelvisInfo:
+    pelvis: {fileID: 7997814668311752127}
     lowerPelvisWeight: 1
     liftPelvisWeight: 0
-    pelvisSpeed: 7
+    pelvisSpeed: 5
+  bones:
+  - effector: {fileID: 132699829964261218}
+    baseBone: {fileID: 201404821635082064}
+  - effector: {fileID: 2972042724804050735}
+    baseBone: {fileID: 5769280551635167507}
 --- !u!1 &3335725775699887961
 GameObject:
   m_ObjectHideFlags: 0

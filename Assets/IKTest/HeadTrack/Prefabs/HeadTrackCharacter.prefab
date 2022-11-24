@@ -909,8 +909,8 @@ GameObject:
   - component: {fileID: 2793737046263692984}
   - component: {fileID: 8080994703452447938}
   - component: {fileID: 4973665215167915641}
-  - component: {fileID: 4973665215167915642}
   - component: {fileID: 7931709773750630498}
+  - component: {fileID: 4973665215167915642}
   m_Layer: 6
   m_Name: HeadTrackCharacter
   m_TagString: Untagged
@@ -974,27 +974,6 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4973665215167915642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282712525343630338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9aea21ed89a268418cd93f1b7119b47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8080994703452447938}
-  trackTarget: {fileID: 0}
-  lookAtWight: 1
-  bodyWeight: 0.1
-  headWeight: 1
-  eyesWeight: 1
-  clampWeight: 0.5
-  maxDistance: 3
-  lookSpeed: 3
 --- !u!114 &7931709773750630498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,6 +1060,27 @@ MonoBehaviour:
   - {fileID: 5955402175430353358}
   - {fileID: 4215887326206077001}
   - {fileID: 2454156773360892443}
+--- !u!114 &4973665215167915642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282712525343630338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9aea21ed89a268418cd93f1b7119b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 8080994703452447938}
+  trackTarget: {fileID: 0}
+  lookAtWight: 1
+  bodyWeight: 0.1
+  headWeight: 1
+  eyesWeight: 1
+  clampWeight: 0.5
+  maxDistance: 3
+  lookSpeed: 3
 --- !u!1 &3335725775699887961
 GameObject:
   m_ObjectHideFlags: 0

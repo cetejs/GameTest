@@ -71,12 +71,12 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FootIKCharacter
+  m_Name: CCDIKCharacter
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: ForwardSpeed
     m_Type: 1
-    m_DefaultFloat: 0.5
+    m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
@@ -87,12 +87,6 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: RightFootIK
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: LeftFootLandMotion
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0

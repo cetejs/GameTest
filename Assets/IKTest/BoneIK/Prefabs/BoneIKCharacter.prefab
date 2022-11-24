@@ -235,8 +235,8 @@ GameObject:
   - component: {fileID: 564247980044429966}
   - component: {fileID: 5851495711534379252}
   - component: {fileID: 412392094716659627}
-  - component: {fileID: 7123265746627577844}
   - component: {fileID: 7238636417176687384}
+  - component: {fileID: 7123265746627577844}
   m_Layer: 6
   m_Name: BoneIKCharacter
   m_TagString: Untagged
@@ -300,26 +300,6 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &7123265746627577844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909529353387765812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a0bc40577c333498fd5c5bf83dc3ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 5851495711534379252}
-  trackTarget: {fileID: 6784168342048994269}
-  boneWeight: 1
-  matchSpeed: 10
-  isIKPosition: 1
-  isIKRotation: 1
-  avatarIKGoal: 2
-  boneIKCurve: LeftHeadIK
 --- !u!114 &7238636417176687384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +386,26 @@ MonoBehaviour:
   - {fileID: 759927996456664898}
   - {fileID: 7111130942871484101}
   - {fileID: 8800300097729094807}
+--- !u!114 &7123265746627577844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909529353387765812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a0bc40577c333498fd5c5bf83dc3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 5851495711534379252}
+  trackTarget: {fileID: 6784168342048994269}
+  boneWeight: 1
+  matchSpeed: 10
+  isIKPosition: 1
+  isIKRotation: 1
+  avatarIKGoal: 2
+  boneIKCurve: LeftHeadIK
 --- !u!1 &933301652728909644
 GameObject:
   m_ObjectHideFlags: 0

@@ -784,8 +784,8 @@ GameObject:
   - component: {fileID: 2793737046263692984}
   - component: {fileID: 8080994703452447938}
   - component: {fileID: 2641600781176198045}
-  - component: {fileID: 7155316479636419835}
   - component: {fileID: 5000412851528468270}
+  - component: {fileID: 7155316479636419835}
   m_Layer: 6
   m_Name: AimIKCharacter
   m_TagString: Untagged
@@ -849,28 +849,6 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &7155316479636419835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282712525343630338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ca480fa079543e418013827a14cf5f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8080994703452447938}
-  trackTarget: {fileID: 0}
-  lookAtWight: 1
-  bodyWeight: 1
-  headWeight: 1
-  eyesWeight: 1
-  clampWeight: 0.5
-  maxDistance: 3
-  lookSpeed: 10
-  aimIKCurve: AimIK
 --- !u!114 &5000412851528468270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,6 +935,28 @@ MonoBehaviour:
   - {fileID: 3141836860461853556}
   - {fileID: 4881350507111015155}
   - {fileID: 6571094727470919841}
+--- !u!114 &7155316479636419835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282712525343630338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca480fa079543e418013827a14cf5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 8080994703452447938}
+  trackTarget: {fileID: 0}
+  lookAtWight: 1
+  bodyWeight: 1
+  headWeight: 1
+  eyesWeight: 1
+  clampWeight: 0.5
+  maxDistance: 3
+  lookSpeed: 10
+  aimIKCurve: AimIK
 --- !u!1 &3306211048437308282
 GameObject:
   m_ObjectHideFlags: 0
