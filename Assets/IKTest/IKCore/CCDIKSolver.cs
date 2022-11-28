@@ -6,8 +6,8 @@ public class CCDIKSolver
     private int maxIterationCount;
     private float posIKWeight;
     private float rotIKWeight;
-    private Vector3 targetPos;
-    private Quaternion targetRot;
+    private Vector3 targetPosition;
+    private Quaternion targetRotation;
     private IKBones bones;
 
     public Transform Effector
@@ -48,23 +48,35 @@ public class CCDIKSolver
 
     public void SetIKPosition(Vector3 pos)
     {
-        targetPos = pos;
+        targetPosition = pos;
     }
 
     public void SetIKRotation(Quaternion rot)
     {
-        targetRot = rot;
+        targetRotation = rot;
     }
 
     public void Process()
     {
+        ProcessPosition();
+        ProcessRotation();
+    }
+
+    private void ProcessPosition()
+    {
         Transform effector = bones.effector;
-        Vector3 targetPos = Vector3.Lerp(effector.position, this.targetPos, posIKWeight);
+        Vector3 targetPos;
+        if (posIKWeight >= 1)
+        {
+            targetPos = targetPosition;
+        }
+        else
+        {
+            targetPos = Vector3.Lerp(effector.position, targetPosition, posIKWeight);
+        }
+
         float sqrDistance;
         int iterationCount = 0;
-
-        Quaternion boneRot = effector.rotation;
-        effector.rotation = Quaternion.Lerp(boneRot, targetRot, rotIKWeight);
 
         do
         {
@@ -76,7 +88,6 @@ public class CCDIKSolver
                     Vector3 bonePos = bones[j].position;
                     bones[j].rotation = Quaternion.FromToRotation(effectorPos - bonePos, targetPos - bonePos) * bones[j].rotation;
                     sqrDistance = (effectorPos - targetPos).sqrMagnitude;
-
                     if (sqrDistance <= sqrDistanceError)
                     {
                         return;
@@ -88,5 +99,19 @@ public class CCDIKSolver
             iterationCount++;
         }
         while (sqrDistance > sqrDistanceError && iterationCount <= maxIterationCount);
+    }
+
+    private void ProcessRotation()
+    {
+        Transform effector = bones.effector;
+        Quaternion boneRot = effector.rotation;
+        if (rotIKWeight >= 1)
+        {
+            effector.rotation = targetRotation;
+        }
+        else
+        {
+            effector.rotation = Quaternion.Lerp(boneRot, targetRotation, rotIKWeight);
+        }
     }
 }
