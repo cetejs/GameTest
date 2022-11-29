@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class CCDIK : MonoBehaviour
+public class FABRIK : MonoBehaviour
 {
-    [SerializeField][Range(0.0f, 1.0f)]
+    [SerializeField] [Range(0.0f, 1.0f)]
     private float weight = 1.0f;
-    [SerializeField][Range(0.0f, 1.0f)]
+    [SerializeField] [Range(0.0f, 1.0f)]
     private float rotationWeight = 1.0f;
     [SerializeField]
-    private IKBones bones;
+    private IKPoleBones bones;
     [SerializeField]
     private Transform target;
     [SerializeField]
     private float distanceError = 0.001f;
     [SerializeField]
     private int maxIterationCount = 10;
-    private CCDIKSolver solver = new CCDIKSolver();
+    private FABRIKSolver solver = new FABRIKSolver();
 
     private void Awake()
     {

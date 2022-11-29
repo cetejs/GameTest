@@ -2,38 +2,29 @@ using UnityEngine;
 
 public class CCDIKSolver
 {
-    private float sqrDistanceError;
     private int maxIterationCount;
+    private float sqrDistanceError;
     private float posIKWeight;
     private float rotIKWeight;
     private Vector3 targetPosition;
     private Quaternion targetRotation;
     private IKBones bones;
 
-    public Transform Effector
-    {
-        get { return bones.effector; }
-    }
-
     public CCDIKSolver()
     {
     }
 
-    public CCDIKSolver(IKBones bones, float sqrDistanceError = 1e-6f, int maxIterationCount = 10)
+    public CCDIKSolver(IKBones bones, int maxIterationCount = 10, float distanceError = 0.001f)
     {
-        Init(bones, sqrDistanceError, maxIterationCount);
+        Init(bones, maxIterationCount, distanceError);
     }
 
-    public void Init(IKBones bones, float sqrDistanceError = 1e-6f, int maxIterationCount = 10)
+    public void Init(IKBones bones, int maxIterationCount = 10, float distanceError = 0.001f)
     {
-        if (bones.Count == 0)
-        {
-            bones.Update();
-        }
-
+        bones.Update();
         this.bones = bones;
-        this.sqrDistanceError = sqrDistanceError;
         this.maxIterationCount = maxIterationCount;
+        sqrDistanceError = distanceError * distanceError;
     }
 
     public void SetIKPositionWeight(float weight)

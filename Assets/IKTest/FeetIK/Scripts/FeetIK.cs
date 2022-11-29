@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,10 +14,10 @@ public class FeetIK : MonoBehaviour
     [SerializeField]
     private PelvisInfo pelvisInfo;
     [SerializeField]
-    private List<IKBones> bones = new List<IKBones>();
+    private List<IKPoleBones> bones = new List<IKPoleBones>();
 
     private FootIKSolver[] footIKSolvers;
-    private CCDIKSolver[] ccdIKSolvers;
+    private FABRIKSolver[] fabrIKSolvers;
     private FeetIKPelvis pelvis;
 
     private void Awake()
@@ -30,12 +29,12 @@ public class FeetIK : MonoBehaviour
 
         footIKInfo.root = anim.transform;
         footIKSolvers = new FootIKSolver[bones.Count];
-        ccdIKSolvers = new CCDIKSolver[bones.Count];
+        fabrIKSolvers = new FABRIKSolver[bones.Count];
         pelvis = new FeetIKPelvis(pelvisInfo);
         for (int i = 0; i < bones.Count; i++)
         {
             footIKSolvers[i] = new FootIKSolver(footIKInfo, bones[i].effector);
-            ccdIKSolvers[i] = new CCDIKSolver(bones[i]);
+            fabrIKSolvers[i] = new FABRIKSolver(bones[i]);
         }
     }
 
@@ -59,15 +58,14 @@ public class FeetIK : MonoBehaviour
             footIKSolvers[i].Process();
         }
 
-        
         MovePelvisHeight();
         for (int i = 0; i < bones.Count; i++)
         {
-            ccdIKSolvers[i].SetIKPositionWeight(weight);
-            ccdIKSolvers[i].SetIKRotationWeight(weight * footRotationWeight);
-            ccdIKSolvers[i].SetIKPosition(footIKSolvers[i].IKPosition);
-            ccdIKSolvers[i].SetIKRotation(footIKSolvers[i].IKRotation);
-            ccdIKSolvers[i].Process();
+            fabrIKSolvers[i].SetIKPositionWeight(weight);
+            fabrIKSolvers[i].SetIKRotationWeight(weight * footRotationWeight);
+            fabrIKSolvers[i].SetIKPosition(footIKSolvers[i].IKPosition);
+            fabrIKSolvers[i].SetIKRotation(footIKSolvers[i].IKRotation);
+            fabrIKSolvers[i].Process();
         }
     }
 
