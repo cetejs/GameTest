@@ -38,6 +38,7 @@ public class FeetIKPelvis
             offsetTarget = 0.0f;
         }
 
+        offsetTarget -= info.pelvisOffset;
         pelvisOffset = Mathf.Lerp(pelvisOffset, offsetTarget, info.pelvisSpeed * deltaTime);
 
         if (anim)
@@ -59,5 +60,6 @@ public class PelvisInfo
     public float lowerPelvisWeight = 1.0f;
     [Range(0.0f, 1.0f)]
     public float liftPelvisWeight;
+    public float pelvisOffset;
     public float pelvisSpeed = 5.0f;
 }
