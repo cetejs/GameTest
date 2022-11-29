@@ -1409,7 +1409,7 @@ MonoBehaviour:
   anim: {fileID: 4857850886953237509}
   cc: {fileID: 1293337123365128253}
   forward: {x: 0, y: 0, z: 1}
-  speed: 1
+  speed: 1.5
 --- !u!114 &5951602454178624572
 MonoBehaviour:
   m_ObjectHideFlags: 0
