@@ -1287,7 +1287,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4773424600687712225}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
@@ -1406,8 +1406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdd12ca024a60340b5b732099543c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cc: {fileID: 1293337123365128253}
   anim: {fileID: 4857850886953237509}
+  cc: {fileID: 1293337123365128253}
   forward: {x: 0, y: 0, z: 1}
   speed: 1
 --- !u!114 &5951602454178624572
@@ -1440,9 +1440,9 @@ MonoBehaviour:
     isDebugInfo: 1
   pelvisInfo:
     pelvis: {fileID: 4767378297899043295}
-    lowerPelvisWeight: 1
-    liftPelvisWeight: 0
-    pelvisOffset: 0.2
+    lowerPelvisWeight: 0.5
+    liftPelvisWeight: 0.5
+    pelvisOffset: 0
     pelvisSpeed: 5
   bones:
   - effector: {fileID: 4767083704490519077}
