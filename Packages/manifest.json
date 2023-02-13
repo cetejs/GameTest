@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cetejs.behaviordesigner": "https://github.com/cetejs/BehaviorDesigner.git#upm",
     "com.cetejs.gameframework": "https://github.com/cetejs/GameFramework.git#upm",
     "com.unity.collab-proxy": "1.17.1",
     "com.unity.feature.development": "1.0.1",
