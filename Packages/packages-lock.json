@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "16798aa1ddc52c2f7b1adb11856a0d9739c25bf1"
+      "hash": "ed3d1f50076c4c5c6daf07e8fcf2ca6196a2a423"
     },
     "com.cetejs.gameframework": {
       "version": "https://github.com/cetejs/GameFramework.git#upm",
@@ -14,7 +14,7 @@
       "dependencies": {
         "com.unity.addressables": "1.19.19"
       },
-      "hash": "7d0634849438ee6f0ec117e71141e8a92e0b673b"
+      "hash": "e0438d21425b10cc3651d414e4c067bef26deb45"
     },
     "com.unity.addressables": {
       "version": "1.19.19",

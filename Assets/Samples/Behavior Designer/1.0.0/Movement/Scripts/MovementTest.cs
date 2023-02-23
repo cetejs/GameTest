@@ -32,6 +32,7 @@ public class MovementTest : MonoBehaviour
 
             behaviorTrees[behaviorIndex].Restart();
         }
+
         GUILayout.Box(behaviorTrees[behaviorIndex].Source.behaviorName, GUILayout.MinWidth(200f));
         if (GUILayout.Button("->"))
         {
@@ -42,6 +43,7 @@ public class MovementTest : MonoBehaviour
 
             behaviorTrees[behaviorIndex].Restart();
         }
+
         GUILayout.EndHorizontal();
     }
 }
