@@ -25,6 +25,18 @@ MonoBehaviour:
     m_Address: Configs
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 6f67bb1c20cc0154e9d4785f457ce587
+    m_Address: Configs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 91f9599eb74157d419ddf44b52f7f65d
+    m_Address: Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: de52be88442e81a4494a487e09c361ca
+    m_Address: Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0af2be016a514ab4c93b9a69b132485f, type: 2}
   m_SchemaSet:
