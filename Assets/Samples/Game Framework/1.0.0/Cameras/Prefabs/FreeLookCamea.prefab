@@ -170,8 +170,7 @@ MonoBehaviour:
   turnSmoothing: 15
   minTiltAngle: -45
   maxTiltAngle: 75
-  joystickAxisSpeed: 0.1
-  isLockScreen: 0
+  lookScreen: 0
 --- !u!114 &4094880719532328517
 MonoBehaviour:
   m_ObjectHideFlags: 0

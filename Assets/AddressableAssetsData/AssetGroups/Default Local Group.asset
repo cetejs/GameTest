@@ -17,16 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 79fcc98919e674249a8e585e96d7e88a
   m_SerializeEntries:
+  - m_GUID: 65174edc5d37f2e418587f4060bc3646
+    m_Address: Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 28eaf102ca6e4c54c940cae3a7ed90f2
     m_Address: Configs
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 7d1170f7b2c97e8458d3272dc1dd515d
-    m_Address: Prefabs/ObjectPool
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: f44adf451cefd9d42b5c24f6b260985f
-    m_Address: Prefabs/Windows
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

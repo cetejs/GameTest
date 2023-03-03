@@ -12,9 +12,10 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.addressables": "1.19.19"
+        "com.unity.addressables": "1.19.19",
+        "com.unity.inputsystem": "1.4.4"
       },
-      "hash": "e0438d21425b10cc3651d414e4c067bef26deb45"
+      "hash": "df57b7381b7fe7738f3c7c924a42e9d949f5ab91"
     },
     "com.unity.addressables": {
       "version": "1.19.19",
@@ -90,6 +91,15 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.inputsystem": {
+      "version": "1.4.4",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {

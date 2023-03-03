@@ -1,17 +1,18 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace GameFramework
 {
     public class CursorControlRig : MonoBehaviour
     {
         [SerializeField]
-        private bool isLockCursor;
+        private bool lockCursor;
 
 #if !MOBILE_INPUT
         private void OnEnable()
         {
-            if (isLockCursor)
+            if (lockCursor)
             {
                 HideCursor();
             }
@@ -24,20 +25,20 @@ namespace GameFramework
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Keyboard.current.escapeKey.isPressed)
             {
                 ShowCursor();
             }
 
-            if (isLockCursor && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+            if (lockCursor && Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject())
             {
                 HideCursor();
             }
 
-            if (Input.GetKeyDown(KeyCode.BackQuote))
+            if (Keyboard.current.backquoteKey.wasPressedThisFrame)
             {
-                isLockCursor = !isLockCursor;
-                if (!isLockCursor)
+                lockCursor = !lockCursor;
+                if (!lockCursor)
                 {
                     ShowCursor();
                 }

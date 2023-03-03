@@ -1,6 +1,5 @@
 ﻿using GameFramework.DevConsoleService;
 using GameFramework.Generic;
-using GameFramework.InputService;
 using GameFramework.UIService;
 using GameFramework.Utils;
 using UnityEngine;
@@ -13,7 +12,7 @@ public class ThrowingController : MonoBehaviour
     [SerializeField]
     private string defaultThrowingId = "ThrowingHub";
     private Transform cam;
-    private InputManager input;
+    private ParabolaInputs input;
     private Vector3 lastOrigin;
     private Vector3 lastEuler;
     private ThrowingHub hub;
@@ -23,23 +22,19 @@ public class ThrowingController : MonoBehaviour
     private void Start()
     {
         cam = Camera.main.transform;
-        input = Global.GetService<InputManager>();
+        input = GetComponentInParent<ParabolaInputs>();
         Global.GetService<UIManager>().ShowWindow("ThrowingWindow");
         throwingId = defaultThrowingId;
     }
 
     public void Update()
     {
-        if (input.GetButtonDown("Throwing"))
-        {
-            isThrowing = true;
-        }
-
-        if (isThrowing)
+        if (input.IsThrow)
         {
             Vector3 origin = cc.transform.position;
             Vector3 euler = cam.eulerAngles;
             bool isChanged = false;
+            isThrowing = true;
 
             if (!VectorUtils.Approximately(origin, lastOrigin))
             {
@@ -58,17 +53,17 @@ public class ThrowingController : MonoBehaviour
                 PreThrow(origin, euler);
             }
 
-            if (input.GetButtonUp("Throwing") || input.GetButtonDown("StartThrowing"))
-            {
-                StartThrow();
-                isThrowing = false;
-            }
-
-            if (input.GetButtonDown("CancelThrowing"))
+            if (input.IsCancelThrow)
             {
                 CancelThrow();
-                isThrowing = false;
+                input.IsThrow = false;
+                input.IsCancelThrow = false;
             }
+        }
+        else if(isThrowing)
+        {
+            isThrowing = false;
+            StartThrow();
         }
     }
 
@@ -108,7 +103,7 @@ public class ThrowingController : MonoBehaviour
     [DevCmd("Throwing", -1, "ThrowingHub", "ThrowingHubA", "ThrowingHubB")]
     public static void TestChangeThrowing(string id)
     {
-        ThrowingController con =  FindObjectOfType<ThrowingController>();
+        ThrowingController con = FindObjectOfType<ThrowingController>();
         if (con)
         {
             con.ChangeThrowing(id);

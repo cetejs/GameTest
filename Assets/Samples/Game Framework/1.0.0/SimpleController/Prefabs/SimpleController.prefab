@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7863392770108456129}
   - component: {fileID: 1172546213314345973}
   - component: {fileID: 1106919135449065035}
-  m_Layer: 6
-  m_Name: Character
-  m_TagString: Untagged
+  m_Layer: 0
+  m_Name: SimpleController
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,10 @@ MonoBehaviour:
   jumpTime: 0.5
   gravity: 9.81
   springMulti: 1.5
+  movement: {x: 0, y: 0}
+  isJumpDown: 0
+  isSpringing: 0
+  isStrafing: 0
 --- !u!1 &6867998572159312143
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +138,7 @@ GameObject:
   - component: {fileID: 1588942112039972857}
   - component: {fileID: 5200062000088681632}
   - component: {fileID: 8884225584662337134}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}

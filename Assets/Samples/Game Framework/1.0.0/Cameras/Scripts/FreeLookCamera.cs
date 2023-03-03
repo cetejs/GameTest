@@ -1,27 +1,27 @@
 ﻿using GameFramework.Generic;
 using GameFramework.InputService;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace GameFramework
 {
     public class FreeLookCamera : FollowTargetCamera
     {
         [SerializeField]
-        private float moveSpeed = 5.0f;
+        private float moveSpeed = 5f;
         [SerializeField]
-        private float turnSpeed = 3.0f;
+        private float turnSpeed = 3f;
         [SerializeField]
-        private float turnSmoothing = 15.0f;
+        private float turnSmoothing = 15f;
         [SerializeField]
-        private float minTiltAngle = -45.0f;
+        private float minTiltAngle = -45f;
         [SerializeField]
-        private float maxTiltAngle = 75.0f;
+        private float maxTiltAngle = 75f;
         [SerializeField]
-        private float joystickAxisSpeed = 0.1f;
-        [SerializeField]
-        private bool isLockScreen;
+        private bool lookScreen;
 
         private InputManager input;
+        private IFreeLookInput lookInput;
         private Transform pivot;
         private float lookAngle;
         private float tiltAngle;
@@ -36,6 +36,7 @@ namespace GameFramework
             pivotEuler = pivot.eulerAngles;
             lookTargetRot = transform.localRotation;
             tiltTargetRot = pivot.localRotation;
+            lookInput = GetComponentInParent<IFreeLookInput>();
         }
 
         private void Start()
@@ -45,9 +46,9 @@ namespace GameFramework
 
         protected override void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F11))
+            if (Keyboard.current.f11Key.wasPressedThisFrame)
             {
-                isLockScreen = !isLockScreen;
+                lookScreen = !lookScreen;
             }
 
             HandleRotation();
@@ -72,17 +73,14 @@ namespace GameFramework
 
         private void HandleRotation()
         {
-            if (!isLockScreen && !input.IsPointerOverGameObject())
+            if (!lookScreen && !input.IsPointerOverGameObject())
             {
-                float axisSpeed = input.InputDevice == InputDevice.MouseKeyboard ? 1.0f : joystickAxisSpeed;
-                float x = input.GetAxis("Mouse X") * axisSpeed;
-                float y = input.GetAxis("Mouse Y") * axisSpeed;
-                lookAngle += x * turnSpeed;
-                tiltAngle -= y * turnSpeed;
+                float deltaTimeMultiplier = lookInput.IsCurrentDeviceMouse ? 1f : Time.deltaTime;
+                lookAngle += lookInput.Look.x * turnSpeed * deltaTimeMultiplier;
+                tiltAngle -= lookInput.Look.y * turnSpeed * deltaTimeMultiplier;
             }
-
+            
             tiltAngle = Mathf.Clamp(tiltAngle, minTiltAngle, maxTiltAngle);
-
             lookTargetRot = Quaternion.Euler(0, lookAngle, 0);
             tiltTargetRot = Quaternion.Euler(tiltAngle, pivotEuler.y, pivotEuler.z);
 
