@@ -7,7 +7,7 @@ namespace Escape
     public class CanHearObject : IntervalConditional
     {
         [SerializeField]
-        private SharedTransform listeningTarget;
+        private SharedTag listeningTag = Tag.Untagged;
         [SerializeField]
         private SharedFloat hearRadius = 10f;
         [SerializeField]
@@ -19,17 +19,23 @@ namespace Escape
         [SerializeField]
         private Color viewColor = new Color(1f, 0.92f, 0.016f, 0.1f);
 
+        private Transform target;
         private CharacterController cc;
 
-        public override void OnAwake()
+        public override void OnStart()
         {
-           cc = listeningTarget.Value.GetComponent<CharacterController>();
+            base.OnStart();
+            if (!target)
+            {
+                target = GameObject.FindGameObjectWithTag(listeningTag.Value).transform;
+                cc = target.GetComponent<CharacterController>();
+            }
         }
 
         public override TaskStatus OnConditionalUpdate()
         {
             storeResult.Value = null;
-            if (Vector3.SqrMagnitude(transform.position - listeningTarget.Value.position) > hearRadius.Value * hearRadius.Value)
+            if (Vector3.SqrMagnitude(transform.position - target.position) > hearRadius.Value * hearRadius.Value)
             {
                 return TaskStatus.Failure;
             }
@@ -39,7 +45,7 @@ namespace Escape
                 return TaskStatus.Failure;
             }
 
-            storeResult.Value = listeningTarget.Value;
+            storeResult.Value = target;
             return TaskStatus.Success;
         }
         
@@ -56,6 +62,17 @@ namespace Escape
             UnityEditor.Handles.DrawSolidDisc(transform.position, transform.up, hearRadius.Value);
             UnityEditor.Handles.color = oldColor;
 #endif
+        }
+
+        public override void OnReset()
+        {
+            base.OnReset();
+            listeningTag = Tag.Untagged;
+            hearRadius = 10f;
+            hearSpeed = 3f;
+            storeResult = null;
+            drawGizmos = true;
+            viewColor = new Color(1f, 0.92f, 0.016f, 0.1f);
         }
     }
 }

@@ -6,11 +6,13 @@ namespace Escape
     [TaskCategory("Escape")]
     public class StoreSeekTarget : Action
     {
-        [SerializeField]
+        [SerializeField] [RequiredField]
         private SharedTransform seeObj;
-        [SerializeField]
+        [SerializeField] [RequiredField]
         private SharedTransform hearObj;
-        [SerializeField]
+        [SerializeField] [RequiredField]
+        private SharedTransform alarmObj;
+        [SerializeField] [RequiredField]
         private SharedTransform storeResult;
 
         public override TaskStatus OnUpdate()
@@ -19,12 +21,24 @@ namespace Escape
             {
                 storeResult.Value = seeObj.Value;
             }
-            else
+            else if(hearObj.Value)
             {
                 storeResult.Value = hearObj.Value;
             }
+            else
+            {
+                storeResult.Value = alarmObj.Value;   
+            }
 
             return TaskStatus.Success;
+        }
+
+        public override void OnReset()
+        {
+            seeObj = null;
+            hearObj = null;
+            alarmObj = null;
+            storeResult = null;
         }
     }
 }

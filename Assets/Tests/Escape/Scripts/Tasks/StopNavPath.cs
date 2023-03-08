@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using BehaviorDesigner;
 using UnityEngine;
 using UnityEngine.AI;
@@ -21,6 +19,11 @@ namespace Escape
             
             agent.isStopped = true;
             return TaskStatus.Success;
+        }
+
+        public override void OnReset()
+        {
+            agent = null;
         }
     }
 }

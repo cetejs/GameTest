@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using BehaviorDesigner;
 using UnityEngine;
-using Action = BehaviorDesigner.Action;
 
 namespace Escape
 {
@@ -16,7 +12,7 @@ namespace Escape
         private SharedFloat viewDistance;
         [SerializeField] [RequiredField]
         private SharedVector3 viewOffset;
-        [SerializeField] [RequiredField]
+        [SerializeField]
         private SharedFloat hearDistance;
         [SerializeField]
         private MeshRenderer seeIndicator;
@@ -49,7 +45,7 @@ namespace Escape
                 seeIndicator.transform.localPosition = viewOffset.Value;
             }
             
-            if (lastHearDis != hearDistance.Value)
+            if (lastHearDis != hearDistance.Value && hearIndicator)
             {
                 lastHearDis = hearDistance.Value;
                 float radius = hearDistance.Value / 5f;
@@ -64,6 +60,9 @@ namespace Escape
             fieldOfView = 0f;
             viewDistance = 0f;
             viewOffset = Vector3.zero;
+            hearDistance = 0f;
+            seeIndicator = null;
+            hearIndicator = null;
         }
     }
 }

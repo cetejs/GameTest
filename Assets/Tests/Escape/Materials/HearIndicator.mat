@@ -26,7 +26,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Angle: 360
+    - _Angle: 300
     - _Gradient: 0.5
     m_Colors:
     - _Color: {r: 0.9716981, g: 0.8832702, b: 0.33459416, a: 1}
