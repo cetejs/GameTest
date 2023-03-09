@@ -9,7 +9,7 @@ namespace Escape
     public class SendAlarmEvent : Action
     {
         [SerializeField]
-        private SharedInt eventId;
+        private EventId eventId;
         [SerializeField]
         private SharedFloat radius;
         [SerializeField]
@@ -20,7 +20,7 @@ namespace Escape
             Data<float, Transform> data = ReferencePool.Get<Data<float, Transform>>();
             data.item1 = radius.Value;
             data.item2 = warner.Value;
-            Global.GetService<EventManager>().Send(eventId.Value, data);
+            Global.GetService<EventManager>().Send((int)eventId, data);
             return TaskStatus.Success;
         }
 

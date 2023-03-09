@@ -5,6 +5,7 @@ namespace Escape
 {
     public class TopLookCamera : FollowTargetCamera
     {
+        [LargeHeader("Look")]
         [SerializeField]
         private float followSpeed = 3f;
         [SerializeField]
@@ -13,6 +14,11 @@ namespace Escape
         private Vector2 minMoveRange = Vector3.zero;
         [SerializeField]
         private Vector2 maxMoveRange = Vector3.one * 25f;
+        [LargeHeader("Zoom")]
+        [SerializeField]
+        private float zoomSpeed = 30f;
+        [SerializeField]
+        private Vector2 zoomRange = new Vector2(20, 60);
 
         private PlayerInputs input;
 
@@ -24,6 +30,7 @@ namespace Escape
 
         protected override void FollowTarget()
         {
+            Zoom();
             if (Look())
             {
                 return;
@@ -55,6 +62,15 @@ namespace Escape
             }
 
             return false;
+        }
+
+        private void Zoom()
+        {
+            float zoom = input.Zoom;
+            zoom *= zoomSpeed * Time.deltaTime;
+            Vector3 pos = transform.position;
+            pos.y = Mathf.Clamp(pos.y - zoom, zoomRange.x, zoomRange.y);
+            transform.position = pos;
         }
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7187038927268894225}
   - component: {fileID: 1450881219}
   - component: {fileID: 1450881218}
+  - component: {fileID: 1450881220}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -64,10 +65,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b508fc41ed417df458b352f17d14a806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  moveSpeed: 6
   turnSpeed: 10
   sprintMultiplier: 1.5
   slowMultiplier: 0.5
+  dieEventId: 2
+--- !u!114 &1450881220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7187038927268894312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61773778297ed6a45bd5fd6fb932bef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birthPosition: {x: 0, y: 0, z: 0}
+  birthRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &7187038926103497034
 PrefabInstance:
   m_ObjectHideFlags: 0

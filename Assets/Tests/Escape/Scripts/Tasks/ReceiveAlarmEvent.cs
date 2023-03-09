@@ -9,7 +9,7 @@ namespace Escape
     public class ReceiveAlarmEvent : Action
     {
         [SerializeField]
-        private SharedInt eventId;
+        private EventId eventId;
         [SerializeField] [RequiredField]
         private SharedFloat radius;
         [SerializeField] [RequiredField]
@@ -18,7 +18,7 @@ namespace Escape
         public override void OnStart()
         {
             base.OnStart();
-            Global.GetService<EventManager>().Register(eventId.Value, EventHandler);
+            Global.GetService<EventManager>().Register((int)eventId, EventHandler);
         }
 
         public override TaskStatus OnUpdate()
@@ -28,7 +28,7 @@ namespace Escape
 
         public override void OnEnd()
         {
-            Global.GetService<EventManager>().Unregister(eventId.Value, EventHandler);
+            Global.GetService<EventManager>().Unregister((int)eventId, EventHandler);
         }
 
         private void EventHandler(EventBody body)

@@ -4,30 +4,30 @@ using UnityEngine;
 namespace Escape
 {
     [TaskCategory("Escape")]
-    public class StoreSeekTarget : Action
+    public class StoreTarget : Action
     {
-        [SerializeField] [RequiredField]
-        private SharedTransform seeObj;
-        [SerializeField] [RequiredField]
-        private SharedTransform hearObj;
-        [SerializeField] [RequiredField]
-        private SharedTransform alarmObj;
-        [SerializeField] [RequiredField]
+        [SerializeField]
+        private SharedTransform target1;
+        [SerializeField]
+        private SharedTransform target2;
+        [SerializeField]
+        private SharedTransform target3;
+        [SerializeField]
         private SharedTransform storeResult;
 
         public override TaskStatus OnUpdate()
         {
-            if (seeObj.Value)
+            if (target1.Value)
             {
-                storeResult.Value = seeObj.Value;
+                storeResult.Value = target1.Value;
             }
-            else if(hearObj.Value)
+            else if(target2.Value)
             {
-                storeResult.Value = hearObj.Value;
+                storeResult.Value = target2.Value;
             }
             else
             {
-                storeResult.Value = alarmObj.Value;   
+                storeResult.Value = target3.Value;   
             }
 
             return TaskStatus.Success;
@@ -35,9 +35,9 @@ namespace Escape
 
         public override void OnReset()
         {
-            seeObj = null;
-            hearObj = null;
-            alarmObj = null;
+            target1 = null;
+            target2 = null;
+            target3 = null;
             storeResult = null;
         }
     }

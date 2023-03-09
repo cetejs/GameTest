@@ -1,3 +1,5 @@
+using GameFramework.EventPoolService;
+using GameFramework.Generic;
 using UnityEngine;
 
 namespace Escape
@@ -12,13 +14,27 @@ namespace Escape
         private float sprintMultiplier = 1.5f;
         [SerializeField]
         private float slowMultiplier = 0.5f;
+        [SerializeField]
+        private EventId dieEventId;
         private PlayerInputs input;
         private CharacterController cc;
+        private ScreenFadeInOut fade;
 
         private void Awake()
         {
             input = GetComponentInParent<PlayerInputs>();
             cc = GetComponent<CharacterController>();
+            Global.GetService<EventManager>().Register((int) dieEventId, Die);
+        }
+
+        private void OnDestroy()
+        {
+            if (Global.IsApplicationQuitting)
+            {
+                return;
+            }
+
+            Global.GetService<EventManager>().Unregister((int) dieEventId, Die);
         }
 
         private void Update()
@@ -52,6 +68,24 @@ namespace Escape
             }
 
             return moveSpeed;
+        }
+
+        private void Die(EventBody body)
+        {
+            if (!fade)
+            {
+                fade = FindObjectOfType<ScreenFadeInOut>();
+            }
+
+            input.enabled = false;
+            cc.SimpleMove(Vector3.zero);
+            fade.StartFadeScreen(() =>
+            {
+                Global.GetService<EventManager>().Send((int) EventId.Reborn);
+            }, () =>
+            {
+                input.enabled = true;
+            });
         }
     }
 }

@@ -12,6 +12,8 @@ namespace Escape
         [SerializeField]
         private Vector2 move;
         [SerializeField]
+        private float zoom;
+        [SerializeField]
         private bool slow;
         [SerializeField]
         private bool sprint;
@@ -21,6 +23,11 @@ namespace Escape
         public Vector2 Look
         {
             get { return look; }
+        }
+
+        public float Zoom
+        {
+            get { return zoom; }
         }
 
         public Vector2 Move
@@ -56,6 +63,11 @@ namespace Escape
             look = value.Get<Vector2>();
         }
 
+        public void OnZoom(InputValue value)
+        {
+            zoom = value.Get<float>();
+        }
+
         public void OnMove(InputValue value)
         {
             move = value.Get<Vector2>();
@@ -74,6 +86,16 @@ namespace Escape
         public void OnOperate(InputValue value)
         {
             operate = value.isPressed;
+        }
+
+        private void OnEnable()
+        {
+            input.enabled = true;
+        }
+
+        private void OnDisable()
+        {
+            input.enabled = false;
         }
     }
 }

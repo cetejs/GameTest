@@ -16,8 +16,9 @@ namespace Escape
             {
                 agent = GetComponent<NavMeshAgent>();
             }
-            
+
             agent.isStopped = true;
+            agent.updateRotation = false;
             return TaskStatus.Success;
         }
 
