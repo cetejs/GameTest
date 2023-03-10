@@ -23,8 +23,12 @@ namespace Escape
                 blackScreenMat = new Material(Shader.Find("Escape/BlackScreen"));
             }
 
-            blackScreenMat.SetFloat(RadiusProperty, 1.5f);
             waitForSeconds = new WaitForSeconds(waitTime);
+        }
+
+        private void OnDisable()
+        {
+            blackScreenMat.SetFloat(RadiusProperty, 1.5f);
         }
 
         public void StartFadeScreen(Action fadeInCallback = null, Action fadeOutCallback = null)
