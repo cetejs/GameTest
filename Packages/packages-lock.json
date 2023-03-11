@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "3d54fc52ad1dfe97edfc679108141755c8ff606a"
+      "hash": "bfb1cba3f880202d2df05e06ea20de9df8d2d6bc"
     },
     "com.cetejs.gameframework": {
       "version": "https://github.com/cetejs/GameFramework.git#upm",
