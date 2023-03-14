@@ -65,11 +65,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b508fc41ed417df458b352f17d14a806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 5
   turnSpeed: 10
   sprintMultiplier: 1.5
   slowMultiplier: 0.5
   dieEventId: 2
+  energy: {fileID: 11400000, guid: b05912ef7566bc74081be18648a061ef, type: 2}
 --- !u!114 &1450881220
 MonoBehaviour:
   m_ObjectHideFlags: 0
