@@ -16,6 +16,8 @@ namespace Escape
         private float slowMultiplier = 0.5f;
         [SerializeField]
         private EventId dieEventId;
+        [SerializeField]
+        private PlayerEnergy energy;
         private PlayerInputs input;
         private CharacterController cc;
         private ScreenFadeInOut fade;
@@ -25,6 +27,7 @@ namespace Escape
             input = GetComponentInParent<PlayerInputs>();
             cc = GetComponent<CharacterController>();
             Global.GetService<EventManager>().Register((int) dieEventId, Die);
+            energy.ResumeToMax();
         }
 
         private void OnDestroy()
@@ -40,6 +43,7 @@ namespace Escape
         private void Update()
         {
             Move();
+            ResumeEnergy();
         }
 
         private void Move()
@@ -55,9 +59,17 @@ namespace Escape
             }
         }
 
+        private void ResumeEnergy()
+        {
+            if (!(input.Move.sqrMagnitude > 0.01f && input.IsSprint))
+            {
+                energy.Resume();
+            }
+        }
+
         private float GetMoveSpeed()
         {
-            if (input.IsSprint)
+            if (input.IsSprint && energy.Consume())
             {
                 return moveSpeed * sprintMultiplier;
             }

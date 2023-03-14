@@ -6,6 +6,9 @@
         Alarm,
         Did,
         Reborn,
+        KeyNumber,
+        KeyCount,
+        OpenDoor,
         EndDefine = 100,
     }
 }
