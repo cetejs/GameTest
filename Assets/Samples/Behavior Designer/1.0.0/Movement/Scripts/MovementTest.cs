@@ -33,7 +33,7 @@ public class MovementTest : MonoBehaviour
             behaviorTrees[behaviorIndex].Restart();
         }
 
-        GUILayout.Box(behaviorTrees[behaviorIndex].Source.behaviorName, GUILayout.MinWidth(200f));
+        GUILayout.Box(behaviorTrees[behaviorIndex].GetSource(true).behaviorName, GUILayout.MinWidth(200f));
         if (GUILayout.Button("->"))
         {
             if (++behaviorIndex >= behaviorTrees.Length)
