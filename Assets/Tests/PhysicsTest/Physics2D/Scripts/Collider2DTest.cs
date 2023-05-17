@@ -27,7 +27,7 @@ namespace PhysicsTest
                         continue;
                     }
 
-                    if (Collider2DUtils.IsIntersect(cs[i], cs[j]))
+                    if (Physics2DUtils.IsIntersect(cs[i], cs[j]))
                     {
                         cs[i].IsTrigger = cs[j].IsTrigger = true;
                         cs[i].HitInfo = new HitInfo2D()
