@@ -19,7 +19,7 @@ MonoBehaviour:
   AssetLoadOption: 0
   ShaderBundleName: shaders
   ShaderVariantsAssetPath: Shaders/ShaderVariants
-  DeleteShaderVariantsWhenBuild: 0
+  DeleteShaderVariantsWhenBuild: 1
   SpriteAtlasPackingPadding: 0
   SpriteAtlasAssetPath: SpriteAtlas
-  DeleteSpriteAtlasWhenBuild: 0
+  DeleteSpriteAtlasWhenBuild: 1

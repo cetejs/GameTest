@@ -1,3 +1,4 @@
+using System;
 using GameFramework;
 using UnityEngine;
 
@@ -17,8 +18,6 @@ namespace Escape
         private bool slow;
         [SerializeField]
         private bool sprint;
-        [SerializeField]
-        private bool operate;
 
         public Vector2 Look
         {
@@ -47,20 +46,24 @@ namespace Escape
             set { sprint = value; }
         }
 
-        public bool IsCurrentDeviceMouse
-        {
-            get { return input.InputDevice == InputDevice.MouseKeyboard; }
-        }
-
         protected virtual void Update()
         {
-            look.x = input.GetAxis("LookX");
-            look.y = input.GetAxis("LookY");
+            look.x = input.GetAxisRaw("LookX");
+            look.y = input.GetAxisRaw("LookY");
+            move.x = input.GetAxisRaw("MoveX");
+            move.y = input.GetAxisRaw("MoveY");
             zoom = input.GetAxis("Zoom");
-            move.x = input.GetAxis("MoveX");
-            move.y = input.GetAxis("MoveY");
             slow = input.GetButton("Slow");
             sprint = input.GetButton("Sprint");
+        }
+
+        private void OnDisable()
+        {
+            look = Vector2.zero;
+            move = Vector2.zero;
+            zoom = 0f;
+            slow = false;
+            sprint = false;
         }
     }
 }
