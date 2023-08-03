@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5160b7f7cfd742dfb5c825bc0fef0281, type: 3}
   m_Name: DataTableSetting
   m_EditorClassIdentifier: 
-  RootPath: D:\Unity\Project\UnityFramework\GameTest
+  RootPath: D:\Unity\Project\GameTest
   ExcelRootPath: RawTables
   TableBuildPath: Configs/Tables
   ScriptBuildPath: Scripts/Tables
   ScriptNamespace: GameFramework
+  EncryptionType: 0
+  Password: password

@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1196260095
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: configs/parabolatest.ab
+      Dependencies: {}
+    Info_1:
+      Name: prefabs/objectpool.ab
+      Dependencies:
+        Dependency_0: prefabs/objectpool_dp.ab
+    Info_2:
+      Name: prefabs/objectpool_dp.ab
+      Dependencies: {}
+    Info_3:
+      Name: prefabs/windows.ab
+      Dependencies: {}
+    Info_4:
+      Name: shaders.ab
+      Dependencies: {}

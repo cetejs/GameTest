@@ -31,6 +31,4 @@ MonoBehaviour:
   ConsoleTimeScale: 1
   ConsoleMaxLogCount: 1000
   DevConsoleAssemblyNames: []
-  InputSettingAssetName: Configs/InputSettings
-  DefaultInputSettingName: DefaultInputSetting
   ImportInputManagerButton: 0

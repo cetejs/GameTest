@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BundleAssetName: ToBundle
   BundleExtension: ab
-  BundleBuildPath: D:/Unity/Project/UnityFramework/GameTest/Assets/StreamingAssets
+  BundleBuildPath: StreamingAssets
   BuiltinResourcesBundleName: builtin_extra
   AssetLoadOption: 0
   ShaderBundleName: shaders
-  ShaderVariantsAssetPath: Assets/Shaders/ShaderVariants
+  ShaderVariantsAssetPath: Shaders/ShaderVariants
   DeleteShaderVariantsWhenBuild: 0
   SpriteAtlasPackingPadding: 0
-  SpriteAtlasAssetPath: Assets/SpriteAtlas
+  SpriteAtlasAssetPath: SpriteAtlas
   DeleteSpriteAtlasWhenBuild: 0
