@@ -1,6 +1,5 @@
 using BehaviorDesigner;
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -17,10 +16,10 @@ namespace Escape
         
         public override TaskStatus OnUpdate()
         {
-            Data<float, Transform> data = ReferencePool.Get<Data<float, Transform>>();
-            data.item1 = radius.Value;
-            data.item2 = warner.Value;
-            Global.GetService<EventManager>().Send((int)eventId, data);
+            GameData<float, Transform> data = ReferencePool.Instance.Get<GameData<float, Transform>>();
+            data.Item1 = radius.Value;
+            data.Item2 = warner.Value;
+            EventManager.Instance.Send((int)eventId, data);
             return TaskStatus.Success;
         }
 

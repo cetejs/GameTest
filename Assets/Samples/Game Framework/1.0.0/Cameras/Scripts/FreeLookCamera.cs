@@ -1,7 +1,5 @@
-﻿using GameFramework.Generic;
-using GameFramework.InputService;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace GameFramework
 {
@@ -20,7 +18,6 @@ namespace GameFramework
         [SerializeField]
         private bool lookScreen;
 
-        private InputManager input;
         private IFreeLookInput lookInput;
         private Transform pivot;
         private float lookAngle;
@@ -39,14 +36,9 @@ namespace GameFramework
             lookInput = GetComponentInParent<IFreeLookInput>();
         }
 
-        private void Start()
-        {
-            input = Global.GetService<InputManager>();
-        }
-
         protected override void Update()
         {
-            if (Keyboard.current.f11Key.wasPressedThisFrame)
+            if (Input.GetKeyDown(KeyCode.F11))
             {
                 lookScreen = !lookScreen;
             }
@@ -73,11 +65,10 @@ namespace GameFramework
 
         private void HandleRotation()
         {
-            if (!lookScreen && !input.IsPointerOverGameObject())
+            if (!lookScreen)
             {
-                float deltaTimeMultiplier = lookInput.IsCurrentDeviceMouse ? 1f : Time.deltaTime;
-                lookAngle += lookInput.Look.x * turnSpeed * deltaTimeMultiplier;
-                tiltAngle -= lookInput.Look.y * turnSpeed * deltaTimeMultiplier;
+                lookAngle += lookInput.Look.x * turnSpeed;
+                tiltAngle -= lookInput.Look.y * turnSpeed;
             }
             
             tiltAngle = Mathf.Clamp(tiltAngle, minTiltAngle, maxTiltAngle);

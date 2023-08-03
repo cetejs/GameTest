@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ac25dd64f6d1e4c843a67ff18051bd, type: 3}
+  m_Name: SimpleInput
+  m_EditorClassIdentifier: 
+  InputMappings:
+  - Name: Horizontal
+    Description: Move
+    KeyCode: 1
+    XboxCode: 17
+    Ps4Code: 19
+  - Name: Vertical
+    Description: Move
+    KeyCode: 1
+    XboxCode: 18
+    Ps4Code: 20
+  - Name: Mouse X
+    Description: RotateView
+    KeyCode: 3
+    XboxCode: 19
+    Ps4Code: 21
+  - Name: Mouse Y
+    Description: RotateView
+    KeyCode: 4
+    XboxCode: 20
+    Ps4Code: 22
+  - Name: Horizontal Nav
+    Description: Navigation
+    KeyCode: 6
+    XboxCode: 21
+    Ps4Code: 23
+  - Name: Vertical Nav
+    Description: Navigation
+    KeyCode: 7
+    XboxCode: 22
+    Ps4Code: 24
+  - Name: Submit
+    Description: Submit
+    KeyCode: 13
+    XboxCode: 1
+    Ps4Code: 2
+  - Name: Cancel
+    Description: Cancel
+    KeyCode: 13
+    XboxCode: 2
+    Ps4Code: 4
+  - Name: LookX
+    Description: RotateView
+    KeyCode: 3
+    XboxCode: 19
+    Ps4Code: 21
+  - Name: LookY
+    Description: RotateView
+    KeyCode: 4
+    XboxCode: 20
+    Ps4Code: 22
+  - Name: MoveX
+    Description: Move
+    KeyCode: 1
+    XboxCode: 17
+    Ps4Code: 19
+  - Name: MoveY
+    Description: Move
+    KeyCode: 2
+    XboxCode: 18
+    Ps4Code: 20
+  - Name: Jump
+    Description: 
+    KeyCode: 32
+    XboxCode: 1
+    Ps4Code: 4
+  - Name: Sprint
+    Description: 
+    KeyCode: 304
+    XboxCode: 2
+    Ps4Code: 2
+  - Name: Strafe
+    Description: 
+    KeyCode: 325
+    XboxCode: 12
+    Ps4Code: 22

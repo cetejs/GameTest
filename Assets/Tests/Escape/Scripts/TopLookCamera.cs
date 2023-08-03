@@ -5,7 +5,7 @@ namespace Escape
 {
     public class TopLookCamera : FollowTargetCamera
     {
-        [LargeHeader("Look")]
+        [InspectorGroup("Look")]
         [SerializeField]
         private float followSpeed = 3f;
         [SerializeField]
@@ -14,7 +14,7 @@ namespace Escape
         private Vector2 minMoveRange = Vector3.zero;
         [SerializeField]
         private Vector2 maxMoveRange = Vector3.one * 25f;
-        [LargeHeader("Zoom")]
+        [InspectorGroup("Zoom")]
         [SerializeField]
         private float zoomSpeed = 30f;
         [SerializeField]

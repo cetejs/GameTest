@@ -1,5 +1,4 @@
-using GameFramework.DelayedActionService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 public class VaultIKTest : MonoBehaviour
@@ -18,7 +17,7 @@ public class VaultIKTest : MonoBehaviour
         if (canVault && vaultIK.Vault())
         {
             canVault = false;
-            Global.GetService<DelayedActionManager>().AddAction(() =>
+            DelayedActionManager.Instance.AddAction(() =>
             {
                 canVault = true;
                 transform.position = origin;

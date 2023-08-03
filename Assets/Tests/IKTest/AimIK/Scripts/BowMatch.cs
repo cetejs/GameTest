@@ -1,4 +1,4 @@
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 public class BowMatch : MonoBehaviour
@@ -36,7 +36,7 @@ public class BowMatch : MonoBehaviour
         }
 
         bool isMatch = false;
-        if (matchParameter.isValid)
+        if (matchParameter.IsValid)
         {
             isMatch = anim.GetFloat(matchParameter) >= 1.0f;
         }

@@ -1,4 +1,4 @@
-using GameFramework.UIService;
+using GameFramework;
 
 public class ThrowingWindow : UIWindow
 {

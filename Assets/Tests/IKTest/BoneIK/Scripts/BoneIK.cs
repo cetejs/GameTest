@@ -1,4 +1,4 @@
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 public class BoneIK : MonoBehaviour
@@ -42,7 +42,7 @@ public class BoneIK : MonoBehaviour
 
         weight = Mathf.Lerp(weight, boneWeight, matchSpeed * Time.deltaTime);
 
-        if (boneParameter.isValid)
+        if (boneParameter.IsValid)
         {
             weight = Mathf.Clamp(weight, 0.0f, anim.GetFloat(boneParameter));
         }

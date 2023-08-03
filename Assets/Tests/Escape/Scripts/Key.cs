@@ -1,5 +1,4 @@
-﻿using GameFramework.EventPoolService;
-using GameFramework.Generic;
+﻿using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -9,7 +8,7 @@ namespace Escape
         private void OnTriggerEnter(Collider other)
         {
             gameObject.SetActive(false);
-            Global.GetService<EventManager>().Send((int) EventId.KeyCount);
+            EventManager.Instance.Send((int) EventId.KeyCount);
         }
     }
 }

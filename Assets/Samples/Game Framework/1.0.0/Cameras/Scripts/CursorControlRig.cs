@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 namespace GameFramework
 {
@@ -25,17 +24,17 @@ namespace GameFramework
 
         private void Update()
         {
-            if (Keyboard.current.escapeKey.isPressed)
+            if (Input.GetKeyDown(KeyCode.Backspace))
             {
                 ShowCursor();
             }
 
-            if (lockCursor && Mouse.current.leftButton.wasPressedThisFrame && !EventSystem.current.IsPointerOverGameObject())
+            if (lockCursor && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 HideCursor();
             }
 
-            if (Keyboard.current.backquoteKey.wasPressedThisFrame)
+            if (Input.GetKeyDown(KeyCode.BackQuote))
             {
                 lockCursor = !lockCursor;
                 if (!lockCursor)

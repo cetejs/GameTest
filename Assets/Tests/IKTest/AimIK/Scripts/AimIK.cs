@@ -1,5 +1,4 @@
-using GameFramework.Generic;
-using GameFramework.Utils;
+using GameFramework;
 using UnityEngine;
 
 public class AimIK : MonoBehaviour
@@ -53,10 +52,10 @@ public class AimIK : MonoBehaviour
             trackTarget.position = rawTarget.position;
         }
 
-        bool isOutRange = !trackTarget || VectorUtils.SqrDistance(head.position, trackTarget.position) > maxDistance * maxDistance;
+        bool isOutRange = !trackTarget || Vector3.SqrMagnitude(head.position - trackTarget.position) > maxDistance * maxDistance;
         weight = Mathf.Lerp(weight, isOutRange ? 0.0f : lookAtWight, lookSpeed * Time.deltaTime);
 
-        if (aimParameter.isValid)
+        if (aimParameter.IsValid)
         {
             weight = Mathf.Clamp(weight, 0.0f, anim.GetFloat(aimParameter));
         }

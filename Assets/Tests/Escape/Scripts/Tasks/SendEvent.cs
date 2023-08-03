@@ -1,6 +1,5 @@
 using BehaviorDesigner;
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -13,7 +12,7 @@ namespace Escape
         
         public override TaskStatus OnUpdate()
         {
-            Global.GetService<EventManager>().Send((int)eventId);
+            EventManager.Instance.Send((int)eventId);
             return TaskStatus.Success;
         }
 

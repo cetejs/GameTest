@@ -1,5 +1,4 @@
-﻿using GameFramework.EventPoolService;
-using GameFramework.Generic;
+﻿using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -8,9 +7,9 @@ namespace Escape
     {
         private void Start()
         {
-            Data<int> data = ReferencePool.Get<Data<int>>();
-            data.item = transform.childCount;
-            Global.GetService<EventManager>().Send((int) EventId.KeyNumber, data);
+            GameData<int> data = ReferencePool.Instance.Get<GameData<int>>();
+            data.Item = transform.childCount;
+            EventManager.Instance.Send((int) EventId.KeyNumber, data);
         }
     }
 }

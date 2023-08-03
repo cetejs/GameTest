@@ -1,7 +1,5 @@
 using BehaviorDesigner;
-using GameFramework.DelayedActionService;
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -14,22 +12,17 @@ namespace Escape
         private void Start()
         {
             behavior = GetComponent<Behavior>();
-            Global.GetService<EventManager>().Register((int) EventId.Reborn, Reborn);
+            EventManager.Instance.Register((int) EventId.Reborn, Reborn);
         }
 
         private void OnDestroy()
         {
-            if (Global.IsApplicationQuitting)
-            {
-                return;
-            }
-
-            Global.GetService<EventManager>().Unregister((int) EventId.Reborn, Reborn);
+            EventManager.Instance.Unregister((int) EventId.Reborn, Reborn);
         }
 
         private void Reborn(EventBody body)
         {
-            Global.GetService<DelayedActionManager>().AddAction(behavior.Restart, 0.5f);
+            DelayedActionManager.Instance.AddAction(behavior.Restart, 0.5f);
         }
     }
 }

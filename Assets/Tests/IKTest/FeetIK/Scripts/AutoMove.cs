@@ -1,4 +1,4 @@
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 public class AutoMove : MonoBehaviour
@@ -26,7 +26,7 @@ public class AutoMove : MonoBehaviour
             cc.SimpleMove(forward * speed);
         }
 
-        if (anim && parameter.isValid)
+        if (anim && parameter.IsValid)
         {
             anim.SetFloat(parameter, speed);
         }

@@ -1,6 +1,5 @@
 ﻿using BehaviorDesigner;
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -18,7 +17,7 @@ namespace Escape
         public override void OnStart()
         {
             base.OnStart();
-            Global.GetService<EventManager>().Register((int)eventId, EventHandler);
+            EventManager.Instance.Register((int)eventId, EventHandler);
         }
 
         public override TaskStatus OnUpdate()
@@ -28,14 +27,14 @@ namespace Escape
 
         public override void OnEnd()
         {
-            Global.GetService<EventManager>().Unregister((int)eventId, EventHandler);
+            EventManager.Instance.Unregister((int)eventId, EventHandler);
         }
 
         private void EventHandler(EventBody body)
         {
-            Data<float, Transform> data = body.GetData<Data<float, Transform>>();
-            radius.Value = data.item1;
-            warner.Value = data.item2;
+            GameData<float, Transform> data = body.GetData<GameData<float, Transform>>();
+            radius.Value = data.Item1;
+            warner.Value = data.Item2;
         }
         
         public override void OnReset()

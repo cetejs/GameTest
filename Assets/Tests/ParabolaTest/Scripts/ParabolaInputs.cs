@@ -1,6 +1,5 @@
 using GameFramework;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class ParabolaInputs : SimpleInputs
 {
@@ -21,13 +20,20 @@ public class ParabolaInputs : SimpleInputs
         set { cancelThrow = value; }
     }
 
-    public void OnThrow(InputValue value)
+    protected override void Update()
     {
-        @throw = value.isPressed;
-    }
+        base.Update();
+        if (input.GetButtonDown("Throw"))
+        {
+            @throw = true;
+        }
 
-    public void OnCancelThrow(InputValue value)
-    {
-        cancelThrow = value.isPressed;
+        if (input.GetButtonUp("Throw"))
+        {
+            
+            @throw = false;
+        }
+
+        cancelThrow = input.GetButton("CancelThrow");
     }
 }

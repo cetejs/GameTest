@@ -1,6 +1,5 @@
 using System.Collections.Generic;
-using GameFramework.Generic;
-using GameFramework.ObjectPoolService;
+using GameFramework;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Config/ThrowingHub", fileName = "ThrowingHub")]
@@ -11,9 +10,12 @@ public class ThrowingHub : ScriptableObject
     public Vector3 originOffset;
     public Vector3 eulerOffset;
     public float minDistance;
-    public PoolObjectReference throwingMover;
-    public PoolObjectReference throwingPreview;
-    public PoolObjectReference throwingSpawner;
+    [ObjectPoolName]
+    public string throwingMover;
+    [ObjectPoolName]
+    public string throwingPreview;
+    [ObjectPoolName]
+    public string throwingSpawner;
 
     private readonly List<Vector3> points = new List<Vector3>();
     private readonly List<Vector3> dirs = new List<Vector3>();
@@ -25,8 +27,7 @@ public class ThrowingHub : ScriptableObject
     {
         if (!preview)
         {
-            ObjectPoolManager pool = Global.GetService<ObjectPoolManager>();
-            preview = pool.Get<ThrowingPreview>(throwingPreview);
+            preview = ObjectPoolManager.Instance.Get<ThrowingPreview>(throwingPreview);
         }
 
         ParabolaBuildInfo info = new ParabolaBuildInfo()
@@ -56,10 +57,9 @@ public class ThrowingHub : ScriptableObject
             return;
         }
 
-        ObjectPoolManager pool = Global.GetService<ObjectPoolManager>();
-        pool.Get<ThrowingMover>(throwingMover).StartMove(moveInfo, points, spawnEuler, endPoint =>
+        ObjectPoolManager.Instance.Get<ThrowingMover>(throwingMover).StartMove(moveInfo, points, spawnEuler, endPoint =>
         {
-            pool.Get<ThrowingSpawner>(throwingSpawner).Spawn(endPoint, spawnEuler);
+            ObjectPoolManager.Instance.Get<ThrowingSpawner>(throwingSpawner).Spawn(endPoint, spawnEuler);
         });
 
         ReleasePreview();

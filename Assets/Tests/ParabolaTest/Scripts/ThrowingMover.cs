@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using GameFramework.Generic;
-using GameFramework.ObjectPoolService;
-using GameFramework.Utils;
+using GameFramework;
 using UnityEngine;
 
 public class ThrowingMover : PoolObject
@@ -29,8 +27,9 @@ public class ThrowingMover : PoolObject
         }
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (nextIndex == -1)
         {
             Release();
@@ -42,7 +41,7 @@ public class ThrowingMover : PoolObject
             Vector3 nowPoint = transform.position;
             Vector3 nextPoint = movePath[nextIndex];
 
-            if (VectorUtils.SqrDistance(nowPoint, nextPoint) > 0.1f)
+            if (Vector3.SqrMagnitude(nowPoint - nextPoint) > 0.1f)
             {
                 nowPoint = Vector3.MoveTowards(nowPoint, nextPoint, info.moveSpeed * Time.deltaTime);
                 if (!info.isIgnoreCollider)

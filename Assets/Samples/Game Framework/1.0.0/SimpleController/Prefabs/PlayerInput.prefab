@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3016440594462098848}
-  - component: {fileID: 3016440594462098849}
   - component: {fileID: 590761196}
+  - component: {fileID: 3016440595169585983}
   m_Layer: 0
   m_Name: PlayerInput
   m_TagString: Untagged
@@ -35,116 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3016440594462098849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3016440594462098854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 690335f4a14e0c64f9715e6a471a16b6, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 590761196}
-        m_TargetAssemblyTypeName: GameFramework.SimpleInputs, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1d427ee8-3aa4-46c0-8f4b-1ab5b8fae0b0
-    m_ActionName: GamePlay/Movement[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2774249994254355218}
-        m_TargetAssemblyTypeName: GameFramework.SimpleController, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: a3d057fe-ac41-4cbb-806a-0cd04692485b
-    m_ActionName: GamePlay/Jump[/XInputControllerWindows/buttonSouth,/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2774249994254355218}
-        m_TargetAssemblyTypeName: GameFramework.SimpleController, Assembly-CSharp
-        m_MethodName: OnSprint
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 43f9f599-db77-4bb0-9ebb-a5f8b24465e8
-    m_ActionName: GamePlay/Spring[/XInputControllerWindows/leftStick/down,/Keyboard/leftShift]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2774249994254355218}
-        m_TargetAssemblyTypeName: GameFramework.SimpleController, Assembly-CSharp
-        m_MethodName: OnStrafe
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c7cc1444-67c5-4355-b94d-68c0137409aa
-    m_ActionName: GamePlay/Strafing[/XInputControllerWindows/rightStick/down,/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1229338579029999290}
-        m_TargetAssemblyTypeName: GameFramework.FreeLookCamera, Assembly-CSharp
-        m_MethodName: OnLook
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 07577c50-9c66-4171-b510-4ab61aa65416
-    m_ActionName: GamePlay/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: GamePlay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &590761196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,12 +47,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e025afab14c604fa82e9198530616c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 3016440594462098849}
+  input: {fileID: 3016440595169585983}
   look: {x: 0, y: 0}
   move: {x: 0, y: 0}
   jump: 0
   sprint: 0
   strafe: 0
+--- !u!114 &3016440595169585983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016440594462098854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7441cfbe544a669fd73356adbefaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identity: 0
+  inputSettingName: DefaultInputSetting
 --- !u!1001 &3016440593851496702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,6 +78,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 5243855049921047594}
+    - target: {fileID: 4094880719532328516, guid: 8e26e692e3301fe4cb5a75f7cbbfe9e1, type: 3}
+      propertyPath: turnSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4094880719532328519, guid: 8e26e692e3301fe4cb5a75f7cbbfe9e1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -229,17 +137,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4094880719532328519, guid: 8e26e692e3301fe4cb5a75f7cbbfe9e1, type: 3}
   m_PrefabInstance: {fileID: 3016440593851496702}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1229338579029999290 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4094880719532328516, guid: 8e26e692e3301fe4cb5a75f7cbbfe9e1, type: 3}
-  m_PrefabInstance: {fileID: 3016440593851496702}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 102fdfa412e244f438bdcb1ef6ce8c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3016440594180287833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297,17 +194,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39187dbda74aa784a825b6f592f94a23, type: 3}
---- !u!114 &2774249994254355218 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1106919135449065035, guid: 39187dbda74aa784a825b6f592f94a23, type: 3}
-  m_PrefabInstance: {fileID: 3016440594180287833}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b2a062346ec2534b9b527d3cd85091c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5243855049921047594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6996736606577197427, guid: 39187dbda74aa784a825b6f592f94a23, type: 3}

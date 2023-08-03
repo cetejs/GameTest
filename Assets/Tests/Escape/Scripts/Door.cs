@@ -1,5 +1,4 @@
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -8,7 +7,7 @@ namespace Escape
     {
         private void Awake()
         {
-            Global.GetService<EventManager>().Register((int)EventId.OpenDoor, body =>
+            EventManager.Instance.Register((int)EventId.OpenDoor, body =>
             {
                 gameObject.SetActive(false);
                 body.Unregister();

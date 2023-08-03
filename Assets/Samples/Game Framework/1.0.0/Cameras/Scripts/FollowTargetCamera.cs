@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GameFramework
 {
-    public abstract class FollowTargetCamera : MonoBehaviour
+    public abstract class FollowTargetCamera : GameBehaviour
     {
         [SerializeField]
         protected Transform target;

@@ -1,4 +1,4 @@
-using GameFramework.Utils;
+using GameFramework;
 using UnityEngine;
 
 public class HeadTrack : MonoBehaviour
@@ -48,7 +48,7 @@ public class HeadTrack : MonoBehaviour
             trackTarget.position = rawTarget.position;
         }
 
-        bool isOutRange = !trackTarget || VectorUtils.SqrDistance(head.position, trackTarget.position) > maxDistance * maxDistance;
+        bool isOutRange = !trackTarget || Vector3.SqrMagnitude(head.position - trackTarget.position) > maxDistance * maxDistance;
         weight = Mathf.Lerp(weight, isOutRange ? 0.0f : lookAtWight, lookSpeed * Time.deltaTime);
     }
 

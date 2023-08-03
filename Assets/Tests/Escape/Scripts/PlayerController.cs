@@ -1,5 +1,4 @@
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -26,18 +25,13 @@ namespace Escape
         {
             input = GetComponentInParent<PlayerInputs>();
             cc = GetComponent<CharacterController>();
-            Global.GetService<EventManager>().Register((int) dieEventId, Die);
+            EventManager.Instance.Register((int) dieEventId, Die);
             energy.ResumeToMax();
         }
 
         private void OnDestroy()
         {
-            if (Global.IsApplicationQuitting)
-            {
-                return;
-            }
-
-            Global.GetService<EventManager>().Unregister((int) dieEventId, Die);
+            EventManager.Instance.Unregister((int) dieEventId, Die);
         }
 
         private void Update()
@@ -93,7 +87,7 @@ namespace Escape
             cc.SimpleMove(Vector3.zero);
             fade.StartFadeScreen(() =>
             {
-                Global.GetService<EventManager>().Send((int) EventId.Reborn);
+                EventManager.Instance.Send((int) EventId.Reborn);
             }, () =>
             {
                 input.enabled = true;

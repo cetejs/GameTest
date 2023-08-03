@@ -1,4 +1,4 @@
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 public class LegacyFeetIK : MonoBehaviour
@@ -101,7 +101,7 @@ public class LegacyFeetIK : MonoBehaviour
 
     private void SetIKWeight(AvatarIKGoal foot, AnimatorParameter parameter)
     {
-        if (parameter.isValid)
+        if (parameter.IsValid)
         {
             anim.SetIKPositionWeight(foot, anim.GetFloat(parameter));
             if (isUseIKRotate)

@@ -1,35 +1,18 @@
 {
   "dependencies": {
     "com.cetejs.behaviordesigner": {
-      "version": "https://github.com/cetejs/BehaviorDesigner.git#upm",
+      "version": "git@github.com:cetejs/BehaviorDesigner.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "d3d0b28bef883eb7ca56ad12db7db061f60c970f"
+      "hash": "0f6a62b5d88ea80cc7509391b0345dc4d2cd8d4a"
     },
     "com.cetejs.gameframework": {
-      "version": "https://github.com/cetejs/GameFramework.git#upm",
+      "version": "https://github.com/cetejs/GameFramework.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {
-        "com.unity.addressables": "1.19.19",
-        "com.unity.inputsystem": "1.4.4"
-      },
-      "hash": "ce74171eb3bc64d39511f97e321b4800eedc0c10"
-    },
-    "com.unity.addressables": {
-      "version": "1.19.19",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.19.6",
-        "com.unity.modules.assetbundle": "1.0.0",
-        "com.unity.modules.imageconversion": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
+      "dependencies": {},
+      "hash": "85756122d49591d6a1c7f7eba21f91d37cd54629"
     },
     "com.unity.collab-proxy": {
       "version": "1.17.1",
@@ -93,15 +76,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.inputsystem": {
-      "version": "1.4.4",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.uielements": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
       "depth": 2,
@@ -112,13 +86,6 @@
     "com.unity.performance.profile-analyzer": {
       "version": "1.1.1",
       "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.scriptablebuildpipeline": {
-      "version": "1.20.1",
-      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"

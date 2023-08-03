@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8776ec81cc40cf145a36879318020a61, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -312,14 +312,14 @@ GameObject:
   - component: {fileID: 204246341}
   - component: {fileID: 204246344}
   - component: {fileID: 204246343}
-  - component: {fileID: 204246342}
+  - component: {fileID: 204246345}
   m_Layer: 5
   m_Name: LeftStick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &204246341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -341,22 +341,6 @@ RectTransform:
   m_AnchoredPosition: {x: 320, y: 320}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &204246342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204246340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296d2b86b28f4b5ea628d41cc2b19d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPath: <Gamepad>/leftStick
-  thumb: {fileID: 1408109782}
-  movementRange: 80
-  scaleMultiplier: {x: 1, y: 1}
 --- !u!114 &204246343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 2f4a9127a72258b45b6cea5acb737472, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -395,6 +379,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204246340}
   m_CullTransparentMesh: 1
+--- !u!114 &204246345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204246340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb0dca87ed040c7a7ad89304e6721bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thumb: {fileID: 1408109782}
+  axisType: 0
+  horizontalAxisName: MoveX
+  verticalAxisName: MoveY
+  movementRange: 50
 --- !u!1 &613074475
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,14 +408,14 @@ GameObject:
   - component: {fileID: 613074480}
   - component: {fileID: 613074479}
   - component: {fileID: 613074478}
-  - component: {fileID: 613074477}
+  - component: {fileID: 613074481}
   m_Layer: 5
   m_Name: JumpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &613074476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -436,19 +437,6 @@ RectTransform:
   m_AnchoredPosition: {x: -100, y: 100}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &613074477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613074475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d672a5d274c4e46b7afd3e7fcae4a02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPath: <Gamepad>/buttonSouth
 --- !u!114 &613074478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: eef4d6cd8e86bc64d9b2b8cca092ada9, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -531,6 +519,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613074475}
   m_CullTransparentMesh: 1
+--- !u!114 &613074481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613074475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f377114b684d04868df8e80beeaaff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: Jump
 --- !u!1 &632424271
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,8 +541,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 632424274}
-  - component: {fileID: 632424273}
   - component: {fileID: 632424272}
+  - component: {fileID: 632424275}
   m_Layer: 0
   m_Name: PlayerInput
   m_TagString: Untagged
@@ -561,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2ca01919112da40878804eccbad90d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 632424273}
+  input: {fileID: 632424275}
   look: {x: 0, y: 0}
   move: {x: 0, y: 0}
   jump: 0
@@ -569,36 +570,6 @@ MonoBehaviour:
   strafe: 0
   throw: 0
   cancelThrow: 0
---- !u!114 &632424273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632424271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: b83cddf6336367f44b318eef1edebf5c, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: GamePlay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!4 &632424274
 Transform:
   m_ObjectHideFlags: 0
@@ -616,6 +587,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632424275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632424271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7441cfbe544a669fd73356adbefaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identity: 0
+  inputSetting: {fileID: 11400000, guid: 9d84beb140eb6534ea078f261c1e4c9c, type: 2}
 --- !u!1 &699324010
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,14 +693,14 @@ GameObject:
   - component: {fileID: 865572504}
   - component: {fileID: 865572503}
   - component: {fileID: 865572502}
-  - component: {fileID: 865572501}
+  - component: {fileID: 865572505}
   m_Layer: 5
   m_Name: SprintButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &865572500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -737,19 +722,6 @@ RectTransform:
   m_AnchoredPosition: {x: -100, y: 300}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &865572501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865572499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d672a5d274c4e46b7afd3e7fcae4a02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPath: <Gamepad>/leftTrigger
 --- !u!114 &865572502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: eef4d6cd8e86bc64d9b2b8cca092ada9, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -832,6 +804,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865572499}
   m_CullTransparentMesh: 1
+--- !u!114 &865572505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865572499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f377114b684d04868df8e80beeaaff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: Sprint
 --- !u!1 &941565720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,14 +1024,14 @@ GameObject:
   - component: {fileID: 1256694466}
   - component: {fileID: 1256694465}
   - component: {fileID: 1256694464}
-  - component: {fileID: 1256694463}
+  - component: {fileID: 1256694467}
   m_Layer: 5
   m_Name: CancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1256694462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1068,19 +1053,6 @@ RectTransform:
   m_AnchoredPosition: {x: -100, y: 500}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1256694463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256694461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d672a5d274c4e46b7afd3e7fcae4a02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPath: <Gamepad>/buttonEast
 --- !u!114 &1256694464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,7 +1117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: eef4d6cd8e86bc64d9b2b8cca092ada9, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1163,6 +1135,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256694461}
   m_CullTransparentMesh: 1
+--- !u!114 &1256694467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256694461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f377114b684d04868df8e80beeaaff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: CancelThrow
 --- !u!1001 &1404081091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1252,7 +1237,6 @@ GameObject:
   - component: {fileID: 1408109782}
   - component: {fileID: 1408109785}
   - component: {fileID: 1408109784}
-  - component: {fileID: 1408109783}
   m_Layer: 5
   m_Name: Thumb
   m_TagString: Untagged
@@ -1280,20 +1264,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 129, y: 129}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1408109783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408109781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovementRange: 100
-  m_ControlPath: <Gamepad>/leftStick
 --- !u!114 &1408109784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,7 +1284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 2f4a9127a72258b45b6cea5acb737472, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1423,14 +1393,14 @@ GameObject:
   - component: {fileID: 1556232913}
   - component: {fileID: 1556232916}
   - component: {fileID: 1556232915}
-  - component: {fileID: 1556232914}
+  - component: {fileID: 1556232917}
   m_Layer: 5
   m_Name: RigthPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1556232913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1451,20 +1421,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
---- !u!114 &1556232914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556232912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25d8dfde452e8e4db3b6422bc28c0ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPath: <Gamepad>/rightStick
-  scaleMultiplier: {x: 0.1, y: 0.1}
 --- !u!114 &1556232915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,6 +1459,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556232912}
   m_CullTransparentMesh: 1
+--- !u!114 &1556232917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556232912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fcad12e61849e594ab1b0c1fefc0a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axisType: 0
+  horizontalAxisName: LookX
+  verticalAxisName: LookY
+  responseSpeed: 1
 --- !u!1 &1586176658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,14 +1487,14 @@ GameObject:
   - component: {fileID: 1586176663}
   - component: {fileID: 1586176662}
   - component: {fileID: 1586176661}
-  - component: {fileID: 1586176660}
+  - component: {fileID: 1586176664}
   m_Layer: 5
   m_Name: ThrowButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1586176659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1544,19 +1516,6 @@ RectTransform:
   m_AnchoredPosition: {x: -300, y: 500}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1586176660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586176658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d672a5d274c4e46b7afd3e7fcae4a02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPath: <Gamepad>/buttonWest
 --- !u!114 &1586176661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,7 +1580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: eef4d6cd8e86bc64d9b2b8cca092ada9, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1639,6 +1598,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586176658}
   m_CullTransparentMesh: 1
+--- !u!114 &1586176664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586176658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f377114b684d04868df8e80beeaaff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: Throw
 --- !u!1001 &1758723629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1802,14 +1774,14 @@ GameObject:
   - component: {fileID: 1993305309}
   - component: {fileID: 1993305308}
   - component: {fileID: 1993305307}
-  - component: {fileID: 1993305306}
+  - component: {fileID: 1993305310}
   m_Layer: 5
   m_Name: StrafeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1993305305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1831,19 +1803,6 @@ RectTransform:
   m_AnchoredPosition: {x: -300, y: 100}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1993305306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993305304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d672a5d274c4e46b7afd3e7fcae4a02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlPath: <Gamepad>/rightStickPress
 --- !u!114 &1993305307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,7 +1867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: eef4d6cd8e86bc64d9b2b8cca092ada9, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1926,6 +1885,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993305304}
   m_CullTransparentMesh: 1
+--- !u!114 &1993305310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993305304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f377114b684d04868df8e80beeaaff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: Strafe
 --- !u!114 &2080596613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,6 +2002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128980341}
   - component: {fileID: 2128980342}
+  - component: {fileID: 2128980343}
   m_Layer: 5
   m_Name: MobileControl
   m_TagString: Untagged
@@ -2073,6 +2046,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2128980340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612bf8e22bccb114191975c355b95165, type: 3}
+  m_Script: {fileID: 11500000, guid: 653f835efa984ea699da1e35be130e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2128980343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128980340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7441cfbe544a669fd73356adbefaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identity: 0
+  inputSetting: {fileID: 11400000, guid: 9d84beb140eb6534ea078f261c1e4c9c, type: 2}

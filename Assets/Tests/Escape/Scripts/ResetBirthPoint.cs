@@ -1,5 +1,4 @@
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Escape
@@ -15,17 +14,12 @@ namespace Escape
         {
             birthPosition = transform.position;
             birthRotation = transform.rotation;
-            Global.GetService<EventManager>().Register((int) EventId.Reborn, Reborn);
+            EventManager.Instance.Register((int) EventId.Reborn, Reborn);
         }
 
         private void OnDestroy()
         {
-            if (Global.IsApplicationQuitting)
-            {
-                return;
-            }
-
-            Global.GetService<EventManager>().Unregister((int) EventId.Reborn, Reborn);
+            EventManager.Instance.Unregister((int) EventId.Reborn, Reborn);
         }
 
         private void Reborn(EventBody body)

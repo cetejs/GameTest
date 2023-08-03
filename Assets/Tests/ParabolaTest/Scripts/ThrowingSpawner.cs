@@ -1,4 +1,4 @@
-﻿using GameFramework.ObjectPoolService;
+﻿using GameFramework;
 using UnityEngine;
 
 public class ThrowingSpawner : PoolObject

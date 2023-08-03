@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace GameFramework
 {
     public class SimpleInputs : MonoBehaviour, IFreeLookInput
     {
         [SerializeField]
-        private PlayerInput input;
+        protected InputControl input;
         [SerializeField]
         private Vector2 look;
         [SerializeField]
@@ -46,34 +45,18 @@ namespace GameFramework
             set { strafe = value; }
         }
 
-        public bool IsCurrentDeviceMouse
+        protected virtual void Update()
         {
-            get { return input.currentControlScheme == "KeyboardMouse"; }
-        }
-
-        public void OnLook(InputValue value)
-        {
-            look = value.Get<Vector2>();
-        }
-
-        public void OnMove(InputValue value)
-        {
-            move = value.Get<Vector2>();
-        }
-
-        public void OnJump(InputValue value)
-        {
-            jump = value.isPressed;
-        }
-
-        public void OnSprint(InputValue value)
-        {
-            sprint = value.isPressed;
-        }
-
-        public void OnStrafe(InputValue value)
-        {
-            strafe = !strafe;
+            look.x = input.GetAxis("LookX");
+            look.y = input.GetAxis("LookY");
+            move.x = input.GetAxis("MoveX");
+            move.y = input.GetAxis("MoveY");
+            jump = input.GetButton("Jump");
+            sprint = input.GetButton("Sprint");
+            if (input.GetButtonDown("Strafe"))
+            {
+                strafe = !strafe;
+            }
         }
     }
 }

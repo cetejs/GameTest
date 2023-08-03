@@ -1,5 +1,4 @@
-using GameFramework.EventPoolService;
-using GameFramework.Generic;
+using GameFramework;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,19 +13,19 @@ namespace Escape
 
         private void Awake()
         {
-            Global.GetService<EventManager>().Register((int) EventId.KeyNumber, body =>
+            EventManager.Instance.Register((int) EventId.KeyNumber, body =>
             {
-                num = remain = body.GetData<Data<int>>().item;
+                num = remain = body.GetData<GameData<int>>().Item;
                 text.text = string.Concat(num, "/", num);
                 body.Unregister();
             });
 
-            Global.GetService<EventManager>().Register((int) EventId.KeyCount, body =>
+            EventManager.Instance.Register((int) EventId.KeyCount, body =>
             {
                 text.text = string.Concat(--remain, "/", num);
                 if (remain == 0)
                 {
-                    Global.GetService<EventManager>().Send((int) EventId.OpenDoor);
+                    EventManager.Instance.Send((int) EventId.OpenDoor);
                     body.Unregister();
                 }
             });

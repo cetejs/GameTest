@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.cetejs.behaviordesigner": "https://github.com/cetejs/BehaviorDesigner.git#upm",
-    "com.cetejs.gameframework": "https://github.com/cetejs/GameFramework.git#upm",
+    "com.cetejs.behaviordesigner": "git@github.com:cetejs/BehaviorDesigner.git",
+    "com.cetejs.gameframework": "https://github.com/cetejs/GameFramework.git",
     "com.unity.collab-proxy": "1.17.1",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.15",

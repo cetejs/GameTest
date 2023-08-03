@@ -1,9 +1,5 @@
-﻿using GameFramework.DevConsoleService;
-using GameFramework.Generic;
-using GameFramework.UIService;
-using GameFramework.Utils;
+﻿using GameFramework;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 public class ThrowingController : MonoBehaviour
 {
@@ -23,7 +19,7 @@ public class ThrowingController : MonoBehaviour
     {
         cam = Camera.main.transform;
         input = GetComponentInParent<ParabolaInputs>();
-        Global.GetService<UIManager>().ShowWindow("ThrowingWindow");
+        UIManager.Instance.ShowWindow("ThrowingWindow");
         throwingId = defaultThrowingId;
     }
 
@@ -67,11 +63,11 @@ public class ThrowingController : MonoBehaviour
         }
     }
 
-    private async void PreThrow(Vector3 origin, Vector3 euler)
+    private void PreThrow(Vector3 origin, Vector3 euler)
     {
         if (!hub)
         {
-            hub = await Addressables.LoadAssetAsync<ThrowingHub>(string.Concat("Configs/", throwingId, ".asset")).Task;
+            hub = AssetManager.Instance.LoadAsset<ThrowingHub>(PathUtils.Combine("Configs/ParabolaTest", throwingId));
         }
 
         hub.PreThrow(origin, euler);

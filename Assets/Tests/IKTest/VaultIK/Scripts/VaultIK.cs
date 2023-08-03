@@ -1,4 +1,4 @@
-﻿using GameFramework.Generic;
+﻿using GameFramework;
 using UnityEngine;
 
 public class VaultIK : MonoBehaviour
@@ -32,7 +32,7 @@ public class VaultIK : MonoBehaviour
             return false;
         }
 
-        if (!vaultParameter.isValid)
+        if (!vaultParameter.IsValid)
         {
             return false;
         }
