@@ -1472,10 +1472,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 590761196, guid: 6a9e393413d4b714b9f336dc9d707ea9, type: 3}
-      propertyPath: joystickLookScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3016440594462098848, guid: 6a9e393413d4b714b9f336dc9d707ea9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1523,18 +1519,6 @@ PrefabInstance:
     - target: {fileID: 3016440594462098854, guid: 6a9e393413d4b714b9f336dc9d707ea9, type: 3}
       propertyPath: m_Name
       value: SimpleInputs
-      objectReference: {fileID: 0}
-    - target: {fileID: 3016440595169585983, guid: 6a9e393413d4b714b9f336dc9d707ea9, type: 3}
-      propertyPath: identity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3016440595169585983, guid: 6a9e393413d4b714b9f336dc9d707ea9, type: 3}
-      propertyPath: inputSetting
-      value: 
-      objectReference: {fileID: 11400000, guid: a077da1d31075c840889c767e4892d03, type: 2}
-    - target: {fileID: 3016440595169585983, guid: 6a9e393413d4b714b9f336dc9d707ea9, type: 3}
-      propertyPath: inputSettingName
-      value: SimpleInput
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a9e393413d4b714b9f336dc9d707ea9, type: 3}

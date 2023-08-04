@@ -22,6 +22,11 @@ namespace GameFramework
             get { return look; }
         }
 
+        public InputDevice InputDevice
+        {
+            get { return input.InputDevice; }
+        }
+
         public Vector2 Move
         {
             get { return move; }
@@ -49,14 +54,22 @@ namespace GameFramework
         {
             look.x = input.GetAxis("LookX");
             look.y = input.GetAxis("LookY");
-            move.x = input.GetAxis("MoveX");
-            move.y = input.GetAxis("MoveY");
+            move.x = input.GetAxisRaw("MoveX");
+            move.y = input.GetAxisRaw("MoveY");
             jump = input.GetButton("Jump");
             sprint = input.GetButton("Sprint");
             if (input.GetButtonDown("Strafe"))
             {
                 strafe = !strafe;
             }
+        }
+
+        protected void OnDisable()
+        {
+            look = Vector2.zero;
+            move = Vector2.zero;
+            jump = false;
+            sprint = false;
         }
     }
 }

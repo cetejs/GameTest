@@ -5,7 +5,6 @@ namespace GameFramework
     [RequireComponent(typeof(CharacterController))]
     public class SimpleController : MonoBehaviour
     {
-        [Header("----- Generic -----")]
         [SerializeField]
         private float moveSpeed = 1f;
         [SerializeField]

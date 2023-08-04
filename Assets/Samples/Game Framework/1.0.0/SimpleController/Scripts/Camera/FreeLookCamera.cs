@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace GameFramework
 {
@@ -12,11 +11,17 @@ namespace GameFramework
         [SerializeField]
         private float turnSmoothing = 15f;
         [SerializeField]
+        private float mouseTurnScale = 1;
+        [SerializeField]
+        private float joystickTurnScale = 1;
+        [SerializeField]
+        private float mobileTurnScale = 1;
+        [SerializeField]
         private float minTiltAngle = -45f;
         [SerializeField]
         private float maxTiltAngle = 75f;
         [SerializeField]
-        private bool lookScreen;
+        private bool lockScreen;
 
         private IFreeLookInput lookInput;
         private Transform pivot;
@@ -25,6 +30,12 @@ namespace GameFramework
         private Vector3 pivotEuler;
         private Quaternion lookTargetRot;
         private Quaternion tiltTargetRot;
+
+        public bool LockScreen
+        {
+            get { return lockScreen; }
+            set { lockScreen = value; }
+        }
 
         protected override void Awake()
         {
@@ -40,7 +51,7 @@ namespace GameFramework
         {
             if (Input.GetKeyDown(KeyCode.F11))
             {
-                lookScreen = !lookScreen;
+                lockScreen = !lockScreen;
             }
 
             HandleRotation();
@@ -65,12 +76,13 @@ namespace GameFramework
 
         private void HandleRotation()
         {
-            if (!lookScreen)
+            if (!lockScreen)
             {
-                lookAngle += lookInput.Look.x * turnSpeed;
-                tiltAngle -= lookInput.Look.y * turnSpeed;
+                float turnScale = GetLookInputTurnScale();
+                lookAngle += lookInput.Look.x * turnSpeed * turnScale;
+                tiltAngle -= lookInput.Look.y * turnSpeed * turnScale;
             }
-            
+
             tiltAngle = Mathf.Clamp(tiltAngle, minTiltAngle, maxTiltAngle);
             lookTargetRot = Quaternion.Euler(0, lookAngle, 0);
             tiltTargetRot = Quaternion.Euler(tiltAngle, pivotEuler.y, pivotEuler.z);
@@ -84,6 +96,20 @@ namespace GameFramework
             {
                 transform.localRotation = lookTargetRot;
                 pivot.localRotation = tiltTargetRot;
+            }
+        }
+
+        private float GetLookInputTurnScale()
+        {
+            switch (lookInput.InputDevice)
+            {
+                case InputDevice.Mobile:
+                    return mobileTurnScale;
+                case InputDevice.XboxGamepad:
+                case InputDevice.Ps4Gamepad:
+                    return joystickTurnScale;
+                default:
+                    return mouseTurnScale;
             }
         }
     }

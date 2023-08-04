@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   identity: 0
-  inputSettingName: DefaultInputSetting
+  inputSetting: {fileID: 11400000, guid: a077da1d31075c840889c767e4892d03, type: 2}
 --- !u!1001 &3016440593851496702
 PrefabInstance:
   m_ObjectHideFlags: 0
