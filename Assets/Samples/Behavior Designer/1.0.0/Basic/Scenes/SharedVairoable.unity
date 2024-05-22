@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1544130591
+--- !u!1 &1162645771
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,10 +131,925 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1544130594}
-  - component: {fileID: 1544130593}
-  - component: {fileID: 1544130592}
-  - component: {fileID: 1544130595}
+  - component: {fileID: 1162645773}
+  - component: {fileID: 1162645772}
+  m_Layer: 0
+  m_Name: BehaviorTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1162645772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162645771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  restartWhenComplete: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  source:
+    behaviorName: Behavior
+    behaviorDescription: 
+    serializedVersion: 102
+    root:
+      rid: 5920605342582177843
+    tasks:
+    - rid: 5920605342582177843
+    - rid: 5920605342582177845
+    - rid: 5920605342582177846
+    - rid: 5920605342582177847
+    - rid: 5920605342582177848
+    - rid: 5920605342582177849
+    - rid: 5920605342582177882
+    - rid: 5920605342582177883
+    - rid: 5920605342582177884
+    sharedVariables:
+    - rid: 5920605342582177857
+    - rid: 5920605342582177858
+    - rid: 5920605342582177859
+    - rid: 5920605342582177860
+    - rid: 5920605342582177861
+    - rid: 5920605342582177862
+    - rid: 5920605342582177863
+    - rid: 5920605342582177864
+    - rid: 5920605342582177865
+    - rid: 5920605342582177866
+    - rid: 5920605342582177867
+    - rid: 5920605342582177868
+    - rid: 5920605342582177869
+    - rid: 5920605342582177870
+    - rid: 5920605342582177871
+    - rid: 5920605342582177872
+    - rid: 5920605342582177873
+    - rid: 5920605342582177874
+    - rid: 5920605342582177875
+    - rid: 5920605342582177876
+    - rid: 5920605342582177877
+    - rid: 5920605342582177880
+    - rid: 5920605342582177881
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605342582177843
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 764e256a031ef4640ac901754481be02
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605342582177845
+    - rid: 5920605342582177845
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 488
+          width: 150
+          height: 130
+        guid: a56c4cc22c840f748a69a542b202260c
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605342582177882
+        - rid: 5920605342582177846
+        - rid: 5920605342582177847
+        - rid: 5920605342582177884
+        - rid: 5920605342582177849
+        - rid: 5920605342582177883
+        - rid: 5920605342582177848
+        abortType: 0
+    - rid: 5920605342582177846
+      type: {class: SerializeFields, ns: , asm: Assembly-CSharp}
+      data:
+        name: Serialize Fields
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 41
+          y: 674
+          width: 150
+          height: 106
+        guid: f314de7f93eecd44090265855309e1ef
+        disabled: 0
+        breakpoint: 0
+        v101:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        v102: {fileID: 1162645772}
+        v103: 1
+        v104: {r: 1, g: 0, b: 0, a: 0}
+        v105: 105
+        v106: 106
+        v107: {fileID: 1162645771}
+        v108: 108
+        v109:
+          serializedVersion: 2
+          m_Bits: 2147483647
+        v110: 110
+        v111: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+        v112: {x: 0.008877192, y: 0.008572587, z: 0.017374935, w: 0.99977285}
+        v113:
+          serializedVersion: 2
+          x: 1
+          y: 1
+          width: 3
+          height: 0
+        v114: 114
+        v115: {fileID: 1162645773}
+        v116: {x: 11, y: 6}
+        v117: {x: 11, y: 7}
+        v118: {x: 1, y: 1, z: 8}
+        v119: {x: 1, y: 1, z: 9}
+        v120: {x: 1, y: 2, z: 0, w: 0}
+        v201:
+        - serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+        - serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+        - serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 0
+        v202:
+        - {fileID: 1162645772}
+        - {fileID: 1386920506}
+        - {fileID: 1178851143}
+        v203: 010001
+        v204:
+        - {r: 1, g: 1, b: 1, a: 0}
+        - {r: 1, g: 0, b: 0, a: 0}
+        - {r: 0, g: 0, b: 0, a: 0}
+        v205:
+        - 2
+        - 0
+        - 5
+        v206:
+        - {fileID: 1162645771}
+        - {fileID: 1386920505}
+        - {fileID: 1178851141}
+        v207: 020000000000000007000000
+        v208:
+        - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+        - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+        - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+        v209:
+        - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+        - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+        - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+        v210:
+        - {x: 0.017452406, y: 0, z: 0, w: 0.9998477}
+        - {x: 0.008726536, y: 0, z: 0, w: 0.9999619}
+        - {x: 0.017452406, y: 0, z: 0, w: 0.9998477}
+        v211:
+        - 2
+        - 1
+        - 1
+        v212:
+        - {fileID: 1162645773}
+        - {fileID: 1386920507}
+        - {fileID: 1178851144}
+        v213:
+        - {x: 2, y: 2}
+        - {x: 1, y: 1}
+        - {x: 3, y: 3}
+        v214:
+        - {x: 2, y: 2, z: 2}
+        - {x: 1, y: 1, z: 1}
+        - {x: 4, y: 4, z: 4}
+        v215:
+        - {x: 2, y: 2, z: 2, w: 2}
+        - {x: 1, y: 1, z: 1, w: 1}
+        - {x: 5, y: 5, z: 5, w: 5}
+    - rid: 5920605342582177847
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 221
+          y: 674
+          width: 150
+          height: 106
+        guid: 23ece88269ed88042b742521816ef833
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 0
+        logText:
+          name: 
+          isShared: 0
+          value: ------------------------------------------------- Get Shared Variables
+            -------------------------------------------------
+    - rid: 5920605342582177848
+      type: {class: GetSharedVariables, ns: , asm: Assembly-CSharp}
+      data:
+        name: Get Shared Variables
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 941
+          y: 674
+          width: 150
+          height: 106
+        guid: 05b5ac4214e8edd4795c51df2428c51c
+        disabled: 0
+        breakpoint: 0
+        v101:
+          name: v101
+          isShared: 1
+          value:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+        v102:
+          name: v102
+          isShared: 1
+          value: {fileID: 0}
+        v103:
+          name: v103
+          isShared: 1
+          value: 0
+        v104:
+          name: v104
+          isShared: 1
+          value: {r: 0, g: 0, b: 0, a: 0}
+        v105:
+          name: v105
+          isShared: 1
+          value: 0
+        v106:
+          name: v106
+          isShared: 1
+          value: 0
+        v107:
+          name: v107
+          isShared: 1
+          value: {fileID: 0}
+        v108:
+          name: v108
+          isShared: 1
+          value: 0
+        v109:
+          name: v109
+          isShared: 1
+          value:
+            serializedVersion: 2
+            m_Bits: 0
+        v110:
+          name: v110
+          isShared: 1
+          value: 0
+        v111:
+          name: v111
+          isShared: 1
+          value: {fileID: 0}
+        v112:
+          name: v112
+          isShared: 1
+          value: {x: 0, y: 0, z: 0, w: 1}
+        v113:
+          name: v113
+          isShared: 1
+          value:
+            serializedVersion: 2
+            x: 0
+            y: 0
+            width: 0
+            height: 0
+        v114:
+          name: v114
+          isShared: 1
+          value: 
+        v115:
+          name: v115
+          isShared: 1
+          value: {fileID: 0}
+        v116:
+          name: v116
+          isShared: 1
+          value: {x: 0, y: 0}
+        v117:
+          name: v117
+          isShared: 1
+          value: {x: 0, y: 0}
+        v118:
+          name: v118
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        v119:
+          name: v119
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        v120:
+          name: v120
+          isShared: 1
+          value: {x: 0, y: 0, z: 0, w: 0}
+        v201:
+          name: v201
+          isShared: 1
+          value: []
+        v202:
+          name: v202
+          isShared: 1
+          value: []
+        v203:
+          name: v203
+          isShared: 1
+          value: []
+    - rid: 5920605342582177849
+      type: {class: SetSharedVariables, ns: , asm: Assembly-CSharp}
+      data:
+        name: Set Shared Variables
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 586
+          y: 674
+          width: 150
+          height: 106
+        guid: d0121588af096a04f87b67d34fb1dd83
+        disabled: 0
+        breakpoint: 0
+        v101:
+          name: v101
+          isShared: 1
+          value:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+        v102:
+          name: v102
+          isShared: 1
+          value: {fileID: 0}
+        v103:
+          name: v103
+          isShared: 1
+          value: 0
+        v104:
+          name: v104
+          isShared: 1
+          value: {r: 0, g: 0, b: 0, a: 0}
+        v105:
+          name: v105
+          isShared: 1
+          value: 0
+        v106:
+          name: v106
+          isShared: 1
+          value: 0
+        v107:
+          name: v107
+          isShared: 1
+          value: {fileID: 0}
+        v108:
+          name: v108
+          isShared: 1
+          value: 0
+        v109:
+          name: v109
+          isShared: 1
+          value:
+            serializedVersion: 2
+            m_Bits: 0
+        v110:
+          name: v110
+          isShared: 1
+          value: 0
+        v111:
+          name: v111
+          isShared: 1
+          value: {fileID: 0}
+        v112:
+          name: v112
+          isShared: 1
+          value: {x: 0, y: 0, z: 0, w: 1}
+        v113:
+          name: v113
+          isShared: 1
+          value:
+            serializedVersion: 2
+            x: 0
+            y: 0
+            width: 0
+            height: 0
+        v114:
+          name: v114
+          isShared: 1
+          value: 
+        v115:
+          name: v115
+          isShared: 1
+          value: {fileID: 0}
+        v116:
+          name: v116
+          isShared: 1
+          value: {x: 0, y: 0}
+        v117:
+          name: v117
+          isShared: 1
+          value: {x: 0, y: 0}
+        v118:
+          name: v118
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        v119:
+          name: v119
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        v120:
+          name: v120
+          isShared: 1
+          value: {x: 0, y: 0, z: 0, w: 0}
+        v201:
+          name: v201
+          isShared: 1
+          value: []
+        v202:
+          name: v202
+          isShared: 1
+          value: []
+        v203:
+          name: v203
+          isShared: 1
+          value: []
+    - rid: 5920605342582177857
+      type: {class: SharedAnimationCurve, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v101
+        isShared: 0
+        value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+    - rid: 5920605342582177858
+      type: {class: SharedBehaviour, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v102
+        isShared: 0
+        value: {fileID: 1162645772}
+    - rid: 5920605342582177859
+      type: {class: SharedBool, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v103
+        isShared: 0
+        value: 1
+    - rid: 5920605342582177860
+      type: {class: SharedColor, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v104
+        isShared: 0
+        value: {r: 1, g: 0, b: 0, a: 0}
+    - rid: 5920605342582177861
+      type: {class: SharedDouble, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v105
+        isShared: 0
+        value: 105
+    - rid: 5920605342582177862
+      type: {class: SharedFloat, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v106
+        isShared: 0
+        value: 106
+    - rid: 5920605342582177863
+      type: {class: SharedGameObject, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v107
+        isShared: 0
+        value: {fileID: 1162645771}
+    - rid: 5920605342582177864
+      type: {class: SharedInt, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v108
+        isShared: 0
+        value: 108
+    - rid: 5920605342582177865
+      type: {class: SharedLayerMask, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v109
+        isShared: 0
+        value:
+          serializedVersion: 2
+          m_Bits: 2147483647
+    - rid: 5920605342582177866
+      type: {class: SharedLong, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v110
+        isShared: 0
+        value: 110
+    - rid: 5920605342582177867
+      type: {class: SharedObject, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v111
+        isShared: 0
+        value: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - rid: 5920605342582177868
+      type: {class: SharedQuaternion, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v112
+        isShared: 0
+        value: {x: 0.008877213, y: 0.008572609, z: 0.017374935, w: 0.99977285}
+    - rid: 5920605342582177869
+      type: {class: SharedRect, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v113
+        isShared: 0
+        value:
+          serializedVersion: 2
+          x: 1
+          y: 1
+          width: 3
+          height: 0
+    - rid: 5920605342582177870
+      type: {class: SharedString, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v114
+        isShared: 0
+        value: 114
+    - rid: 5920605342582177871
+      type: {class: SharedTransform, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v115
+        isShared: 0
+        value: {fileID: 1162645773}
+    - rid: 5920605342582177872
+      type: {class: SharedVector2, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v116
+        isShared: 0
+        value: {x: 11, y: 6}
+    - rid: 5920605342582177873
+      type: {class: SharedVector2Int, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v117
+        isShared: 0
+        value: {x: 11, y: 7}
+    - rid: 5920605342582177874
+      type: {class: SharedVector3, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v118
+        isShared: 0
+        value: {x: 1, y: 1, z: 8}
+    - rid: 5920605342582177875
+      type: {class: SharedVector3Int, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v119
+        isShared: 0
+        value: {x: 1, y: 1, z: 9}
+    - rid: 5920605342582177876
+      type: {class: SharedVector4, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v120
+        isShared: 0
+        value: {x: 1, y: 2, z: 0, w: 0}
+    - rid: 5920605342582177877
+      type: {class: SharedGameObjectList, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v201
+        isShared: 0
+        value:
+        - {fileID: 1162645771}
+        - {fileID: 1386920505}
+        - {fileID: 1178851141}
+    - rid: 5920605342582177880
+      type: {class: SharedObjectList, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v202
+        isShared: 0
+        value:
+        - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+        - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+        - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - rid: 5920605342582177881
+      type: {class: SharedTransformList, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: v203
+        isShared: 0
+        value:
+        - {fileID: 1162645773}
+        - {fileID: 1386920507}
+        - {fileID: 1178851144}
+    - rid: 5920605342582177882
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -141
+          y: 674
+          width: 150
+          height: 106
+        guid: 6927c673974abf94ea49042eb658d903
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 0
+        logText:
+          name: 
+          isShared: 0
+          value: ------------------------------------------------- Serialize Fields
+            -------------------------------------------------
+    - rid: 5920605342582177883
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 768
+          y: 674
+          width: 150
+          height: 106
+        guid: c785fc78b9216dc4cabd5beda8a21b22
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 0
+        logText:
+          name: 
+          isShared: 0
+          value: ------------------------------------------------- Set Shared Variables
+            -------------------------------------------------
+    - rid: 5920605342582177884
+      type: {class: GetSharedVariables, ns: , asm: Assembly-CSharp}
+      data:
+        name: Get Shared Variables
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 674
+          width: 150
+          height: 106
+        guid: 949718211dc9d6848aa78c7ebe8086e9
+        disabled: 0
+        breakpoint: 0
+        v101:
+          name: v101
+          isShared: 1
+          value:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+        v102:
+          name: v102
+          isShared: 1
+          value: {fileID: 0}
+        v103:
+          name: v103
+          isShared: 1
+          value: 0
+        v104:
+          name: v104
+          isShared: 1
+          value: {r: 0, g: 0, b: 0, a: 0}
+        v105:
+          name: v105
+          isShared: 1
+          value: 0
+        v106:
+          name: v106
+          isShared: 1
+          value: 0
+        v107:
+          name: v107
+          isShared: 1
+          value: {fileID: 0}
+        v108:
+          name: v108
+          isShared: 1
+          value: 0
+        v109:
+          name: v109
+          isShared: 1
+          value:
+            serializedVersion: 2
+            m_Bits: 0
+        v110:
+          name: v110
+          isShared: 1
+          value: 0
+        v111:
+          name: v111
+          isShared: 1
+          value: {fileID: 0}
+        v112:
+          name: v112
+          isShared: 1
+          value: {x: 0, y: 0, z: 0, w: 1}
+        v113:
+          name: v113
+          isShared: 1
+          value:
+            serializedVersion: 2
+            x: 0
+            y: 0
+            width: 0
+            height: 0
+        v114:
+          name: v114
+          isShared: 1
+          value: 
+        v115:
+          name: v115
+          isShared: 1
+          value: {fileID: 0}
+        v116:
+          name: v116
+          isShared: 1
+          value: {x: 0, y: 0}
+        v117:
+          name: v117
+          isShared: 1
+          value: {x: 0, y: 0}
+        v118:
+          name: v118
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        v119:
+          name: v119
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        v120:
+          name: v120
+          isShared: 1
+          value: {x: 0, y: 0, z: 0, w: 0}
+        v201:
+          name: v201
+          isShared: 1
+          value: []
+        v202:
+          name: v202
+          isShared: 1
+          value: []
+        v203:
+          name: v203
+          isShared: 1
+          value: []
+--- !u!4 &1162645773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162645771}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1178851141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178851144}
+  - component: {fileID: 1178851143}
+  - component: {fileID: 1178851142}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -142,21 +1057,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1544130592
+--- !u!81 &1178851142
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544130591}
+  m_GameObject: {fileID: 1178851141}
   m_Enabled: 1
---- !u!20 &1544130593
+--- !u!20 &1178851143
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544130591}
+  m_GameObject: {fileID: 1178851141}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -193,13 +1108,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &1544130594
+--- !u!4 &1178851144
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544130591}
+  m_GameObject: {fileID: 1178851141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -208,93 +1123,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1544130595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544130591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateType: 0
-  restartWhenComplete: 0
-  resetValuesOnRestart: 0
-  source:
-    behaviorName: Behavior
-    group: 0
-    behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":399.0,\"y\":300.0,\"width\":150.0,\"height\":94.0},\"comment\":\"\",\"id\":0,\"isDisabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":399.0,\"y\":459.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"id\":1,\"isDisabled\":false,\"abortType\":0}","childCount":6},{"type":"SerializeFields","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-40.25000762939453,\"y\":613.9999389648438,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":2,\"isDisabled\":false,\"v101\":{\"serializedVersion\":\"2\",\"m_Curve\":[{\"serializedVersion\":\"3\",\"time\":0.0,\"value\":0.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0},{\"serializedVersion\":\"3\",\"time\":1.0,\"value\":1.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0}],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4},\"v102\":{\"instanceID\":27938},\"v103\":true,\"v104\":{\"r\":1.0,\"g\":0.0,\"b\":0.0,\"a\":0.0},\"v105\":105.0,\"v106\":106.0,\"v107\":{\"instanceID\":27944},\"v108\":108,\"v109\":{\"serializedVersion\":\"2\",\"m_Bits\":4294967295},\"v110\":110,\"v111\":{\"instanceID\":674},\"v112\":{\"instanceID\":672},\"v113\":{\"x\":1.0,\"y\":1.0,\"z\":3.0,\"w\":0.0},\"v114\":{\"serializedVersion\":\"2\",\"x\":1.0,\"y\":1.0,\"width\":4.0,\"height\":0.0},\"v115\":\"115\",\"v116\":{\"value\":\"MainCamera\"},\"v117\":{\"instanceID\":27940},\"v118\":{\"x\":11.0,\"y\":8.0},\"v119\":{\"x\":11,\"y\":9},\"v120\":{\"x\":1.0,\"y\":2.0,\"z\":0.0},\"v121\":{\"x\":1,\"y\":2,\"z\":1},\"v122\":{\"x\":1.0,\"y\":2.0,\"z\":2.0,\"w\":0.0},\"v201\":[{\"serializedVersion\":\"2\",\"m_Curve\":[{\"serializedVersion\":\"3\",\"time\":0.0,\"value\":0.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0},{\"serializedVersion\":\"3\",\"time\":1.0,\"value\":1.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0}],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4},{\"serializedVersion\":\"2\",\"m_Curve\":[{\"serializedVersion\":\"3\",\"time\":0.0,\"value\":1.0,\"inSlope\":0.0,\"outSlope\":0.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0},{\"serializedVersion\":\"3\",\"time\":1.0,\"value\":1.0,\"inSlope\":0.0,\"outSlope\":0.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0}],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4}],\"v202\":[{\"instanceID\":27938},{\"instanceID\":27946}],\"v203\":[false,true],\"v204\":[{\"r\":1.0,\"g\":0.0,\"b\":0.0,\"a\":0.0},{\"r\":1.0,\"g\":1.0,\"b\":1.0,\"a\":0.0}],\"v205\":[2.0,0.0,5.0],\"v206\":[2.0,0.0,6.0],\"v207\":[{\"instanceID\":27934},{\"instanceID\":27944}],\"v208\":[2,0,8],\"v209\":[2,0,9],\"v210\":[{\"instanceID\":672},{\"instanceID\":674}],\"v211\":[{\"instanceID\":672},{\"instanceID\":674}],\"v212\":[{\"x\":2.0,\"y\":1.0,\"z\":2.0,\"w\":0.0},{\"x\":2.0,\"y\":1.0,\"z\":2.0,\"w\":0.0}],\"v213\":[{\"serializedVersion\":\"2\",\"x\":2.0,\"y\":1.0,\"width\":3.0,\"height\":0.0},{\"serializedVersion\":\"2\",\"x\":2.0,\"y\":1.0,\"width\":3.0,\"height\":0.0}],\"v214\":[\"2\",\"1\",\"4\"],\"v215\":[{\"instanceID\":27940},{\"instanceID\":27948}],\"v216\":[{\"x\":2.0,\"y\":0.0},{\"x\":1.0,\"y\":0.0},{\"x\":6.0,\"y\":0.0}],\"v217\":[{\"x\":2,\"y\":0},{\"x\":1,\"y\":0},{\"x\":7,\"y\":0}],\"v218\":[{\"x\":2.0,\"y\":1.0,\"z\":8.0},{\"x\":2.0,\"y\":1.0,\"z\":8.0}],\"v219\":[{\"x\":2,\"y\":1,\"z\":9}],\"v220\":[{\"x\":2.0,\"y\":2.0,\"z\":0.0,\"w\":0.0},{\"x\":2.0,\"y\":2.0,\"z\":0.0,\"w\":0.0}]}","childCount":0},{"type":"BehaviorDesigner.Tasks.Log","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":135.0,\"y\":614.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":3,\"isDisabled\":false,\"isLogError\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"logText\":{\"name\":\"\",\"isShared\":false,\"value\":\"---------------------------------------------------------------------\"}}","childCount":0},{"type":"GetSharedVariables","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":313.0,\"y\":614.0,\"width\":155.0,\"height\":74.0},\"comment\":\"\",\"id\":4,\"isDisabled\":false,\"v101\":{\"name\":\"v101\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"m_Curve\":[],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4}},\"v102\":{\"name\":\"v102\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v103\":{\"name\":\"v103\",\"isShared\":true,\"value\":false},\"v104\":{\"name\":\"v104\",\"isShared\":true,\"value\":{\"r\":0.0,\"g\":0.0,\"b\":0.0,\"a\":0.0}},\"v105\":{\"name\":\"v105\",\"isShared\":true,\"value\":0.0},\"v106\":{\"name\":\"v106\",\"isShared\":true,\"value\":0.0},\"v107\":{\"name\":\"v107\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v108\":{\"name\":\"v108\",\"isShared\":true,\"value\":0},\"v109\":{\"name\":\"v109\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"m_Bits\":0}},\"v110\":{\"name\":\"v110\",\"isShared\":true,\"value\":0},\"v111\":{\"name\":\"v111\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v112\":{\"name\":\"v112\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v113\":{\"name\":\"v113\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}},\"v114\":{\"name\":\"v114\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"x\":0.0,\"y\":0.0,\"width\":0.0,\"height\":0.0}},\"v115\":{\"name\":\"v115\",\"isShared\":true,\"value\":\"\"},\"v116\":{\"name\":\"v116\",\"isShared\":true,\"value\":{\"value\":\"\"}},\"v117\":{\"name\":\"v117\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v118\":{\"name\":\"v118\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0}},\"v119\":{\"name\":\"v119\",\"isShared\":true,\"value\":{\"x\":0,\"y\":0}},\"v120\":{\"name\":\"v120\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}},\"v121\":{\"name\":\"v121\",\"isShared\":true,\"value\":{\"x\":0,\"y\":0,\"z\":0}},\"v122\":{\"name\":\"v122\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}},\"v201\":{\"name\":\"v201\",\"isShared\":true,\"value\":[]},\"v202\":{\"name\":\"v202\",\"isShared\":true,\"value\":[]},\"v203\":{\"name\":\"v203\",\"isShared\":true,\"value\":[]},\"v204\":{\"name\":\"v204\",\"isShared\":true,\"value\":[]},\"v205\":{\"name\":\"v205\",\"isShared\":true,\"value\":[]},\"v206\":{\"name\":\"v206\",\"isShared\":true,\"value\":[]},\"v207\":{\"name\":\"v207\",\"isShared\":true,\"value\":[]},\"v208\":{\"name\":\"v208\",\"isShared\":true,\"value\":[]},\"v209\":{\"name\":\"v209\",\"isShared\":true,\"value\":[]},\"v210\":{\"name\":\"v210\",\"isShared\":true,\"value\":[]},\"v211\":{\"name\":\"v211\",\"isShared\":true,\"value\":[]},\"v212\":{\"name\":\"v212\",\"isShared\":true,\"value\":[]},\"v213\":{\"name\":\"v213\",\"isShared\":true,\"value\":[]},\"v214\":{\"name\":\"v214\",\"isShared\":true,\"value\":[]},\"v215\":{\"name\":\"v215\",\"isShared\":true,\"value\":[]},\"v216\":{\"name\":\"v216\",\"isShared\":true,\"value\":[]},\"v217\":{\"name\":\"v217\",\"isShared\":true,\"value\":[]},\"v218\":{\"name\":\"v218\",\"isShared\":true,\"value\":[]},\"v219\":{\"name\":\"v219\",\"isShared\":true,\"value\":[]},\"v220\":{\"name\":\"v220\",\"isShared\":true,\"value\":[]}}","childCount":0},{"type":"SetSharedVariables","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":492.0,\"y\":614.0,\"width\":153.0,\"height\":74.0},\"comment\":\"\",\"id\":5,\"isDisabled\":false,\"v101\":{\"name\":\"v101\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"m_Curve\":[],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4}},\"v102\":{\"name\":\"v102\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v103\":{\"name\":\"v103\",\"isShared\":true,\"value\":false},\"v104\":{\"name\":\"v104\",\"isShared\":true,\"value\":{\"r\":0.0,\"g\":0.0,\"b\":0.0,\"a\":0.0}},\"v105\":{\"name\":\"v105\",\"isShared\":true,\"value\":0.0},\"v106\":{\"name\":\"v106\",\"isShared\":true,\"value\":0.0},\"v107\":{\"name\":\"v107\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v108\":{\"name\":\"v108\",\"isShared\":true,\"value\":0},\"v109\":{\"name\":\"v109\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"m_Bits\":0}},\"v110\":{\"name\":\"v110\",\"isShared\":true,\"value\":0},\"v111\":{\"name\":\"v111\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v112\":{\"name\":\"v112\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v113\":{\"name\":\"v113\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}},\"v114\":{\"name\":\"v114\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"x\":0.0,\"y\":0.0,\"width\":0.0,\"height\":0.0}},\"v115\":{\"name\":\"v115\",\"isShared\":true,\"value\":\"\"},\"v116\":{\"name\":\"v116\",\"isShared\":true,\"value\":{\"value\":\"\"}},\"v117\":{\"name\":\"v117\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v118\":{\"name\":\"v118\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0}},\"v119\":{\"name\":\"v119\",\"isShared\":true,\"value\":{\"x\":0,\"y\":0}},\"v120\":{\"name\":\"v120\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}},\"v121\":{\"name\":\"v121\",\"isShared\":true,\"value\":{\"x\":0,\"y\":0,\"z\":0}},\"v122\":{\"name\":\"v122\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}},\"v201\":{\"name\":\"v201\",\"isShared\":true,\"value\":[]},\"v202\":{\"name\":\"v202\",\"isShared\":true,\"value\":[]},\"v203\":{\"name\":\"v203\",\"isShared\":true,\"value\":[]},\"v204\":{\"name\":\"v204\",\"isShared\":true,\"value\":[]},\"v205\":{\"name\":\"v205\",\"isShared\":true,\"value\":[]},\"v206\":{\"name\":\"v206\",\"isShared\":true,\"value\":[]},\"v207\":{\"name\":\"v207\",\"isShared\":true,\"value\":[]},\"v208\":{\"name\":\"v208\",\"isShared\":true,\"value\":[]},\"v209\":{\"name\":\"v209\",\"isShared\":true,\"value\":[]},\"v210\":{\"name\":\"v210\",\"isShared\":true,\"value\":[]},\"v211\":{\"name\":\"v211\",\"isShared\":true,\"value\":[]},\"v212\":{\"name\":\"v212\",\"isShared\":true,\"value\":[]},\"v213\":{\"name\":\"v213\",\"isShared\":true,\"value\":[]},\"v214\":{\"name\":\"v214\",\"isShared\":true,\"value\":[]},\"v215\":{\"name\":\"v215\",\"isShared\":true,\"value\":[]},\"v216\":{\"name\":\"v216\",\"isShared\":true,\"value\":[]},\"v217\":{\"name\":\"v217\",\"isShared\":true,\"value\":[]},\"v218\":{\"name\":\"v218\",\"isShared\":true,\"value\":[]},\"v219\":{\"name\":\"v219\",\"isShared\":true,\"value\":[]},\"v220\":{\"name\":\"v220\",\"isShared\":true,\"value\":[]}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Log","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":668.0,\"y\":614.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":6,\"isDisabled\":false,\"isLogError\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"logText\":{\"name\":\"\",\"isShared\":false,\"value\":\"---------------------------------------------------------------------\"}}","childCount":0},{"type":"GetSharedVariables","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":837.0,\"y\":614.0,\"width\":155.0,\"height\":74.0},\"comment\":\"\",\"id\":7,\"isDisabled\":false,\"v101\":{\"name\":\"v101\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"m_Curve\":[],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4}},\"v102\":{\"name\":\"v102\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v103\":{\"name\":\"v103\",\"isShared\":true,\"value\":false},\"v104\":{\"name\":\"v104\",\"isShared\":true,\"value\":{\"r\":0.0,\"g\":0.0,\"b\":0.0,\"a\":0.0}},\"v105\":{\"name\":\"v105\",\"isShared\":true,\"value\":0.0},\"v106\":{\"name\":\"v106\",\"isShared\":true,\"value\":0.0},\"v107\":{\"name\":\"v107\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v108\":{\"name\":\"v108\",\"isShared\":true,\"value\":0},\"v109\":{\"name\":\"v109\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"m_Bits\":0}},\"v110\":{\"name\":\"v110\",\"isShared\":true,\"value\":0},\"v111\":{\"name\":\"v111\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v112\":{\"name\":\"v112\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v113\":{\"name\":\"v113\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}},\"v114\":{\"name\":\"v114\",\"isShared\":true,\"value\":{\"serializedVersion\":\"2\",\"x\":0.0,\"y\":0.0,\"width\":0.0,\"height\":0.0}},\"v115\":{\"name\":\"v115\",\"isShared\":true,\"value\":\"\"},\"v116\":{\"name\":\"v116\",\"isShared\":true,\"value\":{\"value\":\"\"}},\"v117\":{\"name\":\"v117\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"v118\":{\"name\":\"v118\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0}},\"v119\":{\"name\":\"v119\",\"isShared\":true,\"value\":{\"x\":0,\"y\":0}},\"v120\":{\"name\":\"v120\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}},\"v121\":{\"name\":\"v121\",\"isShared\":true,\"value\":{\"x\":0,\"y\":0,\"z\":0}},\"v122\":{\"name\":\"v122\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}},\"v201\":{\"name\":\"v201\",\"isShared\":true,\"value\":[]},\"v202\":{\"name\":\"v202\",\"isShared\":true,\"value\":[]},\"v203\":{\"name\":\"v203\",\"isShared\":true,\"value\":[]},\"v204\":{\"name\":\"v204\",\"isShared\":true,\"value\":[]},\"v205\":{\"name\":\"v205\",\"isShared\":true,\"value\":[]},\"v206\":{\"name\":\"v206\",\"isShared\":true,\"value\":[]},\"v207\":{\"name\":\"v207\",\"isShared\":true,\"value\":[]},\"v208\":{\"name\":\"v208\",\"isShared\":true,\"value\":[]},\"v209\":{\"name\":\"v209\",\"isShared\":true,\"value\":[]},\"v210\":{\"name\":\"v210\",\"isShared\":true,\"value\":[]},\"v211\":{\"name\":\"v211\",\"isShared\":true,\"value\":[]},\"v212\":{\"name\":\"v212\",\"isShared\":true,\"value\":[]},\"v213\":{\"name\":\"v213\",\"isShared\":true,\"value\":[]},\"v214\":{\"name\":\"v214\",\"isShared\":true,\"value\":[]},\"v215\":{\"name\":\"v215\",\"isShared\":true,\"value\":[]},\"v216\":{\"name\":\"v216\",\"isShared\":true,\"value\":[]},\"v217\":{\"name\":\"v217\",\"isShared\":true,\"value\":[]},\"v218\":{\"name\":\"v218\",\"isShared\":true,\"value\":[]},\"v219\":{\"name\":\"v219\",\"isShared\":true,\"value\":[]},\"v220\":{\"name\":\"v220\",\"isShared\":true,\"value\":[]}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: '[{"type":"BehaviorDesigner.SharedAnimationCurve","json":"{\"name\":\"v101\",\"isShared\":false,\"value\":{\"serializedVersion\":\"2\",\"m_Curve\":[{\"serializedVersion\":\"3\",\"time\":0.0,\"value\":0.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0},{\"serializedVersion\":\"3\",\"time\":1.0,\"value\":1.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0}],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4}}"},{"type":"BehaviorDesigner.SharedBehaviour","json":"{\"name\":\"v102\",\"isShared\":false,\"value\":{\"instanceID\":27938}}"},{"type":"BehaviorDesigner.SharedBool","json":"{\"name\":\"v103\",\"isShared\":false,\"value\":true}"},{"type":"BehaviorDesigner.SharedColor","json":"{\"name\":\"v104\",\"isShared\":false,\"value\":{\"r\":1.0,\"g\":0.0,\"b\":0.0,\"a\":0.0}}"},{"type":"BehaviorDesigner.SharedDouble","json":"{\"name\":\"v105\",\"isShared\":false,\"value\":105.0}"},{"type":"BehaviorDesigner.SharedFloat","json":"{\"name\":\"v106\",\"isShared\":false,\"value\":106.0}"},{"type":"BehaviorDesigner.SharedGameObject","json":"{\"name\":\"v107\",\"isShared\":false,\"value\":{\"instanceID\":27934}}"},{"type":"BehaviorDesigner.SharedInt","json":"{\"name\":\"v108\",\"isShared\":false,\"value\":108}"},{"type":"BehaviorDesigner.SharedLayerMask","json":"{\"name\":\"v109\",\"isShared\":false,\"value\":{\"serializedVersion\":\"2\",\"m_Bits\":4294967295}}"},{"type":"BehaviorDesigner.SharedLong","json":"{\"name\":\"v110\",\"isShared\":false,\"value\":110}"},{"type":"BehaviorDesigner.SharedMaterial","json":"{\"name\":\"v111\",\"isShared\":false,\"value\":{\"instanceID\":674}}"},{"type":"BehaviorDesigner.SharedObject","json":"{\"name\":\"v112\",\"isShared\":false,\"value\":{\"instanceID\":672}}"},{"type":"BehaviorDesigner.SharedQuaternion","json":"{\"name\":\"v113\",\"isShared\":false,\"value\":{\"x\":1.0,\"y\":1.0,\"z\":3.0,\"w\":0.0}}"},{"type":"BehaviorDesigner.SharedRect","json":"{\"name\":\"v114\",\"isShared\":false,\"value\":{\"serializedVersion\":\"2\",\"x\":1.0,\"y\":1.0,\"width\":4.0,\"height\":0.0}}"},{"type":"BehaviorDesigner.SharedString","json":"{\"name\":\"v115\",\"isShared\":false,\"value\":\"115\"}"},{"type":"BehaviorDesigner.SharedTag","json":"{\"name\":\"v116\",\"isShared\":false,\"value\":{\"value\":\"MainCamera\"}}"},{"type":"BehaviorDesigner.SharedTransform","json":"{\"name\":\"v117\",\"isShared\":false,\"value\":{\"instanceID\":27940}}"},{"type":"BehaviorDesigner.SharedVector2","json":"{\"name\":\"v118\",\"isShared\":false,\"value\":{\"x\":11.0,\"y\":8.0}}"},{"type":"BehaviorDesigner.SharedVector2Int","json":"{\"name\":\"v119\",\"isShared\":false,\"value\":{\"x\":11,\"y\":9}}"},{"type":"BehaviorDesigner.SharedVector3","json":"{\"name\":\"v120\",\"isShared\":false,\"value\":{\"x\":1.0,\"y\":2.0,\"z\":0.0}}"},{"type":"BehaviorDesigner.SharedVector3Int","json":"{\"name\":\"v121\",\"isShared\":false,\"value\":{\"x\":1,\"y\":2,\"z\":1}}"},{"type":"BehaviorDesigner.SharedVector4","json":"{\"name\":\"v122\",\"isShared\":false,\"value\":{\"x\":1.0,\"y\":2.0,\"z\":2.0,\"w\":0.0}}"},{"type":"BehaviorDesigner.SharedAnimationCurveList","json":"{\"name\":\"v201\",\"isShared\":false,\"value\":[{\"serializedVersion\":\"2\",\"m_Curve\":[{\"serializedVersion\":\"3\",\"time\":0.0,\"value\":1.0,\"inSlope\":0.0,\"outSlope\":0.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0},{\"serializedVersion\":\"3\",\"time\":1.0,\"value\":1.0,\"inSlope\":0.0,\"outSlope\":0.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0}],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4},{\"serializedVersion\":\"2\",\"m_Curve\":[{\"serializedVersion\":\"3\",\"time\":0.0,\"value\":0.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0},{\"serializedVersion\":\"3\",\"time\":1.0,\"value\":1.0,\"inSlope\":1.0,\"outSlope\":1.0,\"tangentMode\":34,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0}],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4},{\"serializedVersion\":\"2\",\"m_Curve\":[{\"serializedVersion\":\"3\",\"time\":0.0,\"value\":0.0,\"inSlope\":0.0,\"outSlope\":0.0,\"tangentMode\":0,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0},{\"serializedVersion\":\"3\",\"time\":1.0,\"value\":1.0,\"inSlope\":2.0,\"outSlope\":2.0,\"tangentMode\":0,\"weightedMode\":0,\"inWeight\":0.0,\"outWeight\":0.0}],\"m_PreInfinity\":2,\"m_PostInfinity\":2,\"m_RotationOrder\":4}]}"},{"type":"BehaviorDesigner.SharedBehaviourList","json":"{\"name\":\"v202\",\"isShared\":false,\"value\":[{\"instanceID\":27938},{\"instanceID\":27946}]}"},{"type":"BehaviorDesigner.SharedBoolList","json":"{\"name\":\"v203\",\"isShared\":false,\"value\":[false,true]}"},{"type":"BehaviorDesigner.SharedColorList","json":"{\"name\":\"v204\",\"isShared\":false,\"value\":[{\"r\":1.0,\"g\":1.0,\"b\":1.0,\"a\":0.0},{\"r\":1.0,\"g\":0.0,\"b\":0.0,\"a\":0.0}]}"},{"type":"BehaviorDesigner.SharedDoubleList","json":"{\"name\":\"v205\",\"isShared\":false,\"value\":[2.0,0.0,5.0]}"},{"type":"BehaviorDesigner.SharedFloatList","json":"{\"name\":\"v206\",\"isShared\":false,\"value\":[2.0,0.0,6.0]}"},{"type":"BehaviorDesigner.SharedGameObjectList","json":"{\"name\":\"v207\",\"isShared\":false,\"value\":[{\"instanceID\":27934},{\"instanceID\":27944}]}"},{"type":"BehaviorDesigner.SharedTransformList","json":"{\"name\":\"v215\",\"isShared\":false,\"value\":[{\"instanceID\":27940},{\"instanceID\":27948}]}"},{"type":"BehaviorDesigner.SharedIntList","json":"{\"name\":\"v208\",\"isShared\":false,\"value\":[2,0,8]}"},{"type":"BehaviorDesigner.SharedLongList","json":"{\"name\":\"v209\",\"isShared\":false,\"value\":[2,0,9]}"},{"type":"BehaviorDesigner.SharedMaterialList","json":"{\"name\":\"v210\",\"isShared\":false,\"value\":[{\"instanceID\":674},{\"instanceID\":672}]}"},{"type":"BehaviorDesigner.SharedObjectList","json":"{\"name\":\"v211\",\"isShared\":false,\"value\":[{\"instanceID\":674},{\"instanceID\":672}]}"},{"type":"BehaviorDesigner.SharedQuaternionList","json":"{\"name\":\"v212\",\"isShared\":false,\"value\":[{\"x\":2.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},{\"x\":1.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},{\"x\":2.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}]}"},{"type":"BehaviorDesigner.SharedRectList","json":"{\"name\":\"v213\",\"isShared\":false,\"value\":[{\"serializedVersion\":\"2\",\"x\":2.0,\"y\":0.0,\"width\":0.0,\"height\":0.0},{\"serializedVersion\":\"2\",\"x\":1.0,\"y\":0.0,\"width\":0.0,\"height\":0.0},{\"serializedVersion\":\"2\",\"x\":3.0,\"y\":0.0,\"width\":0.0,\"height\":0.0}]}"},{"type":"BehaviorDesigner.SharedStringList","json":"{\"name\":\"v214\",\"isShared\":false,\"value\":[\"2\",\"1\",\"4\"]}"},{"type":"BehaviorDesigner.SharedVector2List","json":"{\"name\":\"v216\",\"isShared\":false,\"value\":[{\"x\":2.0,\"y\":0.0},{\"x\":1.0,\"y\":0.0},{\"x\":6.0,\"y\":0.0}]}"},{"type":"BehaviorDesigner.SharedVector2IntList","json":"{\"name\":\"v217\",\"isShared\":false,\"value\":[{\"x\":2,\"y\":0},{\"x\":1,\"y\":0},{\"x\":7,\"y\":0}]}"},{"type":"BehaviorDesigner.SharedVector3List","json":"{\"name\":\"v218\",\"isShared\":false,\"value\":[{\"x\":2.0,\"y\":0.0,\"z\":0.0},{\"x\":1.0,\"y\":0.0,\"z\":0.0},{\"x\":8.0,\"y\":0.0,\"z\":0.0}]}"},{"type":"BehaviorDesigner.SharedVector3IntList","json":"{\"name\":\"v219\",\"isShared\":false,\"value\":[{\"x\":2,\"y\":0,\"z\":0},{\"x\":1,\"y\":0,\"z\":0},{\"x\":9,\"y\":0,\"z\":0}]}"},{"type":"BehaviorDesigner.SharedVector4List","json":"{\"name\":\"v220\",\"isShared\":false,\"value\":[{\"x\":2.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},{\"x\":2.0,\"y\":0.0,\"z\":0.0,\"w\":0.0},{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":0.0}]}"}]'
-    version: 1099
-    taskIdCount: 7
-    unityObjects:
-    - id: 2_v102
-      obj: {fileID: 1544130593}
-    - id: 2_v107
-      obj: {fileID: 1616501994}
-    - id: 2_v111
-      obj: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-    - id: 2_v112
-      obj: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - id: 2_v117
-      obj: {fileID: 1544130594}
-    - id: 2_v202_0
-      obj: {fileID: 1544130593}
-    - id: 2_v202_1
-      obj: {fileID: 1616501995}
-    - id: 2_v207_0
-      obj: {fileID: 1544130591}
-    - id: 2_v207_1
-      obj: {fileID: 1616501994}
-    - id: 2_v210_0
-      obj: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - id: 2_v210_1
-      obj: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-    - id: 2_v211_0
-      obj: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - id: 2_v211_1
-      obj: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-    - id: 2_v215_0
-      obj: {fileID: 1544130594}
-    - id: 2_v215_1
-      obj: {fileID: 1616501996}
-    - id: v102
-      obj: {fileID: 1544130593}
-    - id: v107
-      obj: {fileID: 1544130591}
-    - id: v111
-      obj: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-    - id: v112
-      obj: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - id: v117
-      obj: {fileID: 1544130594}
-    - id: v202_0
-      obj: {fileID: 1544130593}
-    - id: v202_1
-      obj: {fileID: 1616501995}
-    - id: v207_0
-      obj: {fileID: 1544130591}
-    - id: v207_1
-      obj: {fileID: 1616501994}
-    - id: v215_0
-      obj: {fileID: 1544130594}
-    - id: v215_1
-      obj: {fileID: 1616501996}
-    - id: v210_0
-      obj: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-    - id: v210_1
-      obj: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-    - id: v211_0
-      obj: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-    - id: v211_1
-      obj: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  external: {fileID: 0}
---- !u!1 &1616501994
+--- !u!1 &1386920505
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,8 +1131,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1616501996}
-  - component: {fileID: 1616501995}
+  - component: {fileID: 1386920507}
+  - component: {fileID: 1386920506}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -311,13 +1140,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &1616501995
+--- !u!108 &1386920506
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616501994}
+  m_GameObject: {fileID: 1386920505}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
@@ -373,13 +1202,13 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &1616501996
+--- !u!4 &1386920507
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616501994}
+  m_GameObject: {fileID: 1386920505}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

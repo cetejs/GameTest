@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 namespace Escape
 {
-    [TaskCategory("Escape")]
+    [TaskGroup("Escape")]
     public class StopNavPath : Action
     {
         [SerializeField]

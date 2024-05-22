@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace Escape
 {
-    [TaskCategory("Escape")]
+    [TaskGroup("Escape")]
     public class BindIndicator : Action
     {
-        [SerializeField] [RequiredField]
+        [SerializeField]
         private SharedFloat fieldOfView;
-        [SerializeField] [RequiredField]
+        [SerializeField]
         private SharedFloat viewDistance;
-        [SerializeField] [RequiredField]
+        [SerializeField]
         private SharedVector3 viewOffset;
         [SerializeField]
         private SharedFloat hearDistance;

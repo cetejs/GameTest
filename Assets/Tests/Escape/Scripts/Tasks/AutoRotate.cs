@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Escape
 {
-    [TaskCategory("Escape")]
+    [TaskGroup("Escape")]
     public class AutoRotate : Action
     {
         [SerializeField]

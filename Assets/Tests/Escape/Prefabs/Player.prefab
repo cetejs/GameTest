@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birthPosition: {x: 0, y: 0, z: 0}
-  birthRotation: {x: 0, y: 0, z: 0, w: 0}
+  birthRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1001 &7187038926103497034
 PrefabInstance:
   m_ObjectHideFlags: 0

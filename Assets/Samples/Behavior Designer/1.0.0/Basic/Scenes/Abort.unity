@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1736681830
+--- !u!1 &37161484
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,122 +131,433 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1736681833}
-  - component: {fileID: 1736681832}
-  - component: {fileID: 1736681831}
-  - component: {fileID: 1736681834}
+  - component: {fileID: 37161486}
+  - component: {fileID: 37161485}
   m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
+  m_Name: BehaviorTree
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1736681831
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736681830}
-  m_Enabled: 1
---- !u!20 &1736681832
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736681830}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1736681833
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736681830}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1736681834
+--- !u!114 &37161485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736681830}
+  m_GameObject: {fileID: 37161484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 0
   restartWhenComplete: 0
   resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
   source:
     behaviorName: Behavior
-    group: 0
     behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"breakpoint\":false,\"id\":0,\"disabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Parallel","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":453.0,\"width\":150.0,\"height\":113.0},\"comment\":\"abort
-      type is self\",\"breakpoint\":false,\"id\":1,\"disabled\":false,\"abortType\":1}","childCount":2},{"type":"BehaviorDesigner.Tasks.Repeater","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-3.0,\"y\":613.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":2,\"disabled\":false,\"count\":{\"name\":\"\",\"isShared\":false,\"value\":1},\"repeatForever\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"endOnFailure\":{\"name\":\"\",\"isShared\":false,\"value\":false}}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-8.0,\"y\":747.0,\"width\":155.0,\"height\":113.0},\"comment\":\"repeat
-      change bool value \",\"breakpoint\":false,\"id\":3,\"disabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.Wait","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-153.0,\"y\":909.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":4,\"disabled\":false,\"waitTime\":{\"name\":\"\",\"isShared\":false,\"value\":3.0},\"isRandomWait\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"randomRange\":{\"name\":\"\",\"isShared\":false,\"value\":{\"x\":0.0,\"y\":1.0}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Selector","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":147.0,\"y\":909.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":5,\"disabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":38.0,\"y\":1067.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":6,\"disabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityMath.BoolComparison","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-47.0,\"y\":1208.0,\"width\":150.0,\"height\":89.0},\"comment\":\"value
-      is false ?\",\"breakpoint\":false,\"id\":7,\"disabled\":false,\"firstBool\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"secondBool\":{\"name\":\"Value\",\"isShared\":true,\"value\":false}}","childCount":0},{"type":"BehaviorDesigner.Tasks.UnityMath.SetBool","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":126.0,\"y\":1208.0,\"width\":150.0,\"height\":89.0},\"comment\":\"value
-      = true\",\"breakpoint\":false,\"id\":8,\"disabled\":false,\"boolValue\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"storeResult\":{\"name\":\"Value\",\"isShared\":true,\"value\":false}}","childCount":0},{"type":"BehaviorDesigner.Tasks.UnityMath.SetBool","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":274.0,\"y\":1067.0,\"width\":150.0,\"height\":89.0},\"comment\":\"value
-      = false\",\"breakpoint\":false,\"id\":9,\"disabled\":false,\"boolValue\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"storeResult\":{\"name\":\"Value\",\"isShared\":true,\"value\":false}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":831.0,\"y\":613.0,\"width\":150.0,\"height\":113.0},\"comment\":\"abort
-      type is self\",\"breakpoint\":false,\"id\":10,\"disabled\":false,\"abortType\":1}","childCount":2},{"type":"BehaviorDesigner.Tasks.Selector","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":697.0,\"y\":747.0,\"width\":161.0,\"height\":113.0},\"comment\":\"abort
-      type is lower priority\",\"breakpoint\":false,\"id\":11,\"disabled\":false,\"abortType\":2}","childCount":2},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":561.0,\"y\":909.0,\"width\":161.0,\"height\":113.0},\"comment\":\"abort
-      type is lower priority\",\"breakpoint\":false,\"id\":12,\"disabled\":false,\"abortType\":2}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityMath.BoolComparison","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":475.0,\"y\":1067.0,\"width\":150.0,\"height\":89.0},\"comment\":\"value
-      is false ?\",\"breakpoint\":false,\"id\":13,\"disabled\":false,\"firstBool\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"secondBool\":{\"name\":\"Value\",\"isShared\":true,\"value\":false}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Log","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":662.0,\"y\":1067.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":14,\"disabled\":false,\"logError\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"logText\":{\"name\":\"Invalid
-      String\",\"isShared\":false,\"value\":\"Bool Comparison is success\"}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Log","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":831.0,\"y\":909.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":15,\"disabled\":false,\"logError\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"logText\":{\"name\":\"Invalid
-      String\",\"isShared\":false,\"value\":\"Bool Comparison is failure\"}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Idle","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":941.0,\"y\":747.0,\"width\":187.0,\"height\":104.0},\"comment\":\"when
-      Bool Comparison change\\nI will be interrupted\",\"breakpoint\":false,\"id\":16,\"disabled\":false}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: '[{"type":"BehaviorDesigner.SharedBool","json":"{\"name\":\"Value\",\"isShared\":false,\"value\":false}"}]'
-    version: 738
-    taskIdCount: 16
-    unityObjects: []
-  external: {fileID: 0}
---- !u!1 &1980614380
+    serializedVersion: 88
+    root:
+      rid: 5920605458552324105
+    tasks:
+    - rid: 5920605458552324105
+    - rid: 5920605458552324106
+    - rid: 5920605458552324107
+    - rid: 5920605458552324108
+    - rid: 5920605458552324109
+    - rid: 5920605458552324110
+    - rid: 5920605458552324111
+    - rid: 5920605458552324112
+    - rid: 5920605458552324113
+    - rid: 5920605458552324114
+    - rid: 5920605458552324115
+    - rid: 5920605458552324116
+    - rid: 5920605458552324117
+    - rid: 5920605458552324118
+    - rid: 5920605458552324119
+    - rid: 5920605458552324120
+    - rid: 5920605458552324121
+    sharedVariables:
+    - rid: 5920605458552324123
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605458552324105
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 99ce7bc963c79964b920965c524443a0
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324106
+    - rid: 5920605458552324106
+      type: {class: Parallel, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Parallel
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 450
+          width: 100
+          height: 100
+        guid: 65b79483cfb82b14e860075c96155de5
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324107
+        - rid: 5920605458552324115
+        abortType: 0
+    - rid: 5920605458552324107
+      type: {class: Repeater, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Repeater
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -8
+          y: 615
+          width: 150
+          height: 130
+        guid: af88ceb0d717e2c4e8b3ee3f9bdf33cc
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324108
+        count:
+          name: 
+          isShared: 0
+          value: 1
+        repeatForever:
+          name: 
+          isShared: 0
+          value: 1
+        endOnFailure:
+          name: 
+          isShared: 0
+          value: 0
+    - rid: 5920605458552324108
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -8
+          y: 781
+          width: 150
+          height: 130
+        guid: 1f39b4bd28d14e24380f797e42bdf20c
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324109
+        - rid: 5920605458552324110
+        abortType: 0
+    - rid: 5920605458552324109
+      type: {class: Wait, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Wait
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -158
+          y: 970
+          width: 150
+          height: 106
+        guid: 5c223e0224abaf64697c65e1a04a4e84
+        disabled: 0
+        breakpoint: 0
+        waitTime:
+          name: 
+          isShared: 0
+          value: 1
+        isRandomWait:
+          name: 
+          isShared: 0
+          value: 0
+        randomRange:
+          name: 
+          isShared: 0
+          value: {x: 0, y: 1}
+    - rid: 5920605458552324110
+      type: {class: Selector, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Selector
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 163
+          y: 970
+          width: 150
+          height: 130
+        guid: ddeea627ce4721b43a96e6e96c995429
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324111
+        - rid: 5920605458552324112
+        abortType: 0
+    - rid: 5920605458552324111
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 57
+          y: 1168
+          width: 150
+          height: 130
+        guid: d4c197b366e2cb24c9aa4eebd8e6c11d
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324113
+        - rid: 5920605458552324114
+        abortType: 0
+    - rid: 5920605458552324112
+      type: {class: SetBool, ns: BehaviorDesigner.Tasks.UnityMath, asm: Assembly-CSharp}
+      data:
+        name: Set Bool
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 258
+          y: 1168
+          width: 150
+          height: 106
+        guid: 616a5a26bad6b2d4da07c84bf95ab458
+        disabled: 0
+        breakpoint: 0
+        boolValue:
+          name: 
+          isShared: 0
+          value: 0
+        storeResult:
+          name: Value
+          isShared: 1
+          value: 0
+    - rid: 5920605458552324113
+      type: {class: BoolComparison, ns: BehaviorDesigner.Tasks.UnityMath, asm: Assembly-CSharp}
+      data:
+        name: Bool Comparison
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -32
+          y: 1335
+          width: 150
+          height: 106
+        guid: daede0b3bd5e483499c795a96304bb7e
+        disabled: 0
+        breakpoint: 0
+        firstBool:
+          name: 
+          isShared: 0
+          value: 0
+        secondBool:
+          name: Value
+          isShared: 1
+          value: 0
+    - rid: 5920605458552324114
+      type: {class: SetBool, ns: BehaviorDesigner.Tasks.UnityMath, asm: Assembly-CSharp}
+      data:
+        name: Set Bool
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 145
+          y: 1335
+          width: 150
+          height: 106
+        guid: a921a7e3cb65f1b4f9a233108999c81e
+        disabled: 0
+        breakpoint: 0
+        boolValue:
+          name: 
+          isShared: 0
+          value: 1
+        storeResult:
+          name: Value
+          isShared: 1
+          value: 0
+    - rid: 5920605458552324115
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 875
+          y: 615
+          width: 150
+          height: 130
+        guid: a96f5f3ef4d2eb3409556d4bfab880be
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324116
+        - rid: 5920605458552324117
+        abortType: 1
+    - rid: 5920605458552324116
+      type: {class: Selector, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Selector
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 711
+          y: 781
+          width: 150
+          height: 130
+        guid: 393c6b014a56dbe41a002e3c6e9330a8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324118
+        - rid: 5920605458552324119
+        abortType: 2
+    - rid: 5920605458552324117
+      type: {class: Idle, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Idle
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 1025
+          y: 781
+          width: 150
+          height: 106
+        guid: dc4abebf95b2f5f48aa4f6ff7bd72a75
+        disabled: 0
+        breakpoint: 0
+    - rid: 5920605458552324118
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 572
+          y: 970
+          width: 150
+          height: 130
+        guid: 8a0cd7ea90e7e044b987cd740d6afe86
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324121
+        - rid: 5920605458552324120
+        abortType: 2
+    - rid: 5920605458552324119
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 849
+          y: 970
+          width: 150
+          height: 106
+        guid: 6f550669f0671b3458bd197bb618e332
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 0
+        logText:
+          name: 
+          isShared: 0
+          value: Bool Comparison is failure
+    - rid: 5920605458552324120
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 678
+          y: 1168
+          width: 150
+          height: 106
+        guid: e9c1e96665c4072439c8d88c3249db4e
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 0
+        logText:
+          name: 
+          isShared: 0
+          value: Bool Comparison is success
+    - rid: 5920605458552324121
+      type: {class: BoolComparison, ns: BehaviorDesigner.Tasks.UnityMath, asm: Assembly-CSharp}
+      data:
+        name: Bool Comparison
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 475
+          y: 1168
+          width: 150
+          height: 106
+        guid: 0b982218ededa4e4d9fd7bfb97c040ce
+        disabled: 0
+        breakpoint: 0
+        firstBool:
+          name: 
+          isShared: 0
+          value: 0
+        secondBool:
+          name: Value
+          isShared: 1
+          value: 0
+    - rid: 5920605458552324123
+      type: {class: SharedBool, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Value
+        isShared: 0
+        value: 0
+--- !u!4 &37161486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37161484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1257634130
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,8 +565,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1980614382}
-  - component: {fileID: 1980614381}
+  - component: {fileID: 1257634132}
+  - component: {fileID: 1257634131}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -263,13 +574,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &1980614381
+--- !u!108 &1257634131
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980614380}
+  m_GameObject: {fileID: 1257634130}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
@@ -325,13 +636,13 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &1980614382
+--- !u!4 &1257634132
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980614380}
+  m_GameObject: {fileID: 1257634130}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -340,3 +651,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &2000896333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000896336}
+  - component: {fileID: 2000896335}
+  - component: {fileID: 2000896334}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &2000896334
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000896333}
+  m_Enabled: 1
+--- !u!20 &2000896335
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000896333}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &2000896336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000896333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

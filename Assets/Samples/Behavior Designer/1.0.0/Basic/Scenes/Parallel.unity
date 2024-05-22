@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &242111578
+--- !u!1 &273481507
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,8 +131,275 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 242111580}
-  - component: {fileID: 242111579}
+  - component: {fileID: 273481509}
+  - component: {fileID: 273481508}
+  m_Layer: 0
+  m_Name: BehaviorTree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &273481508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273481507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  restartWhenComplete: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  source:
+    behaviorName: Behavior
+    behaviorDescription: 
+    serializedVersion: 40
+    root:
+      rid: 5920605458552324096
+    tasks:
+    - rid: 5920605458552324096
+    - rid: 5920605458552324098
+    - rid: 5920605458552324099
+    - rid: 5920605458552324101
+    - rid: 5920605458552324102
+    - rid: 5920605458552324104
+    sharedVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605458552324096
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: e9b4bfeaf4010124b8b86c92582b845b
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324104
+    - rid: 5920605458552324098
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 138
+          y: 635
+          width: 150
+          height: 106
+        guid: 11adf5def9f3f1243ae61ecf15c76a40
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 0
+        logText:
+          name: 
+          isShared: 0
+          value: 1
+    - rid: 5920605458552324099
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 308
+          y: 635
+          width: 150
+          height: 106
+        guid: cfb13a280e4418e4faf40a31e6720470
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 0
+        logText:
+          name: 
+          isShared: 0
+          value: 2
+    - rid: 5920605458552324101
+      type: {class: Idle, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Idle
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 487
+          y: 635
+          width: 150
+          height: 106
+        guid: a1410a2e104edfc428a19a82a4f8bd02
+        disabled: 0
+        breakpoint: 0
+    - rid: 5920605458552324102
+      type: {class: Log, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Log
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 656
+          y: 635
+          width: 150
+          height: 106
+        guid: 04de74a9349d5164fbd4540f2b864fe1
+        disabled: 0
+        breakpoint: 0
+        logError:
+          name: 
+          isShared: 0
+          value: 1
+        logText:
+          name: 
+          isShared: 0
+          value: 3
+    - rid: 5920605458552324104
+      type: {class: Parallel, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Parallel
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 463
+          width: 150
+          height: 130
+        guid: 9ae4b4ad9a751344d8700bd7ddcd50f9
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605458552324098
+        - rid: 5920605458552324099
+        - rid: 5920605458552324101
+        - rid: 5920605458552324102
+        abortType: 0
+--- !u!4 &273481509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273481507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &898842318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898842321}
+  - component: {fileID: 898842320}
+  - component: {fileID: 898842319}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &898842319
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898842318}
+  m_Enabled: 1
+--- !u!20 &898842320
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898842318}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &898842321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898842318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1045119195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045119197}
+  - component: {fileID: 1045119196}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -140,13 +407,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &242111579
+--- !u!108 &1045119196
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242111578}
+  m_GameObject: {fileID: 1045119195}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
@@ -202,13 +469,13 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &242111580
+--- !u!4 &1045119197
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242111578}
+  m_GameObject: {fileID: 1045119195}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -217,117 +484,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &598728734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 598728737}
-  - component: {fileID: 598728736}
-  - component: {fileID: 598728735}
-  - component: {fileID: 598728738}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &598728735
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598728734}
-  m_Enabled: 1
---- !u!20 &598728736
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598728734}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &598728737
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598728734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &598728738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598728734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateType: 0
-  restartWhenComplete: 0
-  resetValuesOnRestart: 0
-  source:
-    behaviorName: Behavior
-    group: 0
-    behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"breakpoint\":false,\"id\":0,\"disabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Parallel","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":470.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":1,\"disabled\":false,\"abortType\":0}","childCount":5},{"type":"BehaviorDesigner.Tasks.Log","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":35.0,\"y\":611.0,\"width\":150.0,\"height\":89.0},\"comment\":\"Test
-      Log 1\",\"breakpoint\":false,\"id\":2,\"disabled\":false,\"logError\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"logText\":{\"name\":\"\",\"isShared\":false,\"value\":\"1\"}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Log","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":214.0,\"y\":611.0,\"width\":150.0,\"height\":89.0},\"comment\":\"Test
-      Log 2\",\"breakpoint\":false,\"id\":3,\"disabled\":false,\"logError\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"logText\":{\"name\":\"\",\"isShared\":false,\"value\":\"2\"}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Idle","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":611.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":4,\"disabled\":false}","childCount":0},{"type":"BehaviorDesigner.Tasks.Log","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":580.0,\"y\":611.0,\"width\":150.0,\"height\":89.0},\"comment\":\"Test
-      Error 3\",\"breakpoint\":false,\"id\":5,\"disabled\":false,\"logError\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"logText\":{\"name\":\"\",\"isShared\":false,\"value\":\"3\"}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Idle","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":758.0,\"y\":611.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":6,\"disabled\":false}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: 
-    version: 140
-    taskIdCount: 6
-    unityObjects: []
-  external: {fileID: 0}

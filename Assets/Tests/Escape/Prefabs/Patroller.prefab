@@ -251,7 +251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4234484407248725288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 25}
+  m_LocalPosition: {x: -20, y: 0, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -282,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4234484407296855821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -365,7 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6448755480362348835}
   - component: {fileID: 6448755480362348834}
-  - component: {fileID: 4234484408821146394}
+  - component: {fileID: 3075441042714973890}
   - component: {fileID: 84211215}
   - component: {fileID: 84211216}
   m_Layer: 6
@@ -415,7 +415,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4234484408821146394
+--- !u!114 &3075441042714973890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,47 +424,670 @@ MonoBehaviour:
   m_GameObject: {fileID: 6448755480362348890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 0
   restartWhenComplete: 0
-  resetValuesOnRestart: 1
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
   source:
     behaviorName: Behavior
-    group: 0
     behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"breakpoint\":false,\"id\":0,\"disabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.ParallelSelector","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":420.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":10,\"disabled\":false,\"abortType\":0}","childCount":3},{"type":"Escape.BindIndicator","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":172.13003540039063,\"y\":553.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":9,\"disabled\":false,\"fieldOfView\":{\"name\":\"SeeFOV\",\"isShared\":true,\"value\":60.0},\"viewDistance\":{\"name\":\"SeeDis\",\"isShared\":true,\"value\":10.0},\"viewOffset\":{\"name\":\"SeeOffset\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}},\"hearDistance\":{\"name\":\"HearDis\",\"isShared\":true,\"value\":0.0},\"seeIndicator\":{\"instanceID\":-1352},\"hearIndicator\":{\"instanceID\":-1362}}","childCount":0},{"type":"Escape.ReceiveAlarmEvent","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":399.0,\"y\":553.0,\"width\":151.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":26,\"disabled\":false,\"eventId\":1,\"radius\":{\"name\":\"AlarmRadius\",\"isShared\":true,\"value\":0.0},\"warner\":{\"name\":\"Warnner\",\"isShared\":true,\"value\":{\"instanceID\":0}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Selector","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":663.9100341796875,\"y\":553.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":14,\"disabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":216.9999237060547,\"y\":696.0000610351563,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":12,\"disabled\":false,\"abortType\":0}","childCount":6},{"type":"BehaviorDesigner.Tasks.Selector","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-205.15000915527345,\"y\":828.0001220703125,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":6,\"disabled\":false,\"abortType\":2}","childCount":3},{"type":"BehaviorDesigner.Tasks.Movement.CanSeeObject","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-377.1500244140625,\"y\":976.0001220703125,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":3,\"disabled\":false,\"interval\":{\"name\":\"\",\"isShared\":false,\"value\":1.0},\"optimization\":0,\"tag\":{\"name\":\"\",\"isShared\":false,\"value\":{\"value\":\"Player\"}},\"objectLayerMask\":{\"name\":\"\",\"isShared\":false,\"value\":{\"serializedVersion\":\"2\",\"m_Bits\":64}},\"obstacleLayerMask\":{\"name\":\"\",\"isShared\":false,\"value\":{\"serializedVersion\":\"2\",\"m_Bits\":257}},\"fieldOfView\":{\"name\":\"SeeFOV\",\"isShared\":true,\"value\":60.0},\"viewDistance\":{\"name\":\"SeeDis\",\"isShared\":true,\"value\":10.0},\"viewVolume\":{\"name\":\"\",\"isShared\":false,\"value\":1.0},\"angleOffset\":{\"name\":\"\",\"isShared\":false,\"value\":0.0},\"viewOffset\":{\"name\":\"SeeOffset\",\"isShared\":true,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}},\"storeResult\":{\"name\":\"SeeObj\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"drawGizmos\":true,\"viewColor\":{\"r\":1.0,\"g\":0.9200000166893005,\"b\":0.01600000075995922,\"a\":0.10000000149011612}}","childCount":0},{"type":"Escape.CanHearObject","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-205.15000915527345,\"y\":976.0001220703125,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":11,\"disabled\":false,\"interval\":{\"name\":\"\",\"isShared\":false,\"value\":1.0},\"listeningTag\":{\"name\":\"\",\"isShared\":false,\"value\":{\"value\":\"Player\"}},\"hearRadius\":{\"name\":\"HearDis\",\"isShared\":true,\"value\":10.0},\"hearSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":4.0},\"storeResult\":{\"name\":\"HearObj\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"drawGizmos\":true,\"viewColor\":{\"r\":1.0,\"g\":0.9200000166893005,\"b\":0.01600000075995922,\"a\":0.10000000149011612}}","childCount":0},{"type":"Escape.CanHearAlarm","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-29.150026321411134,\"y\":976.0001220703125,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":27,\"disabled\":false,\"interval\":{\"name\":\"\",\"isShared\":false,\"value\":1.0},\"radius\":{\"name\":\"AlarmRadius\",\"isShared\":true,\"value\":0.0},\"warner\":{\"name\":\"Warnner\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"storeResult\":{\"name\":\"AlarmObj\",\"isShared\":true,\"value\":{\"instanceID\":0}}}","childCount":0},{"type":"Escape.ReplaceMaterial","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":-29.000022888183595,\"y\":828.0001220703125,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":28,\"disabled\":false,\"renderer\":{\"instanceID\":26050},\"material\":{\"instanceID\":26292}}","childCount":0},{"type":"Escape.StoreTarget","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":142.00001525878907,\"y\":828.0001220703125,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":31,\"disabled\":false,\"target1\":{\"name\":\"SeeObj\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"target2\":{\"name\":\"HearObj\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"target3\":{\"name\":\"AlarmObj\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"storeResult\":{\"name\":\"SeekObj\",\"isShared\":true,\"value\":{\"instanceID\":0}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.Seek","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":310.3499450683594,\"y\":828.0001220703125,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":4,\"disabled\":false,\"speed\":{\"name\":\"Speed\",\"isShared\":false,\"value\":6.0},\"angularSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":180.0},\"arriveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":1.5},\"stopOnTaskEnd\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"updateRotation\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"target\":{\"name\":\"SeekObj\",\"isShared\":true,\"value\":{\"instanceID\":0}},\"targetPosition\":{\"name\":\"\",\"isShared\":false,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}}}","childCount":0},{"type":"Escape.StopNavPath","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":475.0000915527344,\"y\":828.0001220703125,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":39,\"disabled\":false,\"agent\":{\"instanceID\":26028}}","childCount":0},{"type":"Escape.SendEvent","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":641.0,\"y\":828.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":30,\"disabled\":false,\"eventId\":2}","childCount":0},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":997.2224731445313,\"y\":696.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":16,\"disabled\":false,\"abortType\":0}","childCount":3},{"type":"Escape.ReplaceMaterial","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":813.2225952148438,\"y\":828.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":29,\"disabled\":false,\"renderer\":{\"instanceID\":26050},\"material\":{\"instanceID\":26290}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Parallel","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":997.2224731445313,\"y\":828.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"breakpoint\":false,\"id\":19,\"disabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.Wait","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":888.2225341796875,\"y\":976.0000610351563,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":15,\"disabled\":false,\"waitTime\":{\"name\":\"\",\"isShared\":false,\"value\":1.0},\"isRandomWait\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"randomRange\":{\"name\":\"\",\"isShared\":false,\"value\":{\"x\":0.0,\"y\":1.0}}}","childCount":0},{"type":"Escape.StopNavPath","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":1092.0,\"y\":976.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":38,\"disabled\":false,\"agent\":{\"instanceID\":26028}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.Patrol","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":1202.947021484375,\"y\":828.0000610351563,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"breakpoint\":false,\"id\":2,\"disabled\":false,\"speed\":{\"name\":\"Speed\",\"isShared\":false,\"value\":5.0},\"angularSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":120.0},\"arriveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":0.10000000149011612},\"stopOnTaskEnd\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"updateRotation\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"randomPatrol\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"reversePatrol\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"findNearestWaypoint\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"waypointPauseDuration\":{\"name\":\"\",\"isShared\":false,\"value\":0.5},\"waypoints\":{\"name\":\"\",\"isShared\":false,\"value\":[{\"instanceID\":26114},{\"instanceID\":26108},{\"instanceID\":26206},{\"instanceID\":26112}]}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: '[{"type":"BehaviorDesigner.SharedTransform","json":"{\"name\":\"SeeObj\",\"isShared\":false,\"value\":{\"instanceID\":0}}"},{"type":"BehaviorDesigner.SharedFloat","json":"{\"name\":\"SeeFOV\",\"isShared\":false,\"value\":60.0}"},{"type":"BehaviorDesigner.SharedFloat","json":"{\"name\":\"SeeDis\",\"isShared\":false,\"value\":10.0}"},{"type":"BehaviorDesigner.SharedVector3","json":"{\"name\":\"SeeOffset\",\"isShared\":false,\"value\":{\"x\":0.0,\"y\":0.5,\"z\":0.0}}"},{"type":"BehaviorDesigner.SharedFloat","json":"{\"name\":\"HearDis\",\"isShared\":false,\"value\":10.0}"},{"type":"BehaviorDesigner.SharedTransform","json":"{\"name\":\"HearObj\",\"isShared\":false,\"value\":{\"instanceID\":0}}"},{"type":"BehaviorDesigner.SharedTransform","json":"{\"name\":\"AlarmObj\",\"isShared\":false,\"value\":{\"instanceID\":0}}"},{"type":"BehaviorDesigner.SharedTransform","json":"{\"name\":\"SeekObj\",\"isShared\":false,\"value\":{\"instanceID\":0}}"},{"type":"BehaviorDesigner.SharedFloat","json":"{\"name\":\"AlarmRadius\",\"isShared\":false,\"value\":0.0}"},{"type":"BehaviorDesigner.SharedTransform","json":"{\"name\":\"Warnner\",\"isShared\":false,\"value\":{\"instanceID\":0}}"}]'
-    version: 749
-    taskIdCount: 39
-    unityObjects:
-    - id: 9_seeIndicator
-      obj: {fileID: 1134661065}
-    - id: 9_hearIndicator
-      obj: {fileID: 1415899022}
-    - id: 28_renderer
-      obj: {fileID: 7187038926105661738}
-    - id: 28_material
-      obj: {fileID: 2100000, guid: 662f93a55270c7f438598dd406c128bb, type: 2}
-    - id: 39_agent
-      obj: {fileID: 6448755480362348834}
-    - id: 29_renderer
-      obj: {fileID: 7187038926105661738}
-    - id: 29_material
-      obj: {fileID: 2100000, guid: 92f78b0851ab37f409990aa746a52ec9, type: 2}
-    - id: 38_agent
-      obj: {fileID: 6448755480362348834}
-    - id: 2_waypoints_0
-      obj: {fileID: 4234484408500981906}
-    - id: 2_waypoints_1
-      obj: {fileID: 4234484407296855818}
-    - id: 2_waypoints_2
-      obj: {fileID: 4234484407248725289}
-    - id: 2_waypoints_3
-      obj: {fileID: 4234484407022974333}
-  external: {fileID: 0}
+    serializedVersion: 153
+    root:
+      rid: 5920605618680365056
+    tasks:
+    - rid: 5920605618680365056
+    - rid: 5920605618680365057
+    - rid: 5920605618680365058
+    - rid: 5920605618680365067
+    - rid: 5920605618680365068
+    - rid: 5920605618680365069
+    - rid: 5920605618680365070
+    - rid: 5920605618680365071
+    - rid: 5920605618680365075
+    - rid: 5920605618680365076
+    - rid: 5920605634532999170
+    - rid: 5920605634532999171
+    - rid: 5920605634532999172
+    - rid: 5920605634532999174
+    - rid: 5920605634532999175
+    - rid: 5920605634532999176
+    - rid: 5920605634532999177
+    - rid: 5920605634532999178
+    - rid: 5920605634532999179
+    - rid: 5920605634532999180
+    - rid: 5920605634532999181
+    sharedVariables:
+    - rid: 5920605618680365059
+    - rid: 5920605618680365060
+    - rid: 5920605618680365061
+    - rid: 5920605618680365062
+    - rid: 5920605618680365063
+    - rid: 5920605618680365064
+    - rid: 5920605618680365065
+    - rid: 5920605634532999168
+    - rid: 5920605634532999169
+    - rid: 5920605634532999173
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605618680365056
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 176203b6-84e8-4151-a0ea-4c596cdb64b0
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605618680365057
+    - rid: 5920605618680365057
+      type: {class: Parallel, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Parallel
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 472
+          width: 150
+          height: 130
+        guid: e8d3a110-c3b2-4d73-954f-c6956ccccd57
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605618680365058
+        - rid: 5920605634532999170
+        - rid: 5920605634532999171
+        abortType: 0
+    - rid: 5920605618680365058
+      type: {class: BindIndicator, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Bind Indicator
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 160
+          y: 667
+          width: 150
+          height: 106
+        guid: 31b1edd7-bb73-42c8-8cb6-62fb03c10d7c
+        disabled: 0
+        breakpoint: 0
+        fieldOfView:
+          name: SeeFOV
+          isShared: 1
+          value: 0
+        viewDistance:
+          name: SeeDis
+          isShared: 1
+          value: 0
+        viewOffset:
+          name: SeeOffset
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        hearDistance:
+          name: HearDis
+          isShared: 1
+          value: 0
+        seeIndicator: {fileID: 1134661065}
+        hearIndicator: {fileID: 1415899022}
+    - rid: 5920605618680365059
+      type: {class: SharedTransform, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: SeeObj
+        isShared: 0
+        value: {fileID: 0}
+    - rid: 5920605618680365060
+      type: {class: SharedFloat, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: SeeFOV
+        isShared: 0
+        value: 60
+    - rid: 5920605618680365061
+      type: {class: SharedFloat, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: SeeDis
+        isShared: 0
+        value: 10
+    - rid: 5920605618680365062
+      type: {class: SharedVector3, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: SeeOffset
+        isShared: 0
+        value: {x: 0, y: 0.5, z: 0}
+    - rid: 5920605618680365063
+      type: {class: SharedTransform, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: HearObj
+        isShared: 0
+        value: {fileID: 0}
+    - rid: 5920605618680365064
+      type: {class: SharedFloat, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: HearDis
+        isShared: 0
+        value: 10
+    - rid: 5920605618680365065
+      type: {class: SharedTransform, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: LookObj
+        isShared: 0
+        value: {fileID: 0}
+    - rid: 5920605618680365067
+      type: {class: Selector, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Selector
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -277
+          y: 1081
+          width: 150
+          height: 130
+        guid: b6efdae9-ce03-4394-abe2-0d5c0ee7664c
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605618680365068
+        - rid: 5920605618680365069
+        - rid: 5920605634532999172
+        abortType: 2
+    - rid: 5920605618680365068
+      type: {class: CanSeeObject, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Can See Object
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -466
+          y: 1252
+          width: 150
+          height: 106
+        guid: 445aed96-5e10-4c63-bb51-17c13eb0fbfa
+        disabled: 0
+        breakpoint: 0
+        interval:
+          name: 
+          isShared: 0
+          value: 1
+        optimization: 0
+        tag:
+          name: 
+          isShared: 0
+          value:
+            value: Player
+        objectLayerMask:
+          name: 
+          isShared: 0
+          value:
+            serializedVersion: 2
+            m_Bits: 64
+        obstacleLayerMask:
+          name: 
+          isShared: 0
+          value:
+            serializedVersion: 2
+            m_Bits: 257
+        fieldOfView:
+          name: SeeFOV
+          isShared: 1
+          value: 60
+        viewDistance:
+          name: SeeDis
+          isShared: 1
+          value: 10
+        viewVolume:
+          name: 
+          isShared: 0
+          value: 1
+        angleOffset:
+          name: 
+          isShared: 0
+          value: 0
+        viewOffset:
+          name: SeeOffset
+          isShared: 1
+          value: {x: 0, y: 0, z: 0}
+        storeResult:
+          name: SeeObj
+          isShared: 1
+          value: {fileID: 0}
+        drawGizmos: 1
+        viewColor: {r: 1, g: 0.92, b: 0.016, a: 0.1}
+    - rid: 5920605618680365069
+      type: {class: CanHearObject, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Can Hear Object
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -277
+          y: 1252
+          width: 150
+          height: 106
+        guid: 87965253-c728-460d-b169-cb25be3cd95e
+        disabled: 0
+        breakpoint: 0
+        interval:
+          name: 
+          isShared: 0
+          value: 1
+        listeningTag:
+          name: 
+          isShared: 0
+          value:
+            value: Player
+        hearRadius:
+          name: HearDis
+          isShared: 1
+          value: 10
+        hearSpeed:
+          name: 
+          isShared: 0
+          value: 4
+        storeResult:
+          name: HearObj
+          isShared: 1
+          value: {fileID: 0}
+        drawGizmos: 1
+        viewColor: {r: 1, g: 0.92, b: 0.016, a: 0.1}
+    - rid: 5920605618680365070
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 221
+          y: 869
+          width: 150
+          height: 130
+        guid: debdfc68-3627-4609-87f3-cf42142a03c7
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605618680365067
+        - rid: 5920605618680365071
+        - rid: 5920605634532999174
+        - rid: 5920605634532999175
+        - rid: 5920605634532999176
+        - rid: 5920605634532999177
+        abortType: 2
+    - rid: 5920605618680365071
+      type: {class: ReplaceMaterial, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Replace Material
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -43
+          y: 1074
+          width: 150
+          height: 106
+        guid: e2b21a8e-dea5-42c3-93ab-554cb0fd10b3
+        disabled: 0
+        breakpoint: 0
+        renderer: {fileID: 7187038926105661738}
+        material: {fileID: 2100000, guid: 662f93a55270c7f438598dd406c128bb, type: 2}
+    - rid: 5920605618680365075
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 1054
+          y: 869
+          width: 150
+          height: 130
+        guid: 342d6499-3704-4bfb-bae5-c6988e3e3a07
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605618680365076
+        - rid: 5920605634532999178
+        - rid: 5920605634532999181
+        abortType: 0
+    - rid: 5920605618680365076
+      type: {class: ReplaceMaterial, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Replace Material
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 860
+          y: 1074
+          width: 150
+          height: 106
+        guid: e39ea059-021f-4b6f-99d9-ccf3d587a1a8
+        disabled: 0
+        breakpoint: 0
+        renderer: {fileID: 7187038926105661738}
+        material: {fileID: 2100000, guid: 92f78b0851ab37f409990aa746a52ec9, type: 2}
+    - rid: 5920605634532999168
+      type: {class: SharedFloat, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: AlarmRadius
+        isShared: 0
+        value: 0
+    - rid: 5920605634532999169
+      type: {class: SharedTransform, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Warnner
+        isShared: 0
+        value: {fileID: 0}
+    - rid: 5920605634532999170
+      type: {class: ReceiveAlarmEvent, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Receive Alarm Event
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 667
+          width: 150
+          height: 106
+        guid: 8ed4b8fd-8d7d-4dc8-83c4-95dbf88be113
+        disabled: 0
+        breakpoint: 0
+        eventId: 1
+        radius:
+          name: AlarmRadius
+          isShared: 1
+          value: 0
+        warner:
+          name: Warnner
+          isShared: 1
+          value: {fileID: 0}
+    - rid: 5920605634532999171
+      type: {class: Selector, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Selector
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 650
+          y: 667
+          width: 150
+          height: 130
+        guid: b80dbc7d-60d5-4e6f-9e54-971d411e83af
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605618680365070
+        - rid: 5920605618680365075
+        abortType: 0
+    - rid: 5920605634532999172
+      type: {class: CanHearAlarm, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Can Hear Alarm
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: -84
+          y: 1252
+          width: 150
+          height: 106
+        guid: 3ed32c75-c489-44f3-9716-006fd242b193
+        disabled: 0
+        breakpoint: 0
+        interval:
+          name: 
+          isShared: 0
+          value: 1
+        radius:
+          name: AlarmRadius
+          isShared: 1
+          value: 0
+        warner:
+          name: Warnner
+          isShared: 1
+          value: {fileID: 0}
+        storeResult:
+          name: AlarmObj
+          isShared: 1
+          value: {fileID: 0}
+    - rid: 5920605634532999173
+      type: {class: SharedTransform, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: AlarmObj
+        isShared: 0
+        value: {fileID: 0}
+    - rid: 5920605634532999174
+      type: {class: StoreTarget, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Store Target
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 132
+          y: 1074
+          width: 150
+          height: 106
+        guid: 50436a47-a8d2-41fa-b081-6a74b11e9ad7
+        disabled: 0
+        breakpoint: 0
+        target1:
+          name: SeeObj
+          isShared: 1
+          value: {fileID: 0}
+        target2:
+          name: HearObj
+          isShared: 1
+          value: {fileID: 0}
+        target3:
+          name: AlarmObj
+          isShared: 1
+          value: {fileID: 0}
+        storeResult:
+          name: SeeObj
+          isShared: 1
+          value: {fileID: 0}
+    - rid: 5920605634532999175
+      type: {class: Seek, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Seek
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 312
+          y: 1074
+          width: 150
+          height: 106
+        guid: aefe3c79-86bb-4f6e-bfe6-438c81528b40
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 6
+        angularSpeed:
+          name: 
+          isShared: 0
+          value: 180
+        arriveDistance:
+          name: 
+          isShared: 0
+          value: 1.5
+        stopOnTaskEnd:
+          name: 
+          isShared: 0
+          value: 1
+        updateRotation:
+          name: 
+          isShared: 0
+          value: 1
+        target:
+          name: SeeObj
+          isShared: 1
+          value: {fileID: 0}
+        targetPosition:
+          name: 
+          isShared: 0
+          value: {x: 0, y: 0, z: 0}
+    - rid: 5920605634532999176
+      type: {class: StopNavPath, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Stop Nav Path
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 485
+          y: 1074
+          width: 150
+          height: 106
+        guid: 1f0f9cc0-ab44-4ab8-93e3-6a693426f46b
+        disabled: 0
+        breakpoint: 0
+        agent: {fileID: 6448755480362348834}
+    - rid: 5920605634532999177
+      type: {class: SendEvent, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Send Event
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 665
+          y: 1074
+          width: 150
+          height: 106
+        guid: 3025faec-3b74-410a-ace2-fac1a06118e5
+        disabled: 0
+        breakpoint: 0
+        eventId: 2
+    - rid: 5920605634532999178
+      type: {class: Parallel, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Parallel
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 1054
+          y: 1074
+          width: 150
+          height: 130
+        guid: a3d314ca-f8dc-4f1e-999a-6d6f0aa3dbd8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605634532999179
+        - rid: 5920605634532999180
+        abortType: 0
+    - rid: 5920605634532999179
+      type: {class: Wait, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Wait
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 957
+          y: 1245
+          width: 150
+          height: 106
+        guid: aefcdd8c-36c3-44f9-bc30-0bff3c471a9d
+        disabled: 0
+        breakpoint: 0
+        waitTime:
+          name: 
+          isShared: 0
+          value: 1
+        isRandomWait:
+          name: 
+          isShared: 0
+          value: 0
+        randomRange:
+          name: 
+          isShared: 0
+          value: {x: 0, y: 1}
+    - rid: 5920605634532999180
+      type: {class: StopNavPath, ns: Escape, asm: Assembly-CSharp}
+      data:
+        name: Stop Nav Path
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 1142
+          y: 1245
+          width: 150
+          height: 106
+        guid: bd147963-307b-4708-8394-6c2b37c7f3b5
+        disabled: 0
+        breakpoint: 0
+        agent: {fileID: 6448755480362348834}
+    - rid: 5920605634532999181
+      type: {class: Patrol, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Patrol
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 1249
+          y: 1074
+          width: 150
+          height: 106
+        guid: 9bb42da6-b197-4c0b-9ba1-ea03f5360b4f
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 5
+        angularSpeed:
+          name: 
+          isShared: 0
+          value: 120
+        arriveDistance:
+          name: 
+          isShared: 0
+          value: 0.1
+        stopOnTaskEnd:
+          name: 
+          isShared: 0
+          value: 1
+        updateRotation:
+          name: 
+          isShared: 0
+          value: 1
+        randomPatrol:
+          name: 
+          isShared: 0
+          value: 0
+        reversePatrol:
+          name: 
+          isShared: 0
+          value: 0
+        findNearestWaypoint:
+          name: 
+          isShared: 0
+          value: 1
+        waypointPauseDuration:
+          name: 
+          isShared: 0
+          value: 0.5
+        waypoints:
+          name: 
+          isShared: 0
+          value:
+          - {fileID: 4234484408500981906}
+          - {fileID: 4234484407296855818}
+          - {fileID: 4234484407248725289}
+          - {fileID: 4234484407022974333}
 --- !u!114 &84211215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +1101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   birthPosition: {x: 0, y: 0, z: 0}
-  birthRotation: {x: 0, y: 0, z: 0, w: 0}
+  birthRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!114 &84211216
 MonoBehaviour:
   m_ObjectHideFlags: 0

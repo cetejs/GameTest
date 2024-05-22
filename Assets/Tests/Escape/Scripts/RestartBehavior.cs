@@ -7,11 +7,11 @@ namespace Escape
     public class RestartBehavior : MonoBehaviour
     {
         [SerializeField]
-        private Behavior behavior;
+        private BehaviorTree behavior;
 
         private void Start()
         {
-            behavior = GetComponent<Behavior>();
+            behavior = GetComponent<BehaviorTree>();
             EventManager.Instance.Register((int) EventId.Reborn, Reborn);
         }
 

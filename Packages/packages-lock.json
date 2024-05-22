@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.cetejs.behaviordesigner": {
-      "version": "git@github.com:cetejs/BehaviorDesigner.git",
+      "version": "https://github.com/cetejs/BehaviorDesigner.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "0f6a62b5d88ea80cc7509391b0345dc4d2cd8d4a"
+      "hash": "c45d89d2019d1791d2b5b3ea746f28f3c07fdc9e"
     },
     "com.cetejs.gameframework": {
       "version": "https://github.com/cetejs/GameFramework.git",

@@ -318,12 +318,12 @@ GameObject:
   - component: {fileID: 669974317}
   - component: {fileID: 669974316}
   - component: {fileID: 669974320}
-  - component: {fileID: 669974318}
-  - component: {fileID: 669974319}
-  - component: {fileID: 669974321}
   - component: {fileID: 669974322}
+  - component: {fileID: 669974321}
   - component: {fileID: 669974323}
   - component: {fileID: 669974324}
+  - component: {fileID: 669974325}
+  - component: {fileID: 669974326}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -369,66 +369,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &669974318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669974315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateType: 1
-  restartWhenComplete: 0
-  resetValuesOnRestart: 0
-  source:
-    behaviorName: Seek
-    group: 0
-    behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"id\":0,\"isDisabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":461.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"id\":1,\"isDisabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityBehaviour.Enable","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":308.0,\"y\":607.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":2,\"isDisabled\":false,\"behaviour\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30648}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.Seek","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":506.0,\"y\":607.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":3,\"isDisabled\":false,\"speed\":{\"name\":\"\",\"isShared\":false,\"value\":10.0},\"angularSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":120.0},\"arriveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":0.10000000149011612},\"isStopOnTaskEnd\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"isUpdateRotation\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"target\":{\"name\":\"2\",\"isShared\":false,\"value\":{\"instanceID\":30796}},\"targetPosition\":{\"name\":\"\",\"isShared\":false,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: 
-    version: 58
-    taskIdCount: 3
-    unityObjects:
-    - id: 2_behaviour
-      obj: {fileID: 669974316}
-    - id: 3_target
-      obj: {fileID: 1664398898}
-  external: {fileID: 0}
---- !u!114 &669974319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669974315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  updateType: 1
-  restartWhenComplete: 0
-  resetValuesOnRestart: 0
-  source:
-    behaviorName: Follow
-    group: 1
-    behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"id\":0,\"isDisabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":469.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"id\":1,\"isDisabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityBehaviour.Enable","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":308.0,\"y\":615.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":2,\"isDisabled\":false,\"behaviour\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30648}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.Follow","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":492.0,\"y\":615.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":3,\"isDisabled\":false,\"speed\":{\"name\":\"\",\"isShared\":false,\"value\":10.0},\"angularSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":120.0},\"arriveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":0.10000000149011612},\"isStopOnTaskEnd\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"isUpdateRotation\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"target\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30708}},\"moveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":1.0}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: 
-    version: 26
-    taskIdCount: 3
-    unityObjects:
-    - id: 2_behaviour
-      obj: {fileID: 669974316}
-    - id: 3_target
-      obj: {fileID: 898981029}
-  external: {fileID: 0}
 --- !u!114 &669974320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,27 +392,124 @@ MonoBehaviour:
   m_GameObject: {fileID: 669974315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 1
   restartWhenComplete: 0
   resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
   source:
-    behaviorName: Flee
-    group: 2
+    behaviorName: Follow
     behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"id\":0,\"isDisabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":453.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"id\":1,\"isDisabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityBehaviour.Enable","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":308.0,\"y\":600.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":2,\"isDisabled\":false,\"behaviour\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30648}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.Flee","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":513.0,\"y\":600.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":3,\"isDisabled\":false,\"speed\":{\"name\":\"\",\"isShared\":false,\"value\":10.0},\"angularSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":120.0},\"arriveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":0.10000000149011612},\"isStopOnTaskEnd\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"isUpdateRotation\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"fleeDistance\":{\"name\":\"\",\"isShared\":false,\"value\":20.0},\"lookAheadDistance\":{\"name\":\"\",\"isShared\":false,\"value\":10.0},\"target\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30708}}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: 
-    version: 337
-    taskIdCount: 3
-    unityObjects:
-    - id: 2_behaviour
-      obj: {fileID: 669974316}
-    - id: 3_target
-      obj: {fileID: 898981029}
-  external: {fileID: 0}
+    serializedVersion: 12
+    root:
+      rid: 5920605543213826065
+    tasks:
+    - rid: 5920605543213826065
+    - rid: 5920605543213826066
+    - rid: 5920605543213826067
+    - rid: 5920605543213826069
+    sharedVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605543213826065
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 4ca702df9f54feb4b9bd2ddb842f3a05
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826066
+    - rid: 5920605543213826066
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 450
+          width: 100
+          height: 100
+        guid: b9e37796e541920419b897d7448086a8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826067
+        - rid: 5920605543213826069
+        abortType: 0
+    - rid: 5920605543213826067
+      type: {class: Enable, ns: BehaviorDesigner.Tasks.UnityBehaviour, asm: Assembly-CSharp}
+      data:
+        name: Enable (Behaviour)
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 250
+          y: 637
+          width: 150
+          height: 106
+        guid: 5500c86579f441a45875d6dbea80be26
+        disabled: 0
+        breakpoint: 0
+        behaviour:
+          name: 
+          isShared: 0
+          value: {fileID: 669974316}
+    - rid: 5920605543213826069
+      type: {class: Follow, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Follow
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 550
+          y: 637
+          width: 150
+          height: 106
+        guid: dd996473c5310bb448eded7633ed2554
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 10
+        angularSpeed:
+          name: 
+          isShared: 0
+          value: 120
+        arriveDistance:
+          name: 
+          isShared: 0
+          value: 0.1
+        stopOnTaskEnd:
+          name: 
+          isShared: 0
+          value: 1
+        updateRotation:
+          name: 
+          isShared: 0
+          value: 1
+        target:
+          name: 
+          isShared: 0
+          value: {fileID: 898981029}
+        moveDistance:
+          name: 
+          isShared: 0
+          value: 1
 --- !u!114 &669974322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,27 +519,124 @@ MonoBehaviour:
   m_GameObject: {fileID: 669974315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 1
   restartWhenComplete: 0
   resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
   source:
-    behaviorName: MoveTowards
-    group: 3
+    behaviorName: Seek
     behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"id\":0,\"isDisabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":462.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"id\":1,\"isDisabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityBehaviour.Disable","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":312.0,\"y\":624.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":2,\"isDisabled\":false,\"behaviour\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30648}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.MoveTowards","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":506.0,\"y\":624.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":3,\"isDisabled\":false,\"speed\":{\"name\":\"\",\"isShared\":false,\"value\":10.0},\"angularSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":120.0},\"arriveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":0.10000000149011612},\"isLookAtTarget\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"target\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30758}},\"targetPosition\":{\"name\":\"\",\"isShared\":false,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: 
-    version: 41
-    taskIdCount: 3
-    unityObjects:
-    - id: 2_behaviour
-      obj: {fileID: 669974316}
-    - id: 3_target
-      obj: {fileID: 1237684813}
-  external: {fileID: 0}
+    serializedVersion: 7
+    root:
+      rid: 5920605543213826065
+    tasks:
+    - rid: 5920605543213826065
+    - rid: 5920605543213826066
+    - rid: 5920605543213826067
+    - rid: 5920605543213826068
+    sharedVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605543213826065
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 4ca702df9f54feb4b9bd2ddb842f3a05
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826066
+    - rid: 5920605543213826066
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 450
+          width: 100
+          height: 100
+        guid: b9e37796e541920419b897d7448086a8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826067
+        - rid: 5920605543213826068
+        abortType: 0
+    - rid: 5920605543213826067
+      type: {class: Enable, ns: BehaviorDesigner.Tasks.UnityBehaviour, asm: Assembly-CSharp}
+      data:
+        name: Enable (Behaviour)
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 250
+          y: 637
+          width: 150
+          height: 106
+        guid: 5500c86579f441a45875d6dbea80be26
+        disabled: 0
+        breakpoint: 0
+        behaviour:
+          name: 
+          isShared: 0
+          value: {fileID: 669974316}
+    - rid: 5920605543213826068
+      type: {class: Seek, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Seek
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 550
+          y: 637
+          width: 150
+          height: 106
+        guid: dd3156a84561d284ab6527b848e3c658
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 10
+        angularSpeed:
+          name: 
+          isShared: 0
+          value: 120
+        arriveDistance:
+          name: 
+          isShared: 0
+          value: 0.1
+        stopOnTaskEnd:
+          name: 
+          isShared: 0
+          value: 1
+        updateRotation:
+          name: 
+          isShared: 0
+          value: 1
+        target:
+          name: 
+          isShared: 0
+          value: {fileID: 1664398898}
+        targetPosition:
+          name: 
+          isShared: 0
+          value: {x: 0, y: 0, z: 0}
 --- !u!114 &669974323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,27 +646,128 @@ MonoBehaviour:
   m_GameObject: {fileID: 669974315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 1
   restartWhenComplete: 0
   resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
   source:
-    behaviorName: RotateTowards
-    group: 4
+    behaviorName: Flee
     behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"id\":0,\"isDisabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":467.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"id\":1,\"isDisabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityBehaviour.Disable","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":322.0,\"y\":634.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":2,\"isDisabled\":false,\"behaviour\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30648}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.RotateTowards","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":498.0,\"y\":634.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":3,\"isDisabled\":false,\"speed\":{\"name\":\"\",\"isShared\":false,\"value\":120.0},\"rotationEpsilon\":{\"name\":\"\",\"isShared\":false,\"value\":0.10000000149011612},\"isOnlyY\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"target\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30638}},\"targetRotation\":{\"name\":\"\",\"isShared\":false,\"value\":{\"x\":0.0,\"y\":0.0,\"z\":0.0}}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: 
-    version: 27
-    taskIdCount: 3
-    unityObjects:
-    - id: 2_behaviour
-      obj: {fileID: 669974316}
-    - id: 3_target
-      obj: {fileID: 530432083}
-  external: {fileID: 0}
+    serializedVersion: 12
+    root:
+      rid: 5920605543213826065
+    tasks:
+    - rid: 5920605543213826065
+    - rid: 5920605543213826066
+    - rid: 5920605543213826067
+    - rid: 5920605543213826070
+    sharedVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605543213826065
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 4ca702df9f54feb4b9bd2ddb842f3a05
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826066
+    - rid: 5920605543213826066
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 450
+          width: 100
+          height: 100
+        guid: b9e37796e541920419b897d7448086a8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826067
+        - rid: 5920605543213826070
+        abortType: 0
+    - rid: 5920605543213826067
+      type: {class: Enable, ns: BehaviorDesigner.Tasks.UnityBehaviour, asm: Assembly-CSharp}
+      data:
+        name: Enable (Behaviour)
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 250
+          y: 637
+          width: 150
+          height: 106
+        guid: 5500c86579f441a45875d6dbea80be26
+        disabled: 0
+        breakpoint: 0
+        behaviour:
+          name: 
+          isShared: 0
+          value: {fileID: 669974316}
+    - rid: 5920605543213826070
+      type: {class: Flee, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Flee
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 550
+          y: 637
+          width: 150
+          height: 106
+        guid: fa75119938d6b80488be5f1a7307dfb2
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 10
+        angularSpeed:
+          name: 
+          isShared: 0
+          value: 120
+        arriveDistance:
+          name: 
+          isShared: 0
+          value: 0.1
+        stopOnTaskEnd:
+          name: 
+          isShared: 0
+          value: 1
+        updateRotation:
+          name: 
+          isShared: 0
+          value: 1
+        fleeDistance:
+          name: 
+          isShared: 0
+          value: 20
+        lookAheadDistance:
+          name: 
+          isShared: 0
+          value: 5
+        target:
+          name: 
+          isShared: 0
+          value: {fileID: 898981029}
 --- !u!114 &669974324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,33 +777,382 @@ MonoBehaviour:
   m_GameObject: {fileID: 669974315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd25ae6554f8444fb2b58347e45ff289, type: 3}
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 1
   restartWhenComplete: 0
   resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  source:
+    behaviorName: MoveTowards
+    behaviorDescription: 
+    serializedVersion: 12
+    root:
+      rid: 5920605543213826065
+    tasks:
+    - rid: 5920605543213826065
+    - rid: 5920605543213826066
+    - rid: 5920605543213826067
+    - rid: 5920605543213826071
+    sharedVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605543213826065
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 4ca702df9f54feb4b9bd2ddb842f3a05
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826066
+    - rid: 5920605543213826066
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 450
+          width: 100
+          height: 100
+        guid: b9e37796e541920419b897d7448086a8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826067
+        - rid: 5920605543213826071
+        abortType: 0
+    - rid: 5920605543213826067
+      type: {class: Enable, ns: BehaviorDesigner.Tasks.UnityBehaviour, asm: Assembly-CSharp}
+      data:
+        name: Enable (Behaviour)
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 250
+          y: 637
+          width: 150
+          height: 106
+        guid: 5500c86579f441a45875d6dbea80be26
+        disabled: 0
+        breakpoint: 0
+        behaviour:
+          name: 
+          isShared: 0
+          value: {fileID: 669974316}
+    - rid: 5920605543213826071
+      type: {class: MoveTowards, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Move Towards
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 550
+          y: 637
+          width: 150
+          height: 106
+        guid: 4fd5fb58b9060694db316ed9b5b516ad
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 10
+        angularSpeed:
+          name: 
+          isShared: 0
+          value: 120
+        arriveDistance:
+          name: 
+          isShared: 0
+          value: 0.1
+        lookAtTarget:
+          name: 
+          isShared: 0
+          value: 1
+        target:
+          name: 
+          isShared: 0
+          value: {fileID: 1237684813}
+        targetPosition:
+          name: 
+          isShared: 0
+          value: {x: 0, y: 0, z: 0}
+--- !u!114 &669974325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669974315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 1
+  restartWhenComplete: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  source:
+    behaviorName: RotateTowards
+    behaviorDescription: 
+    serializedVersion: 12
+    root:
+      rid: 5920605543213826065
+    tasks:
+    - rid: 5920605543213826065
+    - rid: 5920605543213826066
+    - rid: 5920605543213826067
+    - rid: 5920605543213826072
+    sharedVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605543213826065
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 4ca702df9f54feb4b9bd2ddb842f3a05
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826066
+    - rid: 5920605543213826066
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 450
+          width: 100
+          height: 100
+        guid: b9e37796e541920419b897d7448086a8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826067
+        - rid: 5920605543213826072
+        abortType: 0
+    - rid: 5920605543213826067
+      type: {class: Enable, ns: BehaviorDesigner.Tasks.UnityBehaviour, asm: Assembly-CSharp}
+      data:
+        name: Enable (Behaviour)
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 250
+          y: 637
+          width: 150
+          height: 106
+        guid: 5500c86579f441a45875d6dbea80be26
+        disabled: 0
+        breakpoint: 0
+        behaviour:
+          name: 
+          isShared: 0
+          value: {fileID: 669974316}
+    - rid: 5920605543213826072
+      type: {class: RotateTowards, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Rotate Towards
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 550
+          y: 637
+          width: 150
+          height: 106
+        guid: 2d631939dd1eaec4ab0c49894ba92861
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 120
+        rotationEpsilon:
+          name: 
+          isShared: 0
+          value: 0.1
+        onlyY:
+          name: 
+          isShared: 0
+          value: 0
+        target:
+          name: 
+          isShared: 0
+          value: {fileID: 530432083}
+        targetRotation:
+          name: 
+          isShared: 0
+          value: {x: 0, y: 0, z: 0}
+--- !u!114 &669974326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669974315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06eb425bab9748e88ea4b01a8c1daebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 1
+  restartWhenComplete: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
   source:
     behaviorName: Patrol
-    group: 5
     behaviorDescription: 
-    rootJson: '[{"type":"BehaviorDesigner.Root","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":300.0,\"width\":100.0,\"height\":100.0},\"comment\":\"\",\"id\":0,\"isDisabled\":false}","childCount":1},{"type":"BehaviorDesigner.Tasks.Sequence","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":400.0,\"y\":466.0,\"width\":150.0,\"height\":98.0},\"comment\":\"\",\"id\":1,\"isDisabled\":false,\"abortType\":0}","childCount":2},{"type":"BehaviorDesigner.Tasks.UnityBehaviour.Enable","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":308.0,\"y\":613.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":2,\"isDisabled\":false,\"behaviour\":{\"name\":\"\",\"isShared\":false,\"value\":{\"instanceID\":30648}}}","childCount":0},{"type":"BehaviorDesigner.Tasks.Movement.Patrol","task":"{\"graphPosition\":{\"serializedVersion\":\"2\",\"x\":507.0,\"y\":613.0,\"width\":150.0,\"height\":74.0},\"comment\":\"\",\"id\":3,\"isDisabled\":false,\"speed\":{\"name\":\"\",\"isShared\":false,\"value\":10.0},\"angularSpeed\":{\"name\":\"\",\"isShared\":false,\"value\":120.0},\"arriveDistance\":{\"name\":\"\",\"isShared\":false,\"value\":0.10000000149011612},\"isStopOnTaskEnd\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"isUpdateRotation\":{\"name\":\"\",\"isShared\":false,\"value\":true},\"isRandomPatrol\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"isReversePatrol\":{\"name\":\"\",\"isShared\":false,\"value\":false},\"waypointPauseDuration\":{\"name\":\"\",\"isShared\":false,\"value\":1.0},\"waypoints\":{\"name\":\"\",\"isShared\":false,\"value\":[{\"instanceID\":30796},{\"instanceID\":30708},{\"instanceID\":30758},{\"instanceID\":30638}]}}","childCount":0}]'
-    detachedTasksJson: 
-    variablesJson: 
-    version: 47
-    taskIdCount: 3
-    unityObjects:
-    - id: 2_behaviour
-      obj: {fileID: 669974316}
-    - id: 3_waypoints_0
-      obj: {fileID: 1664398898}
-    - id: 3_waypoints_1
-      obj: {fileID: 898981029}
-    - id: 3_waypoints_2
-      obj: {fileID: 1237684813}
-    - id: 3_waypoints_3
-      obj: {fileID: 530432083}
-  external: {fileID: 0}
+    serializedVersion: 12
+    root:
+      rid: 5920605543213826065
+    tasks:
+    - rid: 5920605543213826065
+    - rid: 5920605543213826066
+    - rid: 5920605543213826067
+    - rid: 5920605543213826073
+    sharedVariables: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5920605543213826065
+      type: {class: Root, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Root
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 300
+          width: 100
+          height: 100
+        guid: 4ca702df9f54feb4b9bd2ddb842f3a05
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826066
+    - rid: 5920605543213826066
+      type: {class: Sequence, ns: BehaviorDesigner, asm: BehaviorDesigner}
+      data:
+        name: Sequence
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 400
+          y: 450
+          width: 100
+          height: 100
+        guid: b9e37796e541920419b897d7448086a8
+        disabled: 0
+        breakpoint: 0
+        collapsed: 0
+        children:
+        - rid: 5920605543213826067
+        - rid: 5920605543213826073
+        abortType: 0
+    - rid: 5920605543213826067
+      type: {class: Enable, ns: BehaviorDesigner.Tasks.UnityBehaviour, asm: Assembly-CSharp}
+      data:
+        name: Enable (Behaviour)
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 250
+          y: 637
+          width: 150
+          height: 106
+        guid: 5500c86579f441a45875d6dbea80be26
+        disabled: 0
+        breakpoint: 0
+        behaviour:
+          name: 
+          isShared: 0
+          value: {fileID: 669974316}
+    - rid: 5920605543213826073
+      type: {class: Patrol, ns: BehaviorDesigner.Tasks.Movement, asm: Assembly-CSharp}
+      data:
+        name: Patrol
+        comment: 
+        graphPosition:
+          serializedVersion: 2
+          x: 550
+          y: 637
+          width: 150
+          height: 106
+        guid: 6339f506eabe0e247b47babda80d41ea
+        disabled: 0
+        breakpoint: 0
+        speed:
+          name: 
+          isShared: 0
+          value: 10
+        angularSpeed:
+          name: 
+          isShared: 0
+          value: 120
+        arriveDistance:
+          name: 
+          isShared: 0
+          value: 0.1
+        stopOnTaskEnd:
+          name: 
+          isShared: 0
+          value: 1
+        updateRotation:
+          name: 
+          isShared: 0
+          value: 1
+        randomPatrol:
+          name: 
+          isShared: 0
+          value: 0
+        reversePatrol:
+          name: 
+          isShared: 0
+          value: 0
+        findNearestWaypoint:
+          name: 
+          isShared: 0
+          value: 0
+        waypointPauseDuration:
+          name: 
+          isShared: 0
+          value: 1
+        waypoints:
+          name: 
+          isShared: 0
+          value:
+          - {fileID: 1664398898}
+          - {fileID: 898981029}
+          - {fileID: 1237684813}
+          - {fileID: 530432083}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

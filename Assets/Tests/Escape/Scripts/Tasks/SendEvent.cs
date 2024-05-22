@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Escape
 {
-    [TaskCategory("Escape")]
+    [TaskGroup("Escape")]
     public class SendEvent : Action
     {
         [SerializeField]

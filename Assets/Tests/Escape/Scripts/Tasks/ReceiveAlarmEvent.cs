@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace Escape
 {
-    [TaskCategory("Escape")]
+    [TaskGroup("Escape")]
     public class ReceiveAlarmEvent : Action
     {
         [SerializeField]
         private EventId eventId;
-        [SerializeField] [RequiredField]
+        [SerializeField]
         private SharedFloat radius;
-        [SerializeField] [RequiredField]
+        [SerializeField]
         private SharedTransform warner;
 
         public override void OnStart()
