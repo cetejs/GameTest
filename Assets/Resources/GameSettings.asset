@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf5689cf4ec9554a9119ab2099b801d, type: 3}
+  m_Script: {fileID: 0}
   m_Name: GameSettings
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: GameFramework:GameFramework:GameSettings
   GlobalAssemblyNames:
   - GameFramework
   - Assembly-CSharp
+  BuildProjectDirectoriesButton: 0
   RuntimeReloadAssemblyNames: []
   WindowAssetName: Prefabs/Windows
   WindowRootName: 
@@ -24,8 +25,10 @@ MonoBehaviour:
   - PopUp
   - Top
   PoolAssetName: Prefabs/ObjectPool
+  PoolReleaseOperation: 0
   PoolWorldPosScale: 99999
   DefaultPoolCapacity: 10
+  PreloadOnStart: 0
   PoolPreloadConfigs: []
   ConsoleInput: 9
   ConsoleTimeScale: 1

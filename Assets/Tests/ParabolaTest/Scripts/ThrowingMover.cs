@@ -27,9 +27,8 @@ public class ThrowingMover : PoolObject
         }
     }
 
-    protected override void Update()
+    protected override void OnUpdate()
     {
-        base.Update();
         if (nextIndex == -1)
         {
             Release();
