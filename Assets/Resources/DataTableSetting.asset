@@ -15,7 +15,7 @@ MonoBehaviour:
   RootPath: D:\Unity\Project\GameTest
   ExcelRootPath: RawTables
   TableBuildPath: Configs/Tables
-  ScriptBuildPath: Scripts/Tables
+  ScriptBuildPath: Tests/DataTable/Scripts
   ScriptNamespace: GameFramework
-  EncryptionType: 0
+  CryptoType: 0
   Password: password

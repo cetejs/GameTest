@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: ceac37f2440f40ddbdb17cf2f0c07c67, type: 3}
   m_Name: AssetSetting
-  m_EditorClassIdentifier: GameFramework:GameFramework:AssetSetting
+  m_EditorClassIdentifier: 
   BundleAssetName: ToBundle
   BundleExtension: ab
   BundleBuildPath: StreamingAssets

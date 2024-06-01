@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b647fb143de0423fb3fc814db6683a31, type: 3}
   m_Name: PersistentSetting
   m_EditorClassIdentifier: 
-  SaveDataName: SaveData/SaveData
-  SaveDataExtension: pd
-  EncryptionType: 0
+  SaveDirectory: SaveData
+  DefaultStorageName: DefaultSaveData
+  SaveDataExtension: dat
+  CryptoType: 0
   Password: password
