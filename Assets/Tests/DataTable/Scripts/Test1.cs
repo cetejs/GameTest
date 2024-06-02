@@ -7,9 +7,7 @@ namespace GameFramework
 {
     public class Test1 : IDataTable
     {
-        public int Id1 { get; private set; }
-        public string Id2 { get; private set; }
-        public byte Id3 { get; private set; }
+        public int Id { get; private set; }
         public bool Item1 { get; private set; }
         public byte Item2 { get; private set; }
         public short Item3 { get; private set; }
@@ -30,9 +28,7 @@ namespace GameFramework
 
         public void Read(BinaryReader reader)
         {
-            Id1 = reader.ReadInt32();
-            Id2 = reader.ReadString();
-            Id3 = reader.ReadByte();
+            Id = reader.ReadInt32();
             Item1 = reader.ReadBoolean();
             Item2 = reader.ReadByte();
             Item3 = reader.ReadInt16();
@@ -102,7 +98,7 @@ namespace GameFramework
 
         public override string ToString()
         {
-            return $"Id1 = {Id1}; Id2 = {Id2}; Id3 = {Id3}; Item1 = {Item1}; Item2 = {Item2}; Item3 = {Item3}; Item4 = {Item4}; Item5 = {Item5}; Item6 = {Item6}; Item7 = {Item7}; Item8 = {Item8}; Item9 = {string.Join(", ", Item9)}; Item10 = {string.Join(", ", Item10)}; Item11 = {string.Join(", ", Item11)}; Item12 = {string.Join(", ", Item12)}; Item13 = {string.Join(", ", Item13)}; Item14 = {string.Join(", ", Item14)}; Item15 = {string.Join(", ", Item15)}; Item16 = {string.Join(", ", Item16)}; Test2 = {Test2};";
+            return $"Id = {Id}; Item1 = {Item1}; Item2 = {Item2}; Item3 = {Item3}; Item4 = {Item4}; Item5 = {Item5}; Item6 = {Item6}; Item7 = {Item7}; Item8 = {Item8}; Item9 = {string.Join(", ", Item9)}; Item10 = {string.Join(", ", Item10)}; Item11 = {string.Join(", ", Item11)}; Item12 = {string.Join(", ", Item12)}; Item13 = {string.Join(", ", Item13)}; Item14 = {string.Join(", ", Item14)}; Item15 = {string.Join(", ", Item15)}; Item16 = {string.Join(", ", Item16)}; Test2 = {Test2};";
         }
     }
 }
