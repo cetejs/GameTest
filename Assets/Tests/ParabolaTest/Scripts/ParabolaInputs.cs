@@ -1,4 +1,5 @@
 using GameFramework;
+using GameFramework.Samples.SimpleController;
 using UnityEngine;
 
 public class ParabolaInputs : SimpleInputs

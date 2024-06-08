@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameFramework
+namespace GameFramework.Samples.DataTable
 {
     public class DataTableTest : MonoBehaviour
     {

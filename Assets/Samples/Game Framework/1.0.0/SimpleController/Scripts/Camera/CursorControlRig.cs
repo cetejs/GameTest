@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace GameFramework
+namespace GameFramework.Samples.SimpleController
 {
     public class CursorControlRig : MonoBehaviour
     {

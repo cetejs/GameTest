@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameFramework
+namespace GameFramework.Samples.SimpleController
 {
     [RequireComponent(typeof(CharacterController))]
     public class SimpleController : MonoBehaviour

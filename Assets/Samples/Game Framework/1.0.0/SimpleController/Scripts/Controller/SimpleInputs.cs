@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameFramework
+namespace GameFramework.Samples.SimpleController
 {
     public class SimpleInputs : MonoBehaviour, IFreeLookInput
     {
