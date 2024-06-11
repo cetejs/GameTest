@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceac37f2440f40ddbdb17cf2f0c07c67, type: 3}
   m_Name: AssetSetting
   m_EditorClassIdentifier: 
-  BundleAssetName: ToBundle
   BundleExtension: ab
   BundleBuildPath: StreamingAssets
   BundleHashName: BundleHash
   BuiltinResourcesBundleName: builtin_extra
   DownloadUri: http://127.0.0.1:3000/AssetBundle
   AssetLoadOption: 0
+  BundleAssetGuids:
+  - a38956c7dca48584cb093eb3092e636d
+  - 1077c2d29f507d040b7664d6589d88cd
   ShaderBundleName: shaders
   ShaderVariantsAssetPath: Shaders/ShaderVariants
   DeleteShaderVariantsWhenBuild: 0
