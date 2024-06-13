@@ -17,5 +17,6 @@ MonoBehaviour:
   TableBuildPath: Configs/Tables
   ScriptBuildPath: Tests/DataTable/Scripts
   ScriptNamespace: GameFramework
+  LocalizationName: Localization
   CryptoType: 0
   Password: password
